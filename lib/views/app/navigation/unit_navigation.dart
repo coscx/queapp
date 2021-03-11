@@ -6,7 +6,10 @@ import 'package:flutter_geen/app/api/issues_api.dart';
 import 'package:flutter_geen/views/pages/about/bottom_sheet.dart';
 import 'package:flutter_geen/views/pages/about/person_center_page.dart';
 import 'package:flutter_geen/views/pages/data/card.dart';
+import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
+import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_page.dart';
 import 'package:flutter_geen/views/pages/index/index_page.dart';
+import 'package:flutter_geen/views/pages/message/pages/message_page.dart';
 import 'package:flutter_geen/views/pages/search/serach_page.dart';
 import 'package:flutter_geen/views/app/navigation/unit_bottom_bar.dart';
 import 'package:flutter_geen/views/pages/category/home_right_drawer.dart';
@@ -25,6 +28,8 @@ import 'package:flt_im_plugin/value_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_geen/views/pages/user/User.dart';
+import 'package:flutter_geen/views/pages/user/pages/user_page.dart';
 import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
 import 'package:flutter_xupdate/flutter_xupdate.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
@@ -172,10 +177,14 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
               physics: const NeverScrollableScrollPhysics(),
               controller: _controller,
               children: <Widget>[
-                HomePage(),
-                IndexPages(),
-                ImConversationListPage(memberId: id,),
-                MinePage(),
+                DynamicPage(),
+                DiscoveryPage(),
+                MessagePage(),
+                UserCenterPage(),
+                // HomePage(),
+                // IndexPages(),
+                // ImConversationListPage(memberId: id,),
+                // MinePage(),
 
               ],
             ),

@@ -14,6 +14,13 @@ import 'package:flutter_geen/views/pages/chat/conversation_list.dart';
 import 'package:flutter_geen/views/pages/chat/group_page.dart';
 import 'package:flutter_geen/views/pages/data/brower.dart';
 import 'package:flutter_geen/views/pages/data/card.dart';
+import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
+import 'package:flutter_geen/views/pages/discovery/pages/nearby_list_page.dart';
+import 'package:flutter_geen/views/pages/discovery/pages/topic_detail_page.dart';
+import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_detail_page.dart';
+import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_page.dart';
+import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_video_page.dart';
+import 'package:flutter_geen/views/pages/dynamic/pages/search_page.dart';
 import 'package:flutter_geen/views/pages/gallery/gallery_page.dart';
 import 'package:flutter_geen/views/pages/index/amap.dart';
 import 'package:flutter_geen/views/pages/index/amap_index.dart';
@@ -81,6 +88,16 @@ class UnitRouter {
   static const String baidu_map ='BaiduMap';
   static const String user ='User';
   static const String qr_view ='QrView';
+  static const String discoveryPage = "discoveryPage";
+  static const String topicDetailPage = "topicDetailPage";
+  static const String nearListPage = "nearbyListPage";
+
+  static const String dynamicPage = "dynamicPage";
+  static const String dynamicDetailPage = "dynamicDetailPage";
+  static const String dynamicVideoPage = "dynamicVideoPage";
+  static const String photoViewGalleryScreen = "photoViewGalleryScreen";
+  static const String search_index = "searchIndexPage";
+
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       //根据名称跳转相应页面
@@ -88,6 +105,22 @@ class UnitRouter {
         return Right2LeftRouter(
             child: WidgetDetailPage(
         ));
+
+      case discoveryPage:
+        return Right2LeftRouter(child: DiscoveryPage());
+      case topicDetailPage:
+        return Right2LeftRouter(child: TopicDetailPage());
+      case nearListPage:
+        return Right2LeftRouter(child: NearbyListPage());
+
+      case dynamicPage:
+        return Right2LeftRouter(child: DynamicPage());
+      case dynamicDetailPage:
+        return Right2LeftRouter(child: DynamicDetailPage());
+      case dynamicVideoPage:
+        return Right2LeftRouter(child: DynamicVideoPage());
+      case search_index:
+        return Right2LeftRouter(child: SearchIndexPage());
 
       case search:
         return Right2LeftRouter(child: SearchPage());
