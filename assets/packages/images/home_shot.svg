@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_titlebar_publish</title>
+    <defs>
+        <linearGradient x1="0%" y1="10.043618%" x2="82.4834475%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#2EFEFD" offset="0%"></stop>
+            <stop stop-color="#2ECEFE" offset="100%"></stop>
+        </linearGradient>
+        <path d="M15.0893583,2 C15.9927544,2 16.8378723,2.58037162 16.9769819,3.2962963 L17.636,5 L20.6,5 C21.9254834,5 23,6.0745166 23,7.4 L23,19.2666667 C23,20.5921501 21.9254834,21.6666667 20.6,21.6666667 L3.4,21.6666667 C2.0745166,21.6666667 1,20.5921501 1,19.2666667 L1,7.4 C1,6.0745166 2.0745166,5 3.4,5 L6.363,5 L7.02301815,3.2962963 C7.16212773,2.58037162 8.00724557,2 8.91064167,2 L15.0893583,2 Z M12,8 C9.23857625,8 7,10.2385763 7,13 C7,15.7614237 9.23857625,18 12,18 C14.7614237,18 17,15.7614237 17,13 C17,10.2385763 14.7614237,8 12,8 Z M12,11 C13.1045695,11 14,11.8954305 14,13 C14,14.1045695 13.1045695,15 12,15 C10.8954305,15 10,14.1045695 10,13 C10,11.8954305 10.8954305,11 12,11 Z" id="path-2"></path>
+    </defs>
+    <g id="ic_titlebar_publish" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="形状结合">
+            <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>

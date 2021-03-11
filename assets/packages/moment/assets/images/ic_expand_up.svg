@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic_close_small</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_close_small" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.2">
+        <path d="M5.46966991,3.21966991 C5.73593648,2.95340335 6.15260016,2.9291973 6.44621165,3.14705176 L6.53033009,3.21966991 L10.5303301,7.21966991 C10.7965966,7.48593648 10.8208027,7.90260016 10.6029482,8.19621165 L10.5303301,8.28033009 L6.53033009,12.2803301 C6.23743687,12.5732233 5.76256313,12.5732233 5.46966991,12.2803301 C5.20340335,12.0140635 5.1791973,11.5973998 5.39705176,11.3037883 L5.46966991,11.2196699 L8.939,7.75 L5.46966991,4.28033009 C5.20340335,4.01406352 5.1791973,3.59739984 5.39705176,3.30378835 L5.46966991,3.21966991 Z" id="arrow" fill="#202020" fill-rule="nonzero" transform="translate(8.000000, 7.750000) scale(1, -1) rotate(-270.000000) translate(-8.000000, -7.750000) "></path>
+    </g>
+</svg>

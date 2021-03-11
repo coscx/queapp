@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>消息备份</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="5.94899325%" y2="84.1886837%" id="linearGradient-1">
+            <stop stop-color="#00DCFF" offset="0%"></stop>
+            <stop stop-color="#008DFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.6241264%" y1="110.220918%" x2="69.2447755%" y2="15.8486406%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.602026879" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="消息" transform="translate(-20.000000, -104.000000)" fill-rule="nonzero">
+            <g id="互动消息" transform="translate(20.000000, 104.000000)">
+                <circle id="椭圆形" fill="url(#linearGradient-1)" cx="26" cy="26" r="26"></circle>
+                <path d="M28.25,34.5 C28.6642136,34.5 29,34.8357864 29,35.25 C29,35.30706 28.993628,35.3626318 28.9815566,35.4160425 C28.9939438,35.4562752 29,35.5012832 29,35.55 C29,37.2068542 27.6568542,38.55 26,38.55 C24.3431458,38.55 23,37.2068542 23,35.55 C23,35.4965578 23.0052347,35.4474797 23.0154301,35.402428 C23.005463,35.3543908 23,35.3028334 23,35.25 C23,34.8703042 23.2821539,34.556509 23.6482294,34.5068466 L23.75,34.5 L28.25,34.5 Z M26,14 C30.9705627,14 35,18.0294373 35,23 L35,31 C35,32.1045695 34.1045695,33 33,33 L19,33 C17.8954305,33 17,32.1045695 17,31 L17,23 C17,18.0294373 21.0294373,14 26,14 Z" id="形状结合" fill="url(#linearGradient-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

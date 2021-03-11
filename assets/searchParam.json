@@ -1,0 +1,247 @@
+[
+    {
+      "dateFlag": false,
+      "itemList": [
+        {
+          "code": "2",
+          "name": "A级"
+        },
+        {
+          "code": "1",
+          "name": "B级"
+        },
+        {
+          "code": "0",
+          "name": "C级"
+        },
+        {
+          "code": "20",
+          "name": "A级(已过期)"
+        },
+        {
+          "code": "-2",
+          "name": "A级(已退费)"
+        }
+      ],
+      "multiFlag": false,
+      "paramCode": "customerLevel",
+      "paramName": "客户级别",
+      "dateSelectorType": 1,
+      "defaultVal": ""
+    },
+    {
+      "dateFlag": false,
+      "itemList": [
+        {
+          "code": "1",
+          "name": "个人自带"
+        },
+        {
+          "code": "2",
+          "name": "线下活动"
+        },
+        {
+          "code": "3",
+          "name": "自然到访"
+        },
+        {
+          "code": "4",
+          "name": "罗沈民提供名单"
+        },
+        {
+          "code": "5",
+          "name": "大家亲CRM系统"
+        },
+        {
+          "code": "6",
+          "name": "大家亲同城相亲圈"
+        }
+      ],
+      "multiFlag": false,
+      "paramCode": "from",
+      "paramName": "来源渠道",
+      "dateSelectorType": 1,
+      "defaultVal": ""
+    },
+    {
+      "dateFlag": false,
+      "itemList": [
+        {
+          "code": "1",
+          "name": "高中及以下"
+        },
+        {
+          "code": "2",
+          "name": "大专"
+        },
+        {
+          "code": "3",
+          "name": "本科"
+        },
+        {
+          "code": "4",
+          "name": "硕士"
+        },
+        {
+          "code": "5",
+          "name": "博士及以上"
+        },
+        {
+          "code": "6",
+          "name": "国外留学"
+        },
+        {
+          "code": "7",
+          "name": "其他"
+        }
+      ],
+      "multiFlag": false,
+      "paramCode": "graduate",
+      "paramName": "客户学历",
+      "dateSelectorType": 1,
+      "defaultVal": ""
+    },
+    {
+      "dateFlag": false,
+      "itemList": [
+        {
+          "code": "1",
+          "name": "5万及以下"
+        },
+        {
+          "code": "2",
+          "name": "5-10万"
+        },
+        {
+          "code": "3",
+          "name": "10-15万"
+        },
+        {
+          "code": "4",
+          "name": "15-20万"
+        },
+        {
+          "code": "5",
+          "name": "20-30万"
+        },
+        {
+          "code": "6",
+          "name": "30-50万"
+        },
+        {
+          "code": "7",
+          "name": "50-70万"
+        },
+        {
+          "code": "8",
+          "name": "70-100万"
+        },
+        {
+          "code": "9",
+          "name": "100万以上"
+        }
+
+
+      ],
+      "multiFlag": false,
+      "paramCode": "income",
+      "paramName": "客户收入",
+      "dateSelectorType": 1,
+      "defaultVal": ""
+    },
+  {
+    "dateFlag": false,
+    "itemList": [
+      {
+        "code": "1",
+        "name": "无房"
+      },
+      {
+        "code": "2",
+        "name": "1套"
+      },
+      {
+        "code": "3",
+        "name": "2套"
+      },
+      {
+        "code": "4",
+        "name": "3套及以上"
+      },
+      {
+        "code": "5",
+        "name": "其他"
+      }
+    ],
+    "multiFlag": false,
+    "paramCode": "house",
+    "paramName": "客户房产",
+    "dateSelectorType": 1,
+    "defaultVal": ""
+  },
+    {
+    "dateFlag": false,
+    "itemList": [
+      {
+        "code": "1",
+        "name": "未婚"
+      },
+      {
+        "code": "2",
+        "name": "离异带孩"
+      },
+      {
+        "code": "3",
+        "name": "离异单身"
+      },
+      {
+        "code": "4",
+        "name": "单身未育"
+      },
+      {
+        "code": "5",
+        "name": "离异未育"
+      },
+      {
+        "code": "6",
+        "name": "丧偶"
+      }
+    ],
+    "multiFlag": false,
+    "paramCode": "appointment",
+    "paramName": "客户婚姻状态",
+    "dateSelectorType": 1,
+    "defaultVal": ""
+  }
+  ,
+    {
+      "dateFlag": false,
+      "itemList": [
+        {
+          "code": "0",
+          "name": "16岁"
+        },
+        {
+          "code": "1",
+          "name": "17岁"
+        },
+        {
+          "code": "2",
+          "name": "18岁"
+        },
+        {
+          "code": "3",
+          "name": "19岁"
+        },
+        {
+          "code": "4",
+          "name": "20岁"
+        }
+      ],
+      "multiFlag": false,
+      "paramCode": "age",
+      "paramName": "年龄",
+      "dateSelectorType": 2,
+      "defaultVal": ""
+    }
+  ]

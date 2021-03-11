@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>底部按钮</title>
+    <desc>Created with Sketch.</desc>
+    <g id="个人" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="他人-一已关注动态" transform="translate(-36.000000, -749.000000)" fill="#FFFFFF">
+            <g id="编组-39" transform="translate(0.000000, 637.000000)">
+                <g id="编组-15" transform="translate(20.000000, 95.000000)">
+                    <g id="编组-19" transform="translate(16.000000, 14.000000)">
+                        <g id="编组-20">
+                            <g id="编组-11">
+                                <g id="icon-关注" transform="translate(0.000000, 2.000000)">
+                                    <path d="M10.3571429,1.20710678 C10.9883254,1.20710678 11.5,1.71878135 11.5,2.34996392 L11.5,12.0642496 L11.4977587,12.1349454 C11.4992455,12.1588082 11.5,12.1828694 11.5,12.2071068 C11.5,12.8382894 10.9883254,13.3499639 10.3571429,13.3499639 L5.64285714,13.3499639 C5.01167457,13.3499639 4.5,12.8382894 4.5,12.2071068 C4.5,11.5759242 5.01167457,11.0642496 5.64285714,11.0642496 L9.214,11.0641068 L9.21428571,2.34996392 C9.21428571,1.71878135 9.72596029,1.20710678 10.3571429,1.20710678 Z" id="形状结合" transform="translate(8.000000, 7.278535) rotate(-315.000000) translate(-8.000000, -7.278535) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

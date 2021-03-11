@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="22px" viewBox="0 0 32 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>翅膀-银@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="3.44223228%" y1="13.2277597%" x2="38.0732983%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFE8E8" offset="0%"></stop>
+            <stop stop-color="#FFECED" offset="100%"></stop>
+        </linearGradient>
+        <path d="M21.0119336,18.6444832 C18.5630908,15.2579381 16.0748026,12.8560798 13.5470692,11.4389082 C11.221713,10.1351993 8.05789457,7.55536378 4.05561384,3.69940169 C3.59182054,3.25256412 2.92811545,3.70696676 3.10466012,4.35788763 C4.11568397,8.08553654 5.73265255,10.7457355 7.95556587,12.3384846 C10.5666436,14.209359 14.6218471,16.9901845 20.1211762,20.6809611 L21.0325629,19.1995034 C21.138567,19.0273511 21.1303985,18.8083104 21.0119336,18.6444832 Z" id="path-2"></path>
+        <linearGradient x1="3.44223228%" y1="44.2630355%" x2="45.6849796%" y2="53.0780687%" id="linearGradient-4">
+            <stop stop-color="#E6E6E6" offset="0%"></stop>
+            <stop stop-color="#C9B1B3" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-19.1%" y="-31.4%" width="138.3%" height="162.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="0.6" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="3.44223228%" y1="12.7926133%" x2="38.0732983%" y2="50%" id="linearGradient-6">
+            <stop stop-color="#FFEFEF" offset="0%"></stop>
+            <stop stop-color="#FFECED" offset="100%"></stop>
+        </linearGradient>
+        <path d="M22.1711772,18.941994 C19.6594875,15.4119067 17.1062308,12.9194702 14.5114072,11.4646846 C12.1491033,10.140261 8.9214808,7.49883572 4.82853955,3.54040886 C4.42567439,3.15078384 3.8533907,3.56209803 4.00393414,4.13909384 C5.01001975,7.99517167 6.64867634,10.736894 8.91990389,12.3642609 C11.5309816,14.2351353 15.5861851,17.0159608 21.0855142,20.7067375 L22.1711772,18.941994 Z" id="path-7"></path>
+        <filter x="-19.1%" y="-31.4%" width="138.3%" height="162.8%" filterUnits="objectBoundingBox" id="filter-9">
+            <feGaussianBlur stdDeviation="0.6" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="3.44223228%" y1="33.0839735%" x2="38.0732983%" y2="50%" id="linearGradient-10">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFECED" offset="100%"></stop>
+        </linearGradient>
+        <path d="M24.1604269,13.8268119 C18.7062754,11.7892729 14.6817879,10.0431105 12.0869642,8.5883249 C9.64790673,7.22086942 5.94170128,4.60939285 0.96834788,0.753895188 C0.650733336,0.507670551 0.291875295,0.81137229 0.44358474,1.20076215 C2.0066954,5.21276976 3.9782891,8.07145301 6.35836584,9.7768119 C8.96944358,11.6476863 14.9034639,13.6929621 24.1604269,15.9126393 L24.1604269,13.8268119 Z" id="path-11"></path>
+        <linearGradient x1="3.44223228%" y1="35.4842191%" x2="45.6849796%" y2="57.7881904%" id="linearGradient-13">
+            <stop stop-color="#E6E6E6" offset="0%"></stop>
+            <stop stop-color="#C9B1B3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="翅膀-银" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(1.000000, -4.000000)">
+            <g>
+                <g id="路径-9" transform="translate(17.511122, 17.666722) rotate(-30.000000) translate(-17.511122, -17.666722) translate(5.011122, 5.166722)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="蒙版" fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(12.141169, 12.100757) rotate(-30.000000) translate(-12.141169, -12.100757) " xlink:href="#path-2"></use>
+                    <path d="M1,10.5056005 C2.70973323,11.3950242 4.60646026,12.187195 6.6901811,12.8821127 C8.77390194,13.5770305 12.5838085,13.8515264 18.1199007,13.7056005 L11.6451911,16.9056005 L1.73312902,14.7056005 L1,10.5056005 Z" fill="url(#linearGradient-4)" fill-rule="nonzero" opacity="0.581821987" mask="url(#mask-3)"></path>
+                    <path d="M3.4,9.10560046 C3.8848572,10.2013739 4.46955217,11.104736 5.1540849,11.8156867 C5.83861763,12.5266374 7.50733921,13.5327698 10.1602496,14.8340838 L12.8032834,14.5257729 L9.20262561,9.90180265 L3.4,9.10560046 Z" id="路径-2" fill="#864B73" fill-rule="nonzero" opacity="0.32014974" filter="url(#filter-5)" mask="url(#mask-3)"></path>
+                </g>
+                <g id="路径-9" transform="translate(14.800980, 17.051010) rotate(-7.000000) translate(-14.800980, -17.051010) translate(1.800980, 4.551010)">
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <use id="蒙版" fill="url(#linearGradient-6)" fill-rule="nonzero" transform="translate(13.075238, 12.047099) rotate(-30.000000) translate(-13.075238, -12.047099) " xlink:href="#path-7"></use>
+                    <path d="M2,10.5056005 C3.70973323,11.3950242 5.60646026,12.187195 7.6901811,12.8821127 C9.77390194,13.5770305 13.5838085,13.8515264 19.1199007,13.7056005 L12.6451911,16.9056005 L2.73312902,14.7056005 L2,10.5056005 Z" fill="url(#linearGradient-4)" fill-rule="nonzero" opacity="0.581821987" mask="url(#mask-8)"></path>
+                    <path d="M4.4,9.10560046 C4.8848572,10.2013739 5.46955217,11.104736 6.1540849,11.8156867 C6.83861763,12.5266374 8.50733921,13.5327698 11.1602496,14.8340838 L13.8032834,14.5257729 L10.2026256,9.90180265 L4.4,9.10560046 Z" id="路径-2" fill="#BC81B4" fill-rule="nonzero" opacity="0.190220424" filter="url(#filter-9)" mask="url(#mask-8)"></path>
+                </g>
+                <g id="路径-8" transform="translate(2.300000, 5.400000)">
+                    <mask id="mask-12" fill="white">
+                        <use xlink:href="#path-11"></use>
+                    </mask>
+                    <use id="蒙版" fill="url(#linearGradient-10)" fill-rule="nonzero" xlink:href="#path-11"></use>
+                    <path d="M0.776502661,2.31269098 C2.65908424,5.06327592 4.55428634,7.09519942 6.46210896,8.40846148 C8.36993158,9.72172355 13.1305608,11.6476576 20.7439966,14.1862637 L8.4403446,12.2241105 L0.776502661,4.71476407 L0.776502661,2.31269098 Z" fill="url(#linearGradient-13)" fill-rule="nonzero" opacity="0.581821987" mask="url(#mask-12)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

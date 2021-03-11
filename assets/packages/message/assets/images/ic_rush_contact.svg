@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>消息备份</title>
+    <desc>Created with Sketch.</desc>
+    <g id="消息" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-271.000000, -54.000000)" fill-rule="nonzero" id="编组-3">
+            <g>
+                <g id="标题" transform="translate(0.000000, 44.000000)">
+                    <g id="icon-联系人" transform="translate(271.000000, 10.000000)">
+                        <circle id="椭圆形" stroke="#2E2E2E" stroke-width="2" cx="9.9" cy="8" r="4.5"></circle>
+                        <path d="M17.3999997,21.25 C17.5299372,20.6970082 17.3999997,20.5926386 17.3999997,20 C17.3999997,15.8578644 14.0421353,12.5 9.89999965,12.5 C5.75786403,12.5 2.39999965,15.8578644 2.39999965,20 C2.39999965,20.6017206 2.26616819,20.6892697 2.39999965,21.25 L17.3999997,21.25 Z" id="路径" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <rect id="矩形" fill="#2E2E2E" x="16.4" y="5.5" width="7" height="2" rx="1"></rect>
+                        <rect id="矩形备份" fill="#2E2E2E" x="17.4" y="9.5" width="6" height="2" rx="1"></rect>
+                        <rect id="矩形备份-2" fill="#2E2E2E" x="18.4" y="13.5" width="5" height="2" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

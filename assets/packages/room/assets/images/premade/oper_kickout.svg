@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>编组 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="35.9802782%" y1="100%" x2="73.9257995%" y2="22.3708579%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFEBB6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="65.958895%" y1="36.4091931%" x2="40.2155342%" y2="78.9811067%" id="linearGradient-2">
+            <stop stop-color="#FFE7A8" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="房间-弹窗1" transform="translate(-117.000000, -633.000000)" fill-rule="nonzero">
+            <g id="弹窗" transform="translate(0.000000, 343.000000)">
+                <g id="踢出房间" transform="translate(117.000000, 290.000000)">
+                    <circle id="椭圆形备份-10" fill="#FFC120" cx="23" cy="23" r="23"></circle>
+                    <path d="M21,14 C23.209139,14 25,15.790861 25,18 C25,19.4019034 24.2788062,20.635363 23.1871896,21.3496077 C25.9823338,22.267337 28,24.8980429 28,28 C28,31.8659932 14,31.8659932 14,28 C14,24.8980429 16.0176662,22.267337 18.8122016,21.3486793 C17.7211938,20.635363 17,19.4019034 17,18 C17,15.790861 18.790861,14 21,14 Z" id="形状结合" fill="url(#linearGradient-1)"></path>
+                    <path d="M28.0976487,23.0051797 C27.5094009,23.1068135 27.061957,23.6195934 27.061957,24.2368793 L27.061957,26.1997475 L25.0456032,26.1997475 C24.549761,26.1997475 24.1008603,26.4007272 23.77592,26.7256675 C23.4509797,27.0506077 23.25,27.4995085 23.25,27.9953506 C23.25,28.4911928 23.4509797,28.9400936 23.77592,29.2650338 C24.1025327,29.5916466 24.5543853,29.7930194 25.0532632,29.7909378 L33.0601454,29.6462578 C33.4926565,29.4061034 33.7140365,28.9860322 33.7212746,28.5623032 C33.7269262,28.2314507 33.6020228,27.8983682 33.345131,27.6469606 L28.0976487,23.0051797 Z" id="路径-21" stroke="#FFC120" stroke-width="1.5" fill="url(#linearGradient-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>添加标签</title>
+    <desc>Created with Sketch.</desc>
+    <g id="个人" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.4">
+        <g id="个人-资料-无语音" transform="translate(-46.000000, -350.000000)" fill="#202020" fill-rule="nonzero">
+            <g id="添加标签" transform="translate(20.000000, 338.000000)">
+                <g id="编组-5" transform="translate(26.000000, 11.000000)">
+                    <g id="加号" transform="translate(0.000000, 1.000000)">
+                        <path d="M6,0 C6.55228475,-1.01453063e-16 7,0.44771525 7,1 L7,5 L11,5 C11.5522847,5 12,5.44771525 12,6 C12,6.55228475 11.5522847,7 11,7 L7,7 L7,11 C7,11.5522847 6.55228475,12 6,12 C5.44771525,12 5,11.5522847 5,11 L5,7 L1,7 C0.44771525,7 6.76353751e-17,6.55228475 0,6 C-6.76353751e-17,5.44771525 0.44771525,5 1,5 L5,5 L5,1 C5,0.44771525 5.44771525,1.01453063e-16 6,0 Z" id="形状结合"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

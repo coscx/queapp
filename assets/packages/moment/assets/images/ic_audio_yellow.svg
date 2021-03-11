@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>2备份 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="37.5569309%" y1="116.745727%" x2="81.2533356%" y2="-8.49910089%" id="linearGradient-1">
+            <stop stop-color="#FFC120" offset="0%"></stop>
+            <stop stop-color="#FFE82D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="消息-互动消息" transform="translate(-295.000000, -516.000000)">
+            <g id="2备份-2" transform="translate(16.000000, 516.000000)">
+                <g id="语音" transform="translate(279.000000, 0.000000)">
+                    <rect id="pic" fill="url(#linearGradient-1)" x="0" y="0" width="64" height="64" rx="4"></rect>
+                    <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" x="30" y="10" width="4" height="30" rx="2"></rect>
+                    <rect id="矩形备份-2" fill-opacity="0.8" fill="#FFFFFF" fill-rule="nonzero" x="22" y="15" width="4" height="20" rx="2"></rect>
+                    <rect id="矩形备份-4" fill-opacity="0.8" fill="#FFFFFF" fill-rule="nonzero" x="38" y="15" width="4" height="20" rx="2"></rect>
+                    <rect id="矩形备份-3" fill-opacity="0.4" fill="#FFFFFF" fill-rule="nonzero" x="14" y="19" width="4" height="12" rx="2"></rect>
+                    <rect id="矩形备份-5" fill-opacity="0.4" fill="#FFFFFF" fill-rule="nonzero" x="46" y="19" width="4" height="12" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

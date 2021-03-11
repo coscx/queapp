@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>矩形</title>
+    <g id="游戏圈" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="圈子-短" transform="translate(-240.000000, -259.000000)" stroke="#202020" stroke-width="1.5">
+            <g id="编组-5备份" transform="translate(20.000000, 244.000000)">
+                <g id="圈子活动sub" transform="translate(12.000000, 12.000000)">
+                    <g id="编组-14">
+                        <g id="更多" transform="translate(208.000000, 3.000000)">
+                            <g id="编组-4">
+                                <g id="编组-3">
+                                    <polyline id="路径" points="6 4 9.98395958 8 6 12.0119098"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>标题栏</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人--资料1" transform="translate(-335.000000, -59.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="标题栏" transform="translate(0.000000, 44.000000)">
+                <g id="编组-5" transform="translate(335.000000, 15.000000)">
+                    <path d="M10,15 C10.5522847,15 11,15.4477153 11,16 C11,16.5522847 10.5522847,17 10,17 L2,17 C1.44771525,17 1,16.5522847 1,16 C1,15.4477153 1.44771525,15 2,15 L10,15 Z M14,9 C14.5522847,9 15,9.44771525 15,10 C15,10.5522847 14.5522847,11 14,11 L2,11 C1.44771525,11 1,10.5522847 1,10 C1,9.44771525 1.44771525,9 2,9 L14,9 Z M18,3 C18.5522847,3 19,3.44771525 19,4 C19,4.55228475 18.5522847,5 18,5 L2,5 C1.44771525,5 1,4.55228475 1,4 C1,3.44771525 1.44771525,3 2,3 L18,3 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

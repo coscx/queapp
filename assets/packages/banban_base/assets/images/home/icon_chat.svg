@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_sayhi</title>
+    <g id="ic_sayhi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1" transform="translate(1.500000, 1.500000)">
+            <path d="M10.331483,0.9 C15.5403473,0.9 19.762966,5.1980664 19.762966,10.5 C19.762966,12.1593028 19.3493812,13.7202817 18.6214164,15.0819594 L19.9294814,17.5930984 C20.0568659,17.8376946 20.1233791,18.1094058 20.1233791,18.3851849 C20.1233791,19.3322511 19.3556302,20.1 18.408564,20.1 L18.408564,20.1 L9.82257806,20.1 L9.84226431,20.0873078 C4.86077415,19.8282156 0.9,15.6349165 0.9,10.5 C0.9,5.1980664 5.12261878,0.9 10.331483,0.9 Z" id="形状结合" stroke="#CBCBCB" stroke-width="1.8" stroke-linejoin="round"></path>
+            <circle id="椭圆形" fill="#CBCBCB" cx="6.3" cy="9" r="1.8"></circle>
+            <circle id="椭圆形备份-3" fill="#CBCBCB" cx="11.7" cy="9" r="1.8"></circle>
+        </g>
+    </g>
+</svg>

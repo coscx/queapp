@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_profile_question</title>
+    <g id="ic_profile_question" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M20.6914063,8.91953125 L15.6914063,8.91953125 C14.034552,8.91953125 12.6914063,7.5763855 12.6914063,5.91953125 L12.6914063,2.04074873 L12.6914063,2.04074873 C14.8631033,3.54213321 16.4092327,4.68859696 17.3297945,5.48013999 C18.2503562,6.27168302 19.3708935,7.41814677 20.6914063,8.91953125 Z" id="路径" fill="#FCD415" fill-rule="nonzero"></path>
+        <path d="M15.1228229,3 L20,8.00391924 L20,18.0905273 C20,18.9016985 19.6482259,19.6424454 19.0652177,20.1770671 C18.5149742,20.6816434 17.7568656,21 16.9177086,21 L16.9177086,21 L7.08229136,21 C6.24313443,21 5.4850258,20.6816434 4.9347823,20.1770671 C4.35177414,19.6424454 4,18.9016985 4,18.0905273 L4,18.0905273 L4,5.9094727 C4,5.09830154 4.35177414,4.35755465 4.9347823,3.82293295 C5.4850258,3.31835661 6.24313443,3 7.08229136,3 L7.08229136,3 L15.1228229,3 Z" id="形状" stroke="#202020" stroke-width="2" stroke-linejoin="round"></path>
+        <line x1="9" y1="12.5" x2="15" y2="12.5" id="路径-12" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="9" y1="16.5" x2="13" y2="16.5" id="路径-12" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+    </g>
+</svg>

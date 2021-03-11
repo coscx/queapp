@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_tabbar_home_default</title>
+    <g id="ic_tabbar_home_default" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-16备份-5" transform="translate(3.000000, 3.000000)">
+            <g id="编组-16备份">
+                <rect id="矩形" x="0" y="0" width="34" height="34"></rect>
+                <g id="编组-17" opacity="0.400000006" transform="translate(6.000000, 5.000000)" stroke="#313131" stroke-width="3">
+                    <path d="M0,13.4065489 L0,20.9856598 C2.705415e-16,23.1947988 1.790861,24.9856598 4,24.9856598 L18,24.9856598 C20.209139,24.9856598 22,23.1947988 22,20.9856598 L22,13.4065489 C22,12.3962354 21.6176843,11.4233461 20.9298575,10.6833274 L13.9298575,3.15217279 C12.4258637,1.5340572 9.89489409,1.44154313 8.2767785,2.94553683 C8.20540598,3.01187562 8.13648134,3.08080026 8.07014255,3.15217279 L1.07014255,10.6833274 C0.382315673,11.4233461 -1.23727722e-16,12.3962354 0,13.4065489 Z" id="路径-3"></path>
+                    <path d="M9.08236826,19.2472962 C12.7496361,19.0988035 15.0874475,17.3449247 16.0958023,13.9856598" id="路径-5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

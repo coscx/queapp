@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_profile_question备份</title>
+    <defs>
+        <circle id="path-1" cx="8" cy="8" r="8"></circle>
+    </defs>
+    <g id="ic_profile_question备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="椭圆形-2" transform="translate(4.000000, 4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <circle stroke="#202020" stroke-width="2" cx="8" cy="8" r="9"></circle>
+            <circle id="椭圆形" fill="#FCD415" mask="url(#mask-2)" cx="14" cy="15" r="6"></circle>
+        </g>
+        <polyline id="路径-108" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="9.00193787 8.00247192 7 10.0025288 14 10.0025288"></polyline>
+        <polyline id="路径-108" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(13.500000, 15.000000) scale(-1, -1) translate(-13.500000, -15.000000) " points="11.9981145 14 10 16 17 16"></polyline>
+    </g>
+</svg>

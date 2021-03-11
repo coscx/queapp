@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>list 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="6.07986898%" y1="89.3299885%" x2="94.451393%" y2="29.3685816%" id="linearGradient-1">
+            <stop stop-color="#AC49FF" offset="0%"></stop>
+            <stop stop-color="#EC78FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设置-设置备份" transform="translate(-20.000000, -508.000000)" fill="url(#linearGradient-1)">
+            <g id="list-3" transform="translate(20.000000, 508.000000)">
+                <g id="分享">
+                    <path d="M9.76706601,4.30500652 L9.76706601,1.64040776 C10.0094323,0.525794816 10.9328982,1.20483693 10.9328982,1.20483693 L17.3472788,6.67854835 C18.7575556,7.64661826 17.443409,8.37515144 17.443409,8.37515144 L11.127262,13.8013019 C9.86322125,14.7219099 9.76706601,13.316339 9.76706601,13.316339 L9.76706601,10.8457452 C3.35271046,8.86011435 0.72844876,16.806424 0.72844876,16.806424 C0.486057435,17.24197 0.339821347,16.806424 0.339821347,16.806424 C-2.14015742,4.88699666 9.76706601,4.30500652 9.76706601,4.30500652 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

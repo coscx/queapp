@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_videofq</title>
+    <g id="ic_videofq" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="icon/聊天_视频-1" stroke="#ADADAD" stroke-width="3">
+            <g id="image" transform="translate(14.000000, 14.000000) rotate(-270.000000) translate(-14.000000, -14.000000) translate(4.000000, 4.000000)">
+                <rect id="矩形" transform="translate(10.000000, 10.000000) rotate(-90.000000) translate(-10.000000, -10.000000) " x="0" y="0" width="20" height="20" rx="4"></rect>
+                <path d="M10.8944272,6.78885438 L13.2763932,11.5527864 C13.5233825,12.0467649 13.3231581,12.6474379 12.8291796,12.8944272 C12.6903242,12.9638549 12.5372111,13 12.381966,13 L7.61803399,13 C7.06574924,13 6.61803399,12.5522847 6.61803399,12 C6.61803399,11.8447549 6.65417908,11.6916418 6.7236068,11.5527864 L9.10557281,6.78885438 C9.35256206,6.29487588 9.9532351,6.09465154 10.4472136,6.34164079 C10.640741,6.43840449 10.7976635,6.59532698 10.8944272,6.78885438 Z" id="三角形" transform="translate(10.000000, 9.000000) rotate(-360.000000) translate(-10.000000, -9.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

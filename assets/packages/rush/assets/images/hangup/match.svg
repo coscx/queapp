@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon-找队友</title>
+    <desc>Created with Sketch.</desc>
+    <g id="挂起功能迭代" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="匹配弹窗方案2" transform="translate(-243.000000, -371.000000)" stroke="#202020">
+            <g id="编组-19" transform="translate(38.000000, 70.075136)">
+                <g id="编组-11" transform="translate(19.000000, 299.924864)">
+                    <g id="icon-找队友" transform="translate(186.000000, 1.000000)">
+                        <g>
+                            <path d="M2.74680873,3.89483861 C1.86120633,5.02650534 1.33333333,6.451607 1.33333333,8 C1.33333333,11.6818983 4.31810167,14.6666667 8,14.6666667 C11.6818983,14.6666667 14.6666667,11.6818983 14.6666667,8 C14.6666667,4.31810167 11.6818983,1.33333333 8,1.33333333 C7.40462452,1.33333333 6.82747758,1.41137903 6.27823183,1.55779777" id="路径" stroke-width="1.5" fill-rule="nonzero"></path>
+                            <path d="M2.80753485,3.82617533 C2.96756196,3.64818083 3.09664548,3.5344794 3.19478542,3.48507104 C3.29292535,3.43566268 3.38968722,3.43566268 3.48507104,3.48507104" id="路径-11" stroke-width="1.5" fill-rule="nonzero"></path>
+                            <line x1="3.4261541" y1="3.63709505" x2="7.33515827" y2="7.35838308" id="路径-2" stroke-width="2"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

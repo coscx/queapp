@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>ic_list_more</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_list_more" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#242528" id="more">
+            <path d="M11,10.5 C11.8284271,10.5 12.5,11.1715729 12.5,12 C12.5,12.8284271 11.8284271,13.5 11,13.5 C10.1715729,13.5 9.5,12.8284271 9.5,12 C9.5,11.1715729 10.1715729,10.5 11,10.5 Z M18,10.5 C18.8284271,10.5 19.5,11.1715729 19.5,12 C19.5,12.8284271 18.8284271,13.5 18,13.5 C17.1715729,13.5 16.5,12.8284271 16.5,12 C16.5,11.1715729 17.1715729,10.5 18,10.5 Z M25,10.5 C25.8284271,10.5 26.5,11.1715729 26.5,12 C26.5,12.8284271 25.8284271,13.5 25,13.5 C24.1715729,13.5 23.5,12.8284271 23.5,12 C23.5,11.1715729 24.1715729,10.5 25,10.5 Z" transform="translate(18.000000, 12.000000) rotate(-270.000000) translate(-18.000000, -12.000000) "></path>
+        </g>
+    </g>
+</svg>

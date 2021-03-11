@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>弹窗</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="33.6843092%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.601125437" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="房间-弹窗1" transform="translate(-20.000000, -555.000000)">
+            <g id="弹窗" transform="translate(0.000000, 343.000000)">
+                <g id="关注" transform="translate(20.000000, 212.000000)">
+                    <circle id="椭圆形" fill="#FFC120" fill-rule="nonzero" cx="23" cy="23" r="23"></circle>
+                    <path d="M23,14 C27.9705627,14 32,18.0294373 32,23 C32,27.9705627 27.9705627,32 23,32 C18.0294373,32 14,27.9705627 14,23 C14,18.0294373 18.0294373,14 23,14 Z M23,19 C22.4477153,19 22,19.4477153 22,20 L22,20 L22,22 L20,22 C19.4871642,22 19.0644928,22.3860402 19.0067277,22.8833789 L19,23 C19,23.5522847 19.4477153,24 20,24 L20,24 L22,24 L22,26 C22,26.5128358 22.3860402,26.9355072 22.8833789,26.9932723 L23,27 C23.5522847,27 24,26.5522847 24,26 L24,26 L24,24 L26,24 C26.5128358,24 26.9355072,23.6139598 26.9932723,23.1166211 L27,23 C27,22.4477153 26.5522847,22 26,22 L26,22 L24,22 L24,20 C24,19.4871642 23.6139598,19.0644928 23.1166211,19.0067277 Z" id="形状结合" fill="url(#linearGradient-1)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

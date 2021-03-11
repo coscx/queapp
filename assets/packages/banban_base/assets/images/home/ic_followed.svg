@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_love_selected</title>
+    <defs>
+        <linearGradient x1="0%" y1="8.67768595%" x2="100%" y2="77.5446165%" id="linearGradient-1">
+            <stop stop-color="#FF8D8D" offset="0%"></stop>
+            <stop stop-color="#FF6CD2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ic_love_selected" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9.97450605,20.6457441 L3.10125476,14.3539906 L3.10125476,14.3539906 C0.48392315,11.724786 0.286858397,7.54658113 2.64971607,4.84195157 C3.91712977,3.39348928 5.66573211,2.56278511 7.57705109,2.50334898 C9.17448165,2.45532528 10.7466166,2.97240238 12.0001364,3.95181127 C13.2515649,2.97240238 14.8167673,2.45297987 16.4233649,2.50334898 C18.3324208,2.56513052 20.0832863,3.39572028 21.3483509,4.84195157 C23.713529,7.54658113 23.5163496,11.724786 20.8991613,14.3539906 L14.0257816,20.6457603 C12.8792631,21.695263 11.1210162,21.695256 9.97450605,20.6457441 Z" id="路径备份" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

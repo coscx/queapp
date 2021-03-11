@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="0" y="0" width="80" height="80" rx="40"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="56.0407866%" id="linearGradient-3">
+            <stop stop-color="#A4E0FF" offset="0%"></stop>
+            <stop stop-color="#D0F0FF" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="40.8450335%" cy="23.6934304%" fx="40.8450335%" fy="23.6934304%" r="77.9922738%" id="radialGradient-4">
+            <stop stop-color="#C3ECFF" offset="0%"></stop>
+            <stop stop-color="#A4E0FF" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="2020" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人_邀约" transform="translate(-16.000000, -68.000000)">
+            <g id="top">
+                <g id="avatar" transform="translate(16.000000, 68.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use fill="#EAF8FF" xlink:href="#path-1"></use>
+                    <circle id="1" fill="url(#linearGradient-3)" mask="url(#mask-2)" cx="40" cy="78" r="22"></circle>
+                    <circle id="2" fill="url(#radialGradient-4)" mask="url(#mask-2)" cx="40" cy="40" r="20"></circle>
+                    <path d="M40,51.5212049 C42.4297723,51.5212049 44.5222116,50.0769107 45.46564,48" id="3" stroke="#DEF3FD" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

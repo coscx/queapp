@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>放逐</title>
+    <defs>
+        <path d="M7,0 C10.8659932,0 14,3.13400675 14,7 C14,10.8659932 10.8659932,14 7,14 C3.13400675,14 0,10.8659932 0,7 C0,3.13400675 3.13400675,0 7,0 Z M7,3 C4.790861,3 3,4.790861 3,7 C3,9.209139 4.790861,11 7,11 C9.209139,11 11,9.209139 11,7 C11,4.790861 9.209139,3 7,3 Z" id="path-1"></path>
+        <path d="M9.5,9.27443108 C10.3859363,9.41308117 11.0901715,9.73533852 11.6127056,10.2412031 C12.1352398,10.7470677 12.3715359,11.5 12.3215939,12.5" id="path-3"></path>
+        <filter x="-37.9%" y="-64.2%" width="173.2%" height="180.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="-1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="-1" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.664487092   0 0 0 0 0.664487092   0 0 0 0 0.664487092  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="弹窗-复盘展开" transform="translate(-149.000000, -980.000000)">
+            <g id="第一日备份" transform="translate(45.000000, 910.000000)">
+                <g id="放逐" transform="translate(104.000000, 70.000000)">
+                    <rect id="矩形" stroke="#545454" fill="#D5D5D5" fill-rule="nonzero" transform="translate(5.500000, 5.000000) rotate(-40.000000) translate(-5.500000, -5.000000) " x="3.5" y="2.5" width="4" height="5" rx="1"></rect>
+                    <rect id="矩形备份-15" stroke="#545454" fill="#D5D5D5" fill-rule="nonzero" transform="translate(3.000000, 2.500000) rotate(-40.000000) translate(-3.000000, -2.500000) " x="1.5" y="0.5" width="3" height="4" rx="1"></rect>
+                    <g id="椭圆形" transform="translate(4.000000, 4.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <path stroke="#545454" d="M7,-0.5 C9.07106781,-0.5 10.9460678,0.339466094 12.3033009,1.69669914 C13.6605339,3.05393219 14.5,4.92893219 14.5,7 C14.5,9.07106781 13.6605339,10.9460678 12.3033009,12.3033009 C10.9460678,13.6605339 9.07106781,14.5 7,14.5 C4.92893219,14.5 3.05393219,13.6605339 1.69669914,12.3033009 C0.339466094,10.9460678 -0.5,9.07106781 -0.5,7 C-0.5,4.92893219 0.339466094,3.05393219 1.69669914,1.69669914 C3.05393219,0.339466094 4.92893219,-0.5 7,-0.5 L7,-0.5 Z M7,3.5 L7,3.5 C6.03350169,3.5 5.15850169,3.89175084 4.52512627,4.52512627 C3.89175084,5.15850169 3.5,6.03350169 3.5,7 C3.5,7.96649831 3.89175084,8.84149831 4.52512627,9.47487373 C5.15850169,10.1082492 6.03350169,10.5 7,10.5 C7.96649831,10.5 8.84149831,10.1082492 9.47487373,9.47487373 C10.1082492,8.84149831 10.5,7.96649831 10.5,7 C10.5,6.03350169 10.1082492,5.15850169 9.47487373,4.52512627 C8.84149831,3.89175084 7.96649831,3.5 7,3.5 Z"></path>
+                        <path d="M7,10.1130322 C9.209139,10.1130322 11,8.32217116 11,6.11303216 C11,3.90389316 9.209139,2.11303216 7,2.11303216 C4.790861,2.11303216 3,3.90389316 3,6.11303216 C3,8.32217116 4.790861,10.1130322 7,10.1130322 Z" fill="#B8B8B8" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        <path d="M4.41511834,1.4905074 C3.47170611,1.9055239 2.71011291,2.55810332 2.13033872,3.44824566 C1.55056454,4.338388 1.22036112,5.22665016 1.13972845,6.11303216" id="路径-20" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        <circle fill="#878787" fill-rule="nonzero" mask="url(#mask-2)" cx="8.75" cy="11.75" r="1"></circle>
+                        <path d="M0.233665279,9.27443108 C1.29322815,11.3002481 3.16951968,12.5421044 5.86253987,13 C8.55556006,13.4578956 11.0913334,12.495573 13.46986,10.1130322 L12.3281292,14.4235795 L1.41308084,15.3518822 L0.233665279,9.27443108 Z" id="路径-3" fill="#B8B8B8" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        <g id="路径-2" fill-rule="nonzero" mask="url(#mask-2)">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                            <use stroke="#545454" stroke-width="1" xlink:href="#path-3"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

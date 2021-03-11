@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_delete_round</title>
+    <g id="ic_delete_round" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_delete_small">
+            <circle id="1" fill-opacity="0.2" fill="#202020" cx="8" cy="8" r="8"></circle>
+            <path d="M8,4 C8.41421356,4 8.75,4.33578644 8.75,4.75 L8.75,7.25 L11.25,7.25 C11.6642136,7.25 12,7.58578644 12,8 C12,8.41421356 11.6642136,8.75 11.25,8.75 L8.75,8.75 L8.75,11.25 C8.75,11.6642136 8.41421356,12 8,12 C7.58578644,12 7.25,11.6642136 7.25,11.25 L7.25,8.75 L4.75,8.75 C4.33578644,8.75 4,8.41421356 4,8 C4,7.58578644 4.33578644,7.25 4.75,7.25 L7.25,7.25 L7.25,4.75 C7.25,4.33578644 7.58578644,4 8,4 Z" id="x" fill="#FFFFFF" fill-rule="nonzero" opacity="0.900000036" transform="translate(8.000000, 8.000000) rotate(-315.000000) translate(-8.000000, -8.000000) "></path>
+        </g>
+    </g>
+</svg>

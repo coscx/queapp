@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_tabbar_discover_default</title>
+    <g id="ic_tabbar_discover_default" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.400000006">
+        <g id="发现" transform="translate(3.000000, 3.000000)">
+            <rect id="矩形" x="0" y="0" width="34" height="34"></rect>
+            <circle id="椭圆形" stroke="#313131" stroke-width="3" fill="#FFFFFF" cx="17" cy="17" r="11"></circle>
+            <path d="M28.1165857,9.11821236 C30.6613497,9.50509152 32.3720836,10.4217555 32.7445346,11.8251461 C33.5945063,15.0279283 27.720841,21.1049104 18.8192024,23.512435 C9.91752237,25.919805 1.73887677,23.6432603 0.888829368,20.4404983 C0.52877729,19.0836971 1.477366,17.4896145 3.35922688,15.9219151 C2.85059106,16.8066308 2.67149716,17.677661 2.88555289,18.4833845 C3.73638551,21.6859426 10.4763014,22.6439917 17.9396118,20.623356 C25.4028629,18.6024992 30.7633159,14.3681732 29.9124947,11.165612 C29.6893255,10.3255968 29.060995,9.64000083 28.1207208,9.12207286 Z" id="形状结合" fill="#313131"></path>
+            <path d="M16,10.8217968 C18.3179196,10.3468329 20.1973741,10.9858684 21.6383633,12.7389034" id="路径-8" stroke="#313131" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

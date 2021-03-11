@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_sayhi备份</title>
+    <g id="ic_sayhi备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M11.831483,2.4 C17.0403473,2.4 21.262966,6.6980664 21.262966,12 C21.262966,13.6593028 20.8493812,15.2202817 20.1214164,16.5819594 L21.4294814,19.0930984 C21.5568659,19.3376946 21.6233791,19.6094058 21.6233791,19.8851849 C21.6233791,20.8322511 20.8556302,21.6 19.908564,21.6 L19.908564,21.6 L11.3225781,21.6 L11.3422643,21.5873078 C6.36077415,21.3282156 2.4,17.1349165 2.4,12 C2.4,6.6980664 6.62261878,2.4 11.831483,2.4 Z" id="形状结合" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"></path>
+        <circle id="椭圆形" fill="#FFFFFF" cx="7.8" cy="10.5" r="1.8"></circle>
+        <circle id="椭圆形备份-3" fill="#FFFFFF" cx="13.2" cy="10.5" r="1.8"></circle>
+    </g>
+</svg>

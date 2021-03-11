@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="100px" viewBox="0 0 84 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>伴伴</title>
+    <defs>
+        <linearGradient x1="18.7454754%" y1="3.04340483%" x2="81.1675251%" y2="97.7122239%" id="linearGradient-1">
+            <stop stop-color="#8FDFFF" offset="0%"></stop>
+            <stop stop-color="#60C8FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="礼物面板" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M72,0 C78.627417,0 84,5.372583 84,12 L84,88 C84,94.627417 78.627417,100 72,100 L12,100 C5.372583,100 0,94.627417 0,88 L0,12 C0,5.372583 5.372583,0 12,0 L72,0 Z M72,1 L12,1 C6.02129842,1 1.15663482,5.76976358 1.0037074,11.7115925 L1,12 L1,88 C1,93.9787016 5.76976358,98.8433652 11.7115925,98.9962926 L12,99 L72,99 C77.9787016,99 82.8433652,94.2302364 82.9962926,88.2884075 L83,88 L83,12 C83,6.02129842 78.2302364,1.15663482 72.2884075,1.0037074 L72,1 Z" id="伴伴" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+    </g>
+</svg>

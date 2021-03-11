@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>打招呼</title>
+    <g id="首页改版" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.800000012">
+        <g id="发现页" transform="translate(-284.000000, -374.000000)">
+            <g id="编组-23" transform="translate(0.000000, 100.000000)">
+                <g id="编组-17" transform="translate(0.000000, 269.000000)">
+                    <g id="编组-21" transform="translate(274.000000, 0.000000)">
+                        <g id="hi" transform="translate(10.000000, 5.000000)">
+                            <path d="M9.43548172,18 L9.45358783,17.9895114 C5.30154675,17.7744675 2,14.2796815 2,10 C2,5.581722 5.51884898,2 9.85956918,2 C14.2002894,2 17.7191384,5.581722 17.7191384,10 C17.7191384,11.3826181 17.3745513,12.6833155 16.7680237,13.8179689 L17.6403041,15.4930984 C17.7676886,15.7376946 17.8342018,16.0094058 17.8342018,16.2851849 C17.8342018,17.2322511 17.0664529,18 16.1193867,18 L16.1193867,18 L9.43548172,18 Z" id="形状结合" stroke="#313131" stroke-width="1.6" stroke-linejoin="round"></path>
+                            <circle id="椭圆形" fill="#313131" cx="6.5" cy="8.75" r="1.5"></circle>
+                            <circle id="椭圆形备份-3" fill="#313131" cx="11" cy="8.75" r="1.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

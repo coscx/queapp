@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title> </title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-定稿" transform="translate(-335.000000, -210.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="375" height="1851"></rect>
+            <g id="列表01" transform="translate(16.000000, 206.000000)" fill="#B3B3B3">
+                <g id="收起按钮" transform="translate(319.000000, 4.000000)">
+                    <g>
+                        <circle id="椭圆形" fill-rule="nonzero" cx="18.5" cy="3.5" r="1.5"></circle>
+                        <circle id="椭圆形备份-2" fill-rule="nonzero" cx="18.5" cy="9.5" r="1.5"></circle>
+                        <circle id="椭圆形备份-3" fill-rule="nonzero" cx="18.5" cy="15.5" r="1.5"></circle>
+                    </g>
+                </g>
+                <g id="收起按钮" transform="translate(319.000000, 4.000000)" fill-rule="nonzero">
+                    <g>
+                        <circle id="椭圆形" cx="18.5" cy="3.5" r="1.5"></circle>
+                        <circle id="椭圆形备份-2" cx="18.5" cy="9.5" r="1.5"></circle>
+                        <circle id="椭圆形备份-3" cx="18.5" cy="15.5" r="1.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

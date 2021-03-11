@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>ic_discover_ranklist</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="21.875%" y1="0%" x2="67.7193597%" y2="81.3746351%" id="linearGradient-1">
+            <stop stop-color="#FFD245" offset="0%"></stop>
+            <stop stop-color="#FF8B69" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.3581919%" y1="0%" x2="73.0851334%" y2="81.3746351%" id="linearGradient-2">
+            <stop stop-color="#FFD245" offset="0%"></stop>
+            <stop stop-color="#FF8B69" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="46.875%" x2="81.5010838%" y2="51.9609147%" id="linearGradient-3">
+            <stop stop-color="#FFD245" offset="0%"></stop>
+            <stop stop-color="#FF8B69" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ic_discover_ranklist" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="#" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="28" height="28"></rect>
+            <g id="2" transform="translate(2.000000, 4.500000)">
+                <path d="M1.69917333,3 L6,3 L6,3 L6,11 L5.03112887,11 C2.72819158,11 0.785644216,9.28515373 0.5,7 L0.210756513,4.6860521 C0.108002774,3.86402219 0.691091318,3.11433692 1.51312123,3.01158318 C1.57483847,3.00386853 1.63697579,3 1.69917333,3 Z" id="l" fill="url(#linearGradient-1)"></path>
+                <path d="M19.6991733,3 L24,3 L24,3 L24,11 L23.0311289,11 C20.7281916,11 18.7856442,9.28515373 18.5,7 L18.2107565,4.6860521 C18.1080028,3.86402219 18.6910913,3.11433692 19.5131212,3.01158318 C19.5748385,3.00386853 19.6369758,3 19.6991733,3 Z" id="r" fill="url(#linearGradient-1)" transform="translate(21.000000, 7.000000) scale(-1, 1) translate(-21.000000, -7.000000) "></path>
+                <path d="M18.5603922,0 C19.6649617,-1.62805013e-15 20.5603922,0.8954305 20.5603922,2 C20.5603922,2.13170397 20.5473828,2.2630859 20.5215535,2.39223227 L18.9646606,10.1766968 C18.4648802,12.675599 16.4554083,14.5506535 14.000151,14.929666 L14,20 L10,20 L9.99984898,14.929666 C7.54459167,14.5506535 5.53511979,12.675599 5.03533936,10.1766968 L3.47844645,2.39223227 C3.26182255,1.30911276 3.96425603,0.25546255 5.04737554,0.0388386486 C5.1765219,0.0130093749 5.30790383,-8.63984793e-16 5.43960781,0 L18.5603922,0 Z" id="inner" fill="url(#linearGradient-2)"></path>
+                <path d="M8,17 L16,17 C17.1045695,17 18,17.8954305 18,19 C18,19.5522847 17.5522847,20 17,20 L7,20 C6.44771525,20 6,19.5522847 6,19 C6,17.8954305 6.8954305,17 8,17 Z" id="base" fill="url(#linearGradient-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

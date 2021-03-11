@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_editinfo</title>
+    <g id="ic_editinfo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g stroke="#313131" stroke-width="1.5">
+            <path d="M16,10 L16,14 C16,15.1045695 15.1045695,16 14,16 L6,16 C4.8954305,16 4,15.1045695 4,14 L4,6 C4,4.8954305 4.8954305,4 6,4 L10,4 L10,4" id="路径" stroke-linejoin="round"></path>
+            <line x1="7.76414654" y1="12.5" x2="16" y2="4" id="路径-2"></line>
+        </g>
+    </g>
+</svg>

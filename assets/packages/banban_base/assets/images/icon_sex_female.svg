@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_female</title>
+    <g id="ic_female" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic">
+            <g transform="translate(6.500000, 6.000000) rotate(-330.000000) translate(-6.500000, -6.000000) translate(3.000000, 1.000000)">
+                <circle id="椭圆形" stroke="#FFFFFF" stroke-width="1.6" cx="2.93333333" cy="2.93333333" r="2.13333333"></circle>
+                <path d="M2.94203147,6.43317466 C3.38385927,6.43317466 3.74203147,6.79134686 3.74203147,7.23317466 L3.74203147,8.83317466 C3.74203147,9.27500246 3.38385927,9.63317466 2.94203147,9.63317466 C2.50020367,9.63317466 2.14203147,9.27500246 2.14203147,8.83317466 L2.14203147,7.23317466 C2.14203147,6.79134686 2.50020367,6.43317466 2.94203147,6.43317466 Z" id="矩形" fill="#FFFFFF"></path>
+                <rect id="矩形" fill="#FFFFFF" x="0.304761905" y="6.28571429" width="5.33333333" height="1.6" rx="0.8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

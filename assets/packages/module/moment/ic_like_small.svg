@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_like_small</title>
+    <defs>
+        <linearGradient x1="0%" y1="8.98896419%" x2="100%" y2="77.3371247%" id="linearGradient-1">
+            <stop stop-color="#FF8D8D" offset="0%"></stop>
+            <stop stop-color="#FF6CD2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="伴伴" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="动态" transform="translate(-197.000000, -535.000000)">
+            <g id="ic_like_small" transform="translate(197.000000, 535.000000)">
+                <g>
+                    <rect id="#" x="0" y="0" width="14" height="14"></rect>
+                    <path d="M7.0000868,13.5680719 C6.67343991,13.5680719 6.36866913,13.4418485 6.13964441,13.2112337 L1.33716212,8.4038094 C-0.328412541,6.73699289 -0.453817384,4.08816865 1.04981932,2.37353557 C1.85635531,1.45526514 2.96910225,0.928630038 4.18539615,0.89094978 C5.20194287,0.860504567 6.20239241,1.18831193 7.0000868,1.80922021 C7.79645039,1.18831193 8.79248825,0.859017665 9.8148686,0.89094978 C11.0297223,0.93011694 12.1439094,1.45667951 12.9489506,2.37353557 C14.4540639,4.08816865 14.3285861,6.73699289 12.6631026,8.4038094 L7.86062034,13.2126481 C7.63017367,13.4418485 7.32538467,13.5680719 7.0000868,13.5680719 Z" id="路径" fill="url(#linearGradient-1)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

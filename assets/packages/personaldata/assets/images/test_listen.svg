@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>icon/40/播放@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="17.3166192%" y1="-1.53495873%" x2="110.444961%" y2="95.6529549%" id="linearGradient-1">
+            <stop stop-color="#79DBFE" offset="0%"></stop>
+            <stop stop-color="#68CAFD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/40/播放" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16.9629736,13.470016 L9.31141486,22.3968345 C8.69000992,23.1218069 8.34844127,24.0451549 8.34844127,25 C8.34844127,27.209139 10.1393023,29 12.3484413,29 L27.6515587,29 C28.6064038,29 29.5297518,28.6584314 30.2547242,28.0370264 C31.9320276,26.5993378 32.1262737,24.0741379 30.6885851,22.3968345 L23.0370264,13.470016 C22.9037276,13.3145008 22.7586807,13.1694538 22.6031655,13.0361551 C20.9258621,11.5984665 18.4006622,11.7927126 16.9629736,13.470016 Z M12.3484413,25 L20,16.0731815 L27.6515587,25 L12.3484413,25 Z" id="三角形" fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(20.000036, 20.536554) rotate(-270.000000) translate(-20.000036, -20.536554) "></path>
+    </g>
+</svg>

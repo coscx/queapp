@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="99px" height="99px" viewBox="0 0 99 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 3</title>
+    <g id="发布器" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="发说说" transform="translate(-20.000000, -173.000000)" fill-rule="nonzero">
+            <g id="编组-3" transform="translate(20.000000, 173.000000)">
+                <rect id="矩形" fill="#F6F7F9" x="0" y="0" width="99" height="99" rx="8"></rect>
+                <path d="M49.5,30 C50.3284271,30 51,30.6715729 51,31.5 L51,48 L67.5,48 C68.3284271,48 69,48.6715729 69,49.5 C69,50.3284271 68.3284271,51 67.5,51 L51,51 L51,67.5 C51,68.3284271 50.3284271,69 49.5,69 C48.6715729,69 48,68.3284271 48,67.5 L48,51 L31.5,51 C30.6715729,51 30,50.3284271 30,49.5 C30,48.6715729 30.6715729,48 31.5,48 L48,48 L48,31.5 C48,30.6715729 48.6715729,30 49.5,30 Z" id="形状结合" fill="#000000" opacity="0.100000001"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>设置-设置</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="34.0389169%" y1="104.638296%" x2="82.5155079%" y2="4.60284588%" id="linearGradient-1">
+            <stop stop-color="#FFBD1E" offset="0%"></stop>
+            <stop stop-color="#FFE82D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设置-设置备份" transform="translate(-20.000000, -679.000000)" fill-rule="nonzero">
+            <g id="list-3" transform="translate(20.000000, 508.000000)">
+                <g id="联系" transform="translate(0.000000, 171.000000)">
+                    <path d="M7,1 L11,1 C14.3137085,1 17,3.6862915 17,7 L17,17 L17,17 L7,17 C3.6862915,17 1,14.3137085 1,11 L1,7 C1,3.6862915 3.6862915,1 7,1 Z" id="矩形" fill="url(#linearGradient-1)"></path>
+                    <path d="M4.28820493,10.0880016 C4.70083625,11.1818576 5.75736365,11.9598757 6.99560691,11.9598757 C8.21833616,11.9598757 9.26387447,11.2012311 9.68719693,10.1289669" id="路径" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

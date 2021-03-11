@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_camera</title>
+    <defs>
+        <linearGradient x1="0%" y1="11.71875%" x2="82.4834475%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#2EFEFD" offset="0%"></stop>
+            <stop stop-color="#2ECEFE" offset="100%"></stop>
+        </linearGradient>
+        <path d="M23.6852427,6 C24.6953015,6 25.6186698,6.570673 26.0703819,7.47409708 L27.333,10 L32,10 C34.209139,10 36,11.790861 36,14 L36,30 C36,32.209139 34.209139,34 32,34 L8,34 C5.790861,34 4,32.209139 4,30 L4,14 C4,11.790861 5.790861,10 8,10 L12.666,10 L13.9296181,7.47409708 C14.3813302,6.570673 15.3046985,6 16.3147573,6 L23.6852427,6 Z M20,14 C15.581722,14 12,17.581722 12,22 C12,26.418278 15.581722,30 20,30 C24.418278,30 28,26.418278 28,22 C28,17.581722 24.418278,14 20,14 Z M20,16.6666667 C22.9455187,16.6666667 25.3333333,19.0544813 25.3333333,22 C25.3333333,24.9455187 22.9455187,27.3333333 20,27.3333333 C17.0544813,27.3333333 14.6666667,24.9455187 14.6666667,22 C14.6666667,19.0544813 17.0544813,16.6666667 20,16.6666667 Z" id="path-2"></path>
+    </defs>
+    <g id="ic_camera" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1">
+            <g>
+                <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

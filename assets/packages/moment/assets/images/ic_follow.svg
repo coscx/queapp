@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic_tag</title>
+    <desc>Created with Sketch.</desc>
+    <g id="朋友圈" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="朋友圈2" transform="translate(-279.000000, -119.000000)">
+            <g id="s3" transform="translate(0.000000, 88.000000)">
+                <g id="btn_small" transform="translate(267.000000, 22.000000)">
+                    <g id="ic_add_thin">
+                        <g transform="translate(9.000000, 6.000000)">
+                            <g id="ic_delete_small" stroke-width="1"></g>
+                            <path d="M8,3 C8.41421356,3 8.75,3.33578644 8.75,3.75 L8.75,7.25 L12.25,7.25 C12.6642136,7.25 13,7.58578644 13,8 C13,8.41421356 12.6642136,8.75 12.25,8.75 L8.75,8.75 L8.75,12.25 C8.75,12.6642136 8.41421356,13 8,13 C7.58578644,13 7.25,12.6642136 7.25,12.25 L7.25,8.75 L3.75,8.75 C3.33578644,8.75 3,8.41421356 3,8 C3,7.58578644 3.33578644,7.25 3.75,7.25 L7.25,7.25 L7.25,3.75 C7.25,3.33578644 7.58578644,3 8,3 Z" id="x" fill="#00BBFF" transform="translate(8.000000, 8.000000) rotate(-360.000000) translate(-8.000000, -8.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

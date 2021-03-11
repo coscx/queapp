@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>list 1</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="弹窗-投票详情" transform="translate(-110.000000, -185.000000)" fill="#ADA0DF" fill-rule="nonzero">
+            <g id="list-1" transform="translate(50.000000, 160.000000)">
+                <g id="编组-2" transform="translate(60.000000, 25.000000)">
+                    <polygon id="三角形" transform="translate(4.500000, 7.500000) rotate(-90.000000) translate(-4.500000, -7.500000) " points="4.5 3 12 12 -3 12"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

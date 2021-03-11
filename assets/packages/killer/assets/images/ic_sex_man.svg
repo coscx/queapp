@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>性别-男@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="8.79907561%" y1="0%" x2="93.9466531%" y2="90.2636412%" id="linearGradient-1">
+            <stop stop-color="#59B3FF" offset="0%"></stop>
+            <stop stop-color="#9093FF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="12" height="12" rx="6"></rect>
+    </defs>
+    <g id="谁是凶手" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="游戏房_准备_邀请" transform="translate(-48.000000, -167.000000)">
+            <g id="性别-男" transform="translate(48.000000, 167.000000)">
+                <g>
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="矩形" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <g id="编组-3" mask="url(#mask-3)">
+                        <g transform="translate(6.758929, 4.520342) rotate(-330.000000) translate(-6.758929, -4.520342) translate(-4.241071, -6.479658)" id="编组">
+                            <g transform="translate(10.837019, 10.909696) rotate(-30.000000) translate(-10.837019, -10.909696) translate(3.337019, 2.909696)">
+                                <g id="编组-2" transform="translate(7.587065, 8.139354) rotate(-150.000000) translate(-7.587065, -8.139354) translate(3.087065, 2.139354)">
+                                    <path d="M4.3656446,1 C3.88239544,1 3.44489544,1.19587542 3.12820773,1.51256313 C2.81152002,1.82925084 2.6156446,2.26675084 2.6156446,2.75 C2.6156446,3.23324916 2.81152002,3.67074916 3.12820773,3.98743687 C3.44489544,4.30412458 3.88239544,4.5 4.3656446,4.5 C4.84889375,4.5 5.28639375,4.30412458 5.60308146,3.98743687 C5.91976917,3.67074916 6.1156446,3.23324916 6.1156446,2.75 C6.1156446,2.26675084 5.91976917,1.82925084 5.60308146,1.51256313 C5.28639375,1.19587542 4.84889375,1 4.3656446,1 Z" id="椭圆形" stroke="#FFFFFF" stroke-width="2"></path>
+                                    <g id="编组-4" transform="translate(4.500000, 7.430510) rotate(-225.000000) translate(-4.500000, -7.430510) translate(1.500000, 4.430510)" fill="#FFFFFF">
+                                        <path d="M2.81790688,0.92121005 L4.40889714,2.51220031 L4.40889714,2.51220031 C4.70179036,2.80509353 4.70179036,3.27996726 4.40889714,3.57286048 L2.81790688,5.16385074 C2.52501366,5.45674396 2.05013993,5.45674396 1.75724671,5.16385074 C1.46435349,4.87095752 1.46435349,4.39608378 1.75724671,4.10319056 L2.8175768,3.04254014 L1.75724671,1.98187022 C1.46435349,1.688977 1.46435349,1.21410327 1.75724671,0.92121005 C2.05013993,0.628316831 2.52501366,0.628316831 2.81790688,0.92121005 Z" id="形状结合" transform="translate(3.083072, 3.042530) rotate(-45.000000) translate(-3.083072, -3.042530) "></path>
+                                        <rect id="矩形" transform="translate(2.098776, 4.091166) rotate(-315.000000) translate(-2.098776, -4.091166) " x="1.34877584" y="2.34116631" width="1.5" height="3.5" rx="0.75"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

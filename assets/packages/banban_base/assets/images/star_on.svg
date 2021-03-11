@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>形状备份 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFD657" offset="0%"></stop>
+            <stop stop-color="#FFAC2C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="形状备份-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M14,23.4491551 L20.7897966,27.7460982 C22.0332292,28.5335858 23.5547981,27.3694737 23.227579,25.8972143 L21.4278738,17.8169068 L27.4323446,12.3729709 C28.5285286,11.3800517 27.9395342,9.4969292 26.4997701,9.37709413 L18.5974285,8.67520302 L15.5052079,1.0399972 C14.9489354,-0.346665735 13.0510646,-0.346665735 12.4947921,1.0399972 L9.40257147,8.65808372 L1.50022991,9.35997484 C0.0604658155,9.47980991 -0.528528587,11.3629324 0.56765544,12.3558516 L6.57212615,17.7997875 L4.77242103,25.880095 C4.44520192,27.3523544 5.96677079,28.5164665 7.21020342,27.728979 L14,23.4491551 L14,23.4491551 Z" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

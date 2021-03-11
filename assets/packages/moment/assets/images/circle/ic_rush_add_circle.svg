@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>形状结合</title>
+    <g id="游戏圈" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="圈子详情页滑动" transform="translate(-313.000000, -63.000000)" fill="#FFFFFF">
+            <g id="编组-2" transform="translate(305.000000, 56.000000)">
+                <g id="编组-10" transform="translate(8.000000, 4.000000)">
+                    <g id="编组-11">
+                        <path d="M5,3 C5.55228475,3 6,3.44771525 6,4 L6,7 L9,7 C9.55228475,7 10,7.44771525 10,8 C10,8.55228475 9.55228475,9 9,9 L5.999,9 L6,12 C6,12.5522847 5.55228475,13 5,13 C4.44771525,13 4,12.5522847 4,12 L3.999,9 L1,9 C0.44771525,9 6.76353751e-17,8.55228475 0,8 C-6.76353751e-17,7.44771525 0.44771525,7 1,7 L4,7 L4,4 C4,3.44771525 4.44771525,3 5,3 Z" id="形状结合"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

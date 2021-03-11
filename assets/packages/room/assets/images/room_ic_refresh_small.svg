@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_refresh_small</title>
+    <g id="ic_refresh_small" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#60C8FF" stroke-width="1.5">
+            <path d="M12.6454393,4.20236028 C11.5451233,2.85800327 9.87276034,2 8,2 C4.6862915,2 2,4.6862915 2,8 C2,11.3137085 4.6862915,14 8,14 L8,14 C11.3137085,14 14,11.3137085 14,8" id="1"></path>
+            <polyline id="2" points="10.5 5 13.5 5 13.5 2"></polyline>
+        </g>
+    </g>
+</svg>

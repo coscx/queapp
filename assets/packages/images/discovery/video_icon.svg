@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>ic_discover_beauty</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="28" height="28"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FF67B2" offset="0%"></stop>
+            <stop stop-color="#FF91C6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ic_discover_beauty" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="#" fill-opacity="0" fill="#D8D8D8" xlink:href="#path-1"></use>
+            <g id="heart" mask="url(#mask-2)">
+                <g transform="translate(0.000000, 2.000000)">
+                    <path d="M11.858,2.107 L20.09,2.107 C21.226602,2.107 22.148,3.02839798 22.148,4.165 L22.148,14.9695 C22.148,18.379306 19.383806,21.1435 15.974,21.1435 C12.564194,21.1435 9.8,18.379306 9.8,14.9695 L9.8,4.165 C9.8,3.02839798 10.721398,2.107 11.858,2.107 Z" id="2" fill="#FF67B2" transform="translate(15.974000, 11.625250) scale(-1, 1) rotate(-225.000000) translate(-15.974000, -11.625250) "></path>
+                    <path d="M7.203,2.107 L15.435,2.107 C16.571602,2.107 17.493,3.02839798 17.493,4.165 L17.493,14.9695 C17.493,18.379306 14.728806,21.1435 11.319,21.1435 C7.90919395,21.1435 5.145,18.379306 5.145,14.9695 L5.145,4.165 C5.145,3.02839798 6.06639798,2.107 7.203,2.107 Z" id="1" fill="url(#linearGradient-3)" transform="translate(11.319000, 11.625250) rotate(-225.000000) translate(-11.319000, -11.625250) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

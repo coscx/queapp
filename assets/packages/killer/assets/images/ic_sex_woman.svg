@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>性别-男@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="83.328986%" id="linearGradient-1">
+            <stop stop-color="#FF8D8D" offset="0%"></stop>
+            <stop stop-color="#FF6CD2" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="12" height="12" rx="6"></rect>
+    </defs>
+    <g id="谁是凶手" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="游戏房_准备_邀请" transform="translate(-121.000000, -167.000000)">
+            <g id="房间人" transform="translate(8.000000, 107.000000)">
+                <g id="性别-男备份">
+                    <g transform="translate(113.000000, 60.000000)">
+                        <g id="编组-4">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <use id="矩形" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                            <g id="编组-3" mask="url(#mask-3)">
+                                <g transform="translate(5.850435, 6.593899) rotate(-330.000000) translate(-5.850435, -6.593899) translate(2.850435, 1.593899)">
+                                    <circle id="椭圆形" stroke="#FFFFFF" stroke-width="2" cx="2.75" cy="2.75" r="1.75"></circle>
+                                    <g id="编组-2" stroke="none" stroke-width="1" fill-rule="evenodd" transform="translate(0.285714, 5.892857)">
+                                        <rect id="矩形" fill="#FFFFFF" x="0" y="0" width="5" height="2" rx="1"></rect>
+                                        <rect id="矩形" fill="#FFFFFF" x="1.5" y="0.138244103" width="2" height="3.5" rx="1"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

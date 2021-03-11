@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_picfq</title>
+    <g id="ic_picfq" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(4.000000, 5.000000)">
+            <path d="M2.81759427,17.5 L11.9810477,8.33654658 C12.3681698,7.94942452 12.9946165,7.94556047 13.3864846,8.32787755 L20,14.7802011 L20,14.7802011" id="路径-2" stroke="#ADADAD" stroke-width="3"></path>
+            <circle id="椭圆形" fill="#ADADAD" cx="6" cy="5.5" r="2"></circle>
+            <rect id="矩形" stroke="#ADADAD" stroke-width="3" x="0" y="0" width="20" height="18" rx="3"></rect>
+        </g>
+    </g>
+</svg>

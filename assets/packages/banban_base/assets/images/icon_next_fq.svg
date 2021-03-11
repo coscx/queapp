@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_next_small_fq</title>
+    <g id="ic_next_small_fq" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="arrow" stroke="#D6D6D6" stroke-width="1.5">
+            <polyline points="4 4 8 8 4 12"></polyline>
+        </g>
+    </g>
+</svg>

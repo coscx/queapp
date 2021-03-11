@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_profile_mark</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="83.328986%" id="linearGradient-1">
+            <stop stop-color="#FF8D8D" offset="0%"></stop>
+            <stop stop-color="#FF6CD2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ic_profile_mark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12,2 C13.1045695,2 14,2.8954305 14,4 L14,10 L20,10 C21.1045695,10 22,10.8954305 22,12 C22,13.1045695 21.1045695,14 20,14 L14,14 L14,20 C14,21.1045695 13.1045695,22 12,22 C10.8954305,22 10,21.1045695 10,20 L10,13.999 L4,14 C2.8954305,14 2,13.1045695 2,12 C2,10.8954305 2.8954305,10 4,10 L10,9.999 L10,4 C10,2.8954305 10.8954305,2 12,2 Z" id="形状结合" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

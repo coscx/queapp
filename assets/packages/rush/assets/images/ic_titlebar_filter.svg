@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>匹配聊天备份 9</title>
+    <g id="快速开黑" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="快速开黑展示视频" transform="translate(-331.000000, -56.000000)" fill-rule="nonzero">
+            <g id="icon-筛选" transform="translate(331.000000, 56.000000)">
+                <g>
+                    <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M14.8258737,6.48983185 L14.8258737,12.5230611 L19.6889294,18.0768464 C20.1566757,18.6110296 20.0943703,19.4159984 19.5497664,19.8747946 C19.3140366,20.0733828 19.013577,20.1825704 18.7028368,20.1825704 L5.30260466,20.1825704 C4.58470493,20.1825704 4.00273221,19.6117334 4.00273221,18.9075704 C4.00273221,18.6022227 4.11445366,18.3070147 4.31758123,18.0756269 L9.25619037,12.4499306 L9.25619037,4" id="路径" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(12.002732, 12.091285) scale(1, -1) translate(-12.002732, -12.091285) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

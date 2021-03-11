@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>icon/40/停止@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="91.5146014%" y1="20.8334788%" x2="9.55949004%" y2="79.6617788%" id="linearGradient-1">
+            <stop stop-color="#7CDEFE" offset="0%"></stop>
+            <stop stop-color="#66C8FD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/40/停止" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="url(#linearGradient-1)" fill-rule="nonzero" x="6" y="6" width="28" height="28" rx="6"></rect>
+    </g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>ic_discover_activity</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="28" height="28"></rect>
+        <linearGradient x1="50%" y1="0.325435265%" x2="50%" y2="98.6407306%" id="linearGradient-3">
+            <stop stop-color="#FF7474" offset="0%"></stop>
+            <stop stop-color="#FF6363" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.0354991%" y1="19.0767653%" x2="88.410166%" y2="85.1686846%" id="linearGradient-4">
+            <stop stop-color="#FF8682" offset="0%"></stop>
+            <stop stop-color="#FF7272" offset="100%"></stop>
+            <stop stop-color="#FF7070" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ic_discover_activity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="#" fill-opacity="0" fill="#D8D8D8" xlink:href="#path-1"></use>
+            <g id="1" mask="url(#mask-2)">
+                <g transform="translate(15.500000, 12.859821) rotate(-15.000000) translate(-15.500000, -12.859821) translate(5.000000, 2.359821)">
+                    <rect id="1" fill="url(#linearGradient-3)" fill-rule="evenodd" x="0.258171997" y="0.0339889883" width="2.9925" height="20.9475" rx="1.425"></rect>
+                    <path d="M0.258171997,1.53023899 C0.258171997,0.736142718 0.878516106,0.0803625043 1.67138868,0.036294702 C5.80602975,-0.19350836 8.94854205,1.08554172 10.8932822,3.88733432 L11.19814,4.34049553 C12.4960375,6.16570401 14.917226,6.93656331 18.6867319,6.55111823 C19.9808361,6.41879158 20.8157192,7.88694859 20.040337,8.93145733 C15.9189613,14.4833171 11.9403195,16.8019608 8.10161227,15.4048173 C5.1808258,14.3417621 3.27279834,12.8064143 1.92200295,12.7238921 C1.13255039,12.6756633 0.258171997,12.9872767 0.258171997,12.1963523 L0.258171997,1.53023899 Z" id="2" fill="url(#linearGradient-4)" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

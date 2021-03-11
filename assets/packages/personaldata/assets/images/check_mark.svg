@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>icon/40/完成@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="91.5146014%" y1="37.5308807%" x2="9.55949004%" y2="62.6808492%" id="linearGradient-1">
+            <stop stop-color="#7CDEFE" offset="0%"></stop>
+            <stop stop-color="#66C8FD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/40/完成" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9.2027958,7.7027958 C10.3073653,7.7027958 11.2027958,8.5982263 11.2027958,9.7027958 L11.2027958,20.7017958 L31.2027958,20.7027958 C32.3073653,20.7027958 33.2027958,21.5982263 33.2027958,22.7027958 C33.2027958,23.8073653 32.3073653,24.7027958 31.2027958,24.7027958 L9.22803133,24.7026399 C9.21963185,24.7027437 9.21121991,24.7027958 9.2027958,24.7027958 C8.0982263,24.7027958 7.2027958,23.8073653 7.2027958,22.7027958 L7.2027958,9.7027958 C7.2027958,8.5982263 8.0982263,7.7027958 9.2027958,7.7027958 Z" id="形状结合" fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(20.202796, 16.202796) rotate(-45.000000) translate(-20.202796, -16.202796) "></path>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>tab</title>
+    <desc>Created with Sketch.</desc>
+    <g id="发现页面视觉探索" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="发现页" transform="translate(-306.000000, -116.000000)" fill="#FF5353" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+            <g id="朋友圈" transform="translate(20.000000, 100.000000)">
+                <g id="头像" transform="translate(258.000000, 16.000000)">
+                    <g id="红点" transform="translate(28.000000, 0.000000)">
+                        <g id="椭圆形">
+                            <circle cx="6" cy="6" r="5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

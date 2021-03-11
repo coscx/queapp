@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>list 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="6.07986898%" y1="82.8606087%" x2="94.451393%" y2="32.7622384%" id="linearGradient-1">
+            <stop stop-color="#AC49FF" offset="0%"></stop>
+            <stop stop-color="#EC78FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设置-设置备份" transform="translate(-18.000000, -333.000000)">
+            <g id="list-2" transform="translate(0.000000, 333.000000)">
+                <g id="隐私" transform="translate(18.000000, 0.000000)">
+                    <path d="M13.6910964,7.73412788 C13.8908769,7.19388279 14,6.60968493 14,6 C14,3.23857625 11.7614237,1 9,1 C6.23857625,1 4,3.23857625 4,6 C4,6.61390707 4.11063971,7.20197284 4.31306715,7.74534533" id="路径" stroke="#E472FF" stroke-width="1.5" fill-rule="nonzero"></path>
+                    <rect id="矩形" fill="url(#linearGradient-1)" x="1" y="5" width="16" height="13" rx="4"></rect>
+                    <path d="M10,9 L10.0010775,10.2681881 C10.5982846,10.6141507 11,11.2601625 11,12 C11,13.1045695 10.1045695,14 9,14 C7.8954305,14 7,13.1045695 7,12 C7,11.2597476 7.40216612,10.6134261 7.99992752,10.2676063 L8,9 L10,9 Z" id="形状结合" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

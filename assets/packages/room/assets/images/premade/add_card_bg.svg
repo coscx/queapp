@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="32px" viewBox="0 0 81 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>信息</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="81" height="32" rx="16"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="81" height="32" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="2,3">
+        <g id="房间-弹窗4" transform="translate(-87.000000, -727.000000)" fill-rule="nonzero" stroke="#D2D2D2" stroke-width="2">
+            <g id="弹窗" transform="translate(0.000000, 588.000000)">
+                <g id="添加标签" transform="translate(87.000000, 139.000000)">
+                    <g id="编组-2">
+                        <use id="矩形备份-11" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>拖拽上传</title>
+	<script src="./jquery.js"></script>
+	<script src="./plupload.js"></script>
+	<style>
+	body{ font-size: 12px;}
+	body,p,div{ padding: 0; margin: 0;}
+	*{padding: 0; margin: 0}
+	.wraper{ padding: 30px 0;}
+	.btn-wraper{ text-align: center;}
+	.btn-wraper input{ margin: 0 10px;}
+	#file-list{ width: 600px; margin: 20px auto; list-style: none}
+	#file-list li{position: relative; margin-bottom: 10px; list-style: none}
+	.file-name{ line-height: 40px; height: 40px; color : black; padding-left: 12px; font-size: 16px}
+	.progress{position: absolute; z-index: -1; left : 0; top: 0; bottom : 0; height: 40px; font-size: 0; line-height: 40px; background: orange; width: 0; border-radius: 5px;}
+	.background{position: absolute; z-index: -2; left : 0; top: 0; bottom : 0; height: 40px; font-size: 0; line-height: 40px; background: #EEEEEE; width: 600px; border-radius: 5px;}
+	#drag-area{border-radius: 12px; border: 1px solid #ccc; height: 150px; display: flex; flex-direction: column; justify-content: center; text-align: center; color: #aaa; width: 600px; margin: 16px auto;}
+	#drag-area p {padding-top: 6px; padding-bottom: 6px}
+	</style>
+</head>
+<body>
+	<div class="wraper">
+		<div id="drag-area">
+			<p>把要上传的文件拖放到这里(请使用支持html5的浏览器)</p>
+			<p>仅支持上传格式为mp3,m4a,aac,ncm的音频文件</p>
+		</div>
+		<div class="btn-wraper">
+			<input type="button" value="选择音频文件" id="browse" style="padding: 5px 10px" />
+			<input type="button" value="开始上传" id="upload-btn" style="padding: 5px 10px" />
+		</div>
+		<ul id="file-list">
+
+		</ul>
+	</div>
+	<script>
+	var uploader = new plupload.Uploader({ //实例化一个plupload上传对象
+		browse_button : 'browse',
+		url : '/upload',
+		flash_swf_url : './Moxie.swf',
+		silverlight_xap_url : './Moxie.xap',
+		drop_element : 'drag-area',
+		filters: {
+			mime_types : [
+				{title : 'Audio Files', extensions : "mp3,aac,m4a,wav,ncm"}
+			],
+			max_file_size : '10240kb',
+			prevent_duplicates: true
+		}
+	});
+	uploader.init(); //初始化
+	//绑定文件添加进队列事件
+	uploader.bind('FilesAdded',function(uploader,files){
+		for(var i = 0, len = files.length; i<len; i++){
+			var file_name = files[i].name; //文件名
+			//构造html来更新UI
+			var html = '<li id="file-' + files[i].id +'"><div class="background"></div><div class="progress"></div><p class="file-name">' + file_name + '</p></li>';
+			$(html).appendTo('#file-list');
+		}
+	});
+
+	//绑定文件上传进度事件
+	uploader.bind('UploadProgress',function(uploader,file){
+		$('#file-'+file.id+' .progress').css('width',file.percent + '%');//控制进度条
+	});
+
+	uploader.bind('FileUploaded', function(uploader, file, response){
+		console.log(response);
+		try{
+			var json = JSON.parse(response.response);
+			if(json && json.success == true){
+
+			}else{
+				console.log(json.data);
+			}
+		}catch(e){
+			console.log(e);
+		}
+	});
+
+	uploader.bind('Error', function(uploader, error){
+		console.log(error);
+		alert(error.message);
+	});
+
+	//上传按钮
+	$('#upload-btn').click(function(){
+		uploader.start(); //开始上传
+	});
+
+	</script>
+</body>
+</html>

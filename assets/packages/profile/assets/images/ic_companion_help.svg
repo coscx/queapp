@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_help_b</title>
+    <g id="ic_help_b" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="椭圆形" stroke="#313131" stroke-width="2" cx="12" cy="12" r="9.5"></circle>
+        <path d="M12.5,13.5 C14.1568542,13.5 15.5,12.1568542 15.5,10.5 C15.5,8.84314575 14.1568542,7.5 12.5,7.5 C11.5624219,7.5 10.7001852,8.22049148 9.9132899,9.66147443 C9.63100646,10.1784243 9.08900014,10.5 8.5,10.5 L8.5,10.5 L8.5,10.5" id="路径" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(12.000000, 10.500000) scale(-1, 1) rotate(-90.000000) translate(-12.000000, -10.500000) "></path>
+        <circle id="椭圆形" fill="#313131" cx="12" cy="17.5" r="1.5"></circle>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon-评论</title>
+    <desc>Created with Sketch.</desc>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页长图" transform="translate(-17.000000, -433.000000)" fill-rule="nonzero">
+            <g id="编组-15备份-3" transform="translate(0.000000, 241.000000)">
+                <g id="编组-17" transform="translate(17.000000, 120.000000)">
+                    <g id="编组-18" transform="translate(0.000000, 72.000000)">
+                        <g id="编组-12">
+                            <g id="编组-9">
+                                <g id="icon-评论">
+                                    <g>
+                                        <path d="M10,0.75 C7.44568303,0.75 5.13318303,1.78534152 3.45926227,3.45926227 C1.78534152,5.13318303 0.75,7.44568303 0.75,10 L0.75,16 C0.75,16.8974627 1.11376864,17.7099627 1.70190296,18.298097 C2.29003728,18.8862314 3.10253728,19.25 4,19.25 L10,19.25 C12.554317,19.25 14.866817,18.2146585 16.5407377,16.5407377 C18.2146585,14.866817 19.25,12.554317 19.25,10 C19.25,7.44568303 18.2146585,5.13318303 16.5407377,3.45926227 C14.866817,1.78534152 12.554317,0.75 10,0.75 Z" id="矩形" stroke="#ADB3BA" stroke-width="1.5"></path>
+                                        <rect id="矩形" fill="#ADB3BA" x="6" y="7" width="8" height="1.5" rx="0.75"></rect>
+                                        <rect id="矩形备份-3" fill="#ADB3BA" x="6" y="11" width="5" height="1.5" rx="0.75"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>游戏房匹配</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="游戏房匹配1" transform="translate(-331.000000, -54.000000)" fill-rule="nonzero">
+            <g id="icon-找队友" transform="translate(331.000000, 54.000000)">
+                <g transform="translate(1.000000, 2.000000)">
+                    <path d="M2.99986736,3.99920164 C1.74412657,5.67065946 1,7.74842969 1,10 C1,15.5228475 5.4771525,20 11,20 C16.5228475,20 21,15.5228475 21,10 C21,4.4771525 16.5228475,0 11,0 C10.2065082,0 9.43460191,0.0924188821 8.69445818,0.267079715" id="路径" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+                    <rect id="矩形" fill="#FFFFFF" transform="translate(6.560660, 6.767767) rotate(-45.000000) translate(-6.560660, -6.767767) " x="4.56066017" y="0.767766953" width="4" height="12" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

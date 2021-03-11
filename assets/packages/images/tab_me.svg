@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_tabbar_profile_default</title>
+    <g id="ic_tabbar_profile_default" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.400000006">
+        <path d="M20,7 C24.5882118,7 28.3076923,10.7416203 28.3076923,15.3571429 C28.3076923,17.0901442 27.7833217,18.6999433 26.8854818,20.0347404 C29.978102,21.926887 32,25.0593413 32,28.6034547 C32,34.3806832 26.627417,32.8031919 20,32.8031919 C13.372583,32.8031919 8,34.3806832 8,28.6034547 C8,25.0593413 10.021898,21.926887 13.1150367,20.0347955 C12.2166783,18.6999433 11.6923077,17.0901442 11.6923077,15.3571429 C11.6923077,10.7416203 15.4117882,7 20,7 Z" id="形状结合" stroke="#313131" stroke-width="2.78571429" stroke-linejoin="round"></path>
+        <rect id="矩形" fill="#313131" x="15" y="13" width="3" height="4" rx="1.5"></rect>
+        <polyline id="路径-9" stroke="#313131" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="23 14 21 14.8727682 23 16"></polyline>
+    </g>
+</svg>

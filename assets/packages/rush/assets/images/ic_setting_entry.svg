@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>编组 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24.5,20 C25.3284271,20 26,20.6715729 26,21.5 C26,22.3284271 25.3284271,23 24.5,23 L9.5,23 C8.67157288,23 8,22.3284271 8,21.5 C8,20.6715729 8.67157288,20 9.5,20 L24.5,20 Z M24.5,13 C25.3284271,13 26,13.6715729 26,14.5 C26,15.3284271 25.3284271,16 24.5,16 L9.5,16 C8.67157288,16 8,15.3284271 8,14.5 C8,13.6715729 8.67157288,13 9.5,13 L24.5,13 Z M24.5,6 C25.3284271,6 26,6.67157288 26,7.5 C26,8.32842712 25.3284271,9 24.5,9 L9.5,9 C8.67157288,9 8,8.32842712 8,7.5 C8,6.67157288 8.67157288,6 9.5,6 L24.5,6 Z" id="path-1"></path>
+        <filter x="-55.6%" y="-58.8%" width="222.2%" height="229.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.8 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人--资料1" transform="translate(-329.000000, -53.000000)" fill-rule="nonzero">
+            <g id="标题栏" transform="translate(0.000000, 44.000000)">
+                <g id="设置" transform="translate(329.000000, 9.000000)">
+                    <g id="形状结合">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

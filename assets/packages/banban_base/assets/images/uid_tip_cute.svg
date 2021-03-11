@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="4px" viewBox="0 0 8 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cut</title>
+    <defs>
+        <linearGradient x1="24.6913637%" y1="43.677385%" x2="84.7346462%" y2="56.2709171%" id="linearGradient-1">
+            <stop stop-color="#FFE688" offset="0%"></stop>
+            <stop stop-color="#FFA257" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="直播" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="直播页面" transform="translate(-319.000000, -213.000000)" fill="url(#linearGradient-1)">
+            <g id="info" transform="translate(25.000000, 193.000000)">
+                <g id="1" transform="translate(268.000000, 0.000000)">
+                    <path d="M50,0 C55.5228475,-1.01453063e-15 60,4.4771525 60,10 C60,15.5228475 55.5228475,20 50,20 L33.464,20 L31.7320508,23 C31.1797661,23.9565852 29.9565852,24.2843356 29,23.7320508 C28.6959616,23.5565141 28.4434859,23.3040384 28.2679492,23 L26.535,20 L10,20 C4.4771525,20 -2.87635993e-15,15.5228475 0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 L50,0 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

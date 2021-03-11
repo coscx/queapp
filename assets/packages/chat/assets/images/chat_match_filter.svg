@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>匹配聊天备份 9</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="匹配聊天" transform="translate(-331.000000, -56.000000)" fill-rule="nonzero">
+            <g id="icon-筛选" transform="translate(331.000000, 56.000000)">
+                <g>
+                    <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M15.2605228,5.89089584 L15.2605228,12.9888126 L20.8722915,19.5226777 C21.4120518,20.1511284 21.3401539,21.0981506 20.7117031,21.6379108 C20.4396805,21.871544 20.0929623,22 19.7343807,22 L4.2710572,22 C3.44263007,22 2.7710572,21.3284271 2.7710572,20.5 C2.7710572,20.1407674 2.89997921,19.7934639 3.13438018,19.521243 L8.8333345,12.9027767 L8.8333345,2" id="路径" stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(12.002732, 12.000000) scale(1, -1) translate(-12.002732, -12.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
