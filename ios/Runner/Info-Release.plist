@@ -37,6 +37,8 @@
 	<string>3</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>yes</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>0</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
@@ -58,8 +60,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>0</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
