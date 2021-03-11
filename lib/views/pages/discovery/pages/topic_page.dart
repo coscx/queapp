@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
+import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/views/pages/discovery/widget/topic_item.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/topic_item_widget.dart';
 import 'package:flutter_geen/views/widget/cell.dart';
@@ -79,6 +80,7 @@ class _TopicPageState extends State<TopicPage>
                 children: <Widget>[
                   TopicItem('你的小心想', onTap: () {
                     //NavigatorUtils.push(context, DiscoveryRouter.topicDetailPage);
+                    Navigator.of(context).pushNamed(UnitRouter.topicDetailPage);
                   },),
                   Gaps.hGap10,
                   TopicItem('你的小心想'),

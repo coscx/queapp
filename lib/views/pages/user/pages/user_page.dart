@@ -10,14 +10,14 @@ import 'package:flutter_geen/views/widget/avatar_widget.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';
 import 'package:flutter_geen/views/widget/load_image.dart';
 
-class UserPage extends StatefulWidget {
+class UserCenterPage extends StatefulWidget {
   @override
-  _UserPageState createState() => _UserPageState();
+  _UserCenterPageState createState() => _UserCenterPageState();
 }
 
-class _UserPageState extends State<UserPage>
+class _UserCenterPageState extends State<UserCenterPage>
     with
-        AutomaticKeepAliveClientMixin<UserPage>,
+        AutomaticKeepAliveClientMixin<UserCenterPage>,
         SingleTickerProviderStateMixin {
   @override
   // TODO: implement wantKeepAlive

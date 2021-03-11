@@ -4,12 +4,12 @@ import 'package:flutter_geen/views/util/icon_font.dart';
 import 'package:flutter_geen/views/widget/avatar_widget.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';
 
-class SearchPage extends StatefulWidget {
+class SearchIndexPage extends StatefulWidget {
   @override
-  _SearchPageState createState() => _SearchPageState();
+  _SearchIndexPageState createState() => _SearchIndexPageState();
 }
 
-class _SearchPageState extends State<SearchPage> {
+class _SearchIndexPageState extends State<SearchIndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

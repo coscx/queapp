@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_video_widget.dart';
-
+import 'package:flutter_geen/service/event_bus_service.dart';
 
 class DynamicVideoPage extends StatefulWidget {
   @override
@@ -28,7 +28,7 @@ class _DynamicVideoPageState extends State<DynamicVideoPage> {
           itemCount: 2,
           itemBuilder: _swiperBuilder,
           onIndexChanged: (index) {
-            //eventBus.emit(keyPlayVideo + index.toString(), index);
+            eventBus.emit(keyPlayVideo + index.toString(), index);
           }
         ),
       ),
@@ -37,7 +37,7 @@ class _DynamicVideoPageState extends State<DynamicVideoPage> {
 
   Widget _swiperBuilder(BuildContext context, int index) {
 
-    return Container();
-//    return DynamicVideoWidget(positionTag: index,);
+    //return Container();
+   return DynamicVideoWidget(positionTag: index,);
   }
 }

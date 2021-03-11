@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_selfie_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_video_page.dart';
@@ -91,6 +92,7 @@ class _DynamicPageState extends State<DynamicPage>
                   FlatButton(
                     onPressed: () {
                       //NavigatorUtils.push(context, DynamicsRouter.searchPage);
+                      Navigator.of(context).pushNamed(UnitRouter.search_index);
                     },
                     child: Icon(
                       IconFont.icon_sousuo,

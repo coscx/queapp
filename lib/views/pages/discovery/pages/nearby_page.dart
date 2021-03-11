@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_easyrefresh/material_footer.dart';
 import 'package:flutter_easyrefresh/material_header.dart';
+import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_widget.dart';
 import 'package:flutter_geen/views/pages/user/pages/user_page.dart';
 import 'package:flutter_geen/views/util/icon_font.dart';
@@ -156,7 +157,7 @@ class _NearbyPageState extends State<NearbyPage>
               title: '为你推荐附近人',
               desc: '有缘数里来相会',
               onTap: () {
-                //NavigatorUtils.push(context,DiscoveryRouter.nearListPage);
+                Navigator.of(context).pushNamed(UnitRouter.nearListPage);
               },
             ),
             Gaps.vGap15,
