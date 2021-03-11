@@ -11,9 +11,9 @@ import io.github.zileyuan.umeng_analytics_push.UmengAnalyticsPushFlutterAndroid
 class MyFlutterApplication: FlutterApplication() {
     override fun onCreate() {
         super.onCreate();
-        UmengAnalyticsPushFlutterAndroid.androidInit(this, "5fec7e1cadb42d58269648d8", "default", false, "9aa304c3f2ff5e98734edb2784b43700",)
+        UmengAnalyticsPushFlutterAndroid.androidInit(this, "60499fa1777e961462b986d8", "default", false, "0ecfdb97b841ca0b091f4a3dbedec89e",)
         // Register Xiaomi Push (optional)
-        UmengAnalyticsPushFlutterAndroid.registerXiaomi(this, "2882303761518946758", "5911894688758")
+        UmengAnalyticsPushFlutterAndroid.registerXiaomi(this, "2882303761519543544", "5781954349544")
         // Register Huawei Push (optional, need add other infomation in AndroidManifest.xml)
         UmengAnalyticsPushFlutterAndroid.registerHuawei(this)
         // Register Oppo Push (optional)
