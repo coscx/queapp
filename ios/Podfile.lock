@@ -1,0 +1,312 @@
+PODS:
+  - BSGridCollectionViewLayout (1.2.5)
+  - BSImagePicker (2.10.3):
+    - BSGridCollectionViewLayout (= 1.2.5)
+    - BSImageView (= 1.0.3)
+  - BSImageView (1.0.3)
+  - city_pickers (0.0.1):
+    - Flutter
+  - connectivity (0.0.1):
+    - Flutter
+    - Reachability
+  - device_info (0.0.1):
+    - Flutter
+  - flt_im_plugin (0.1.0):
+    - flt_im_plugin/imkit (= 0.1.0)
+    - flt_im_plugin/imlib (= 0.1.0)
+    - flt_im_plugin/imsdk (= 0.1.0)
+    - Flutter
+    - MJExtension (~> 3.2.2)
+  - flt_im_plugin/imkit (0.1.0):
+    - flt_im_plugin/imlib
+    - flt_im_plugin/imsdk
+    - Flutter
+    - FMDB (~> 2.7.0)
+    - Masonry (~> 1.1.0)
+    - MBProgressHUD (~> 0.9.1)
+    - MJExtension (~> 3.2.2)
+    - SDWebImage (~> 5.1.0)
+    - Toast (~> 4.0.0)
+  - flt_im_plugin/imlib (0.1.0):
+    - flt_im_plugin/imsdk
+    - Flutter
+    - FMDB (~> 2.7.0)
+    - Masonry (~> 1.1.0)
+    - MJExtension (~> 3.2.2)
+    - SDWebImage (~> 5.1.0)
+  - flt_im_plugin/imsdk (0.1.0):
+    - Flutter
+    - MJExtension (~> 3.2.2)
+  - Flutter (1.0.0)
+  - flutter_ad_plugin (0.0.1):
+    - Flutter
+  - flutter_image_compress (0.0.1):
+    - Flutter
+    - Mantle
+    - SDWebImageWebPCoder
+  - flutter_local_notifications (0.0.1):
+    - Flutter
+  - flutter_my_picker (0.0.1):
+    - Flutter
+  - flutter_nfc_reader (0.0.1):
+    - Flutter
+    - VYNFCKit
+  - flutter_qr_reader (0.0.1):
+    - Flutter
+  - "flutter_sound (7.6.2+6)":
+    - Flutter
+    - mobile-ffmpeg-audio (= 4.3.1.LTS)
+    - "tau_sound_core (= 7.6.2+6)"
+  - flutter_webview_plugin (0.0.1):
+    - Flutter
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - fluwx (0.0.1):
+    - Flutter
+    - WechatOpenSDK (= 1.8.7.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - image_gallery_saver (1.5.0):
+    - Flutter
+  - image_picker (0.0.1):
+    - Flutter
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
+    - libwebp/webp
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
+  - Masonry (1.1.0)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.2.4)
+  - mobile-ffmpeg-audio (4.3.1.LTS)
+  - multi_image_picker (4.8.00):
+    - BSImagePicker (~> 2.10.3)
+    - Flutter
+  - package_info (0.0.1):
+    - Flutter
+  - path_provider (0.0.1):
+    - Flutter
+  - "permission_handler (5.0.1+1)":
+    - Flutter
+  - Reachability (3.2)
+  - SDWebImage (5.1.1):
+    - SDWebImage/Core (= 5.1.1)
+  - SDWebImage/Core (5.1.1)
+  - SDWebImageWebPCoder (0.3.1):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.0)
+  - share (0.5.2):
+    - Flutter
+  - shared_preferences (0.0.1):
+    - Flutter
+  - sqflite (0.0.2):
+    - Flutter
+    - FMDB (>= 2.7.5)
+  - "tau_sound_core (7.6.2+6)"
+  - Toast (4.0.0)
+  - UMAPM (1.1.0)
+  - UMCCommon (7.2.5):
+    - UMAPM
+    - UMDevice
+  - UMCCommonLog (2.0.0)
+  - UMCPush (3.3.1):
+    - UMCCommon
+  - UMDevice (1.1.0)
+  - umeng_analytics_push (0.0.1):
+    - Flutter
+    - UMCCommon
+    - UMCCommonLog
+    - UMCPush
+  - url_launcher (0.0.1):
+    - Flutter
+  - vibration (1.7.2):
+    - Flutter
+  - video_player (0.0.1):
+    - Flutter
+  - video_thumbnail (0.0.1):
+    - Flutter
+    - libwebp
+  - VYNFCKit (0.3.2)
+  - WechatOpenSDK (1.8.7.1)
+
+DEPENDENCIES:
+  - city_pickers (from `.symlinks/plugins/city_pickers/ios`)
+  - connectivity (from `.symlinks/plugins/connectivity/ios`)
+  - device_info (from `.symlinks/plugins/device_info/ios`)
+  - flt_im_plugin (from `.symlinks/plugins/flt_im_plugin/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_ad_plugin (from `.symlinks/plugins/flutter_ad_plugin/ios`)
+  - flutter_image_compress (from `.symlinks/plugins/flutter_image_compress/ios`)
+  - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
+  - flutter_my_picker (from `.symlinks/plugins/flutter_my_picker/ios`)
+  - flutter_nfc_reader (from `.symlinks/plugins/flutter_nfc_reader/ios`)
+  - flutter_qr_reader (from `.symlinks/plugins/flutter_qr_reader/ios`)
+  - flutter_sound (from `.symlinks/plugins/flutter_sound/ios`)
+  - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - fluwx (from `.symlinks/plugins/fluwx/ios`)
+  - image_gallery_saver (from `.symlinks/plugins/image_gallery_saver/ios`)
+  - image_picker (from `.symlinks/plugins/image_picker/ios`)
+  - multi_image_picker (from `.symlinks/plugins/multi_image_picker/ios`)
+  - package_info (from `.symlinks/plugins/package_info/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - share (from `.symlinks/plugins/share/ios`)
+  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - umeng_analytics_push (from `.symlinks/plugins/umeng_analytics_push/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+  - vibration (from `.symlinks/plugins/vibration/ios`)
+  - video_player (from `.symlinks/plugins/video_player/ios`)
+  - video_thumbnail (from `.symlinks/plugins/video_thumbnail/ios`)
+
+SPEC REPOS:
+  trunk:
+    - BSGridCollectionViewLayout
+    - BSImagePicker
+    - BSImageView
+    - FMDB
+    - libwebp
+    - Mantle
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - mobile-ffmpeg-audio
+    - Reachability
+    - SDWebImage
+    - SDWebImageWebPCoder
+    - tau_sound_core
+    - Toast
+    - UMAPM
+    - UMCCommon
+    - UMCCommonLog
+    - UMCPush
+    - UMDevice
+    - VYNFCKit
+    - WechatOpenSDK
+
+EXTERNAL SOURCES:
+  city_pickers:
+    :path: ".symlinks/plugins/city_pickers/ios"
+  connectivity:
+    :path: ".symlinks/plugins/connectivity/ios"
+  device_info:
+    :path: ".symlinks/plugins/device_info/ios"
+  flt_im_plugin:
+    :path: ".symlinks/plugins/flt_im_plugin/ios"
+  Flutter:
+    :path: Flutter
+  flutter_ad_plugin:
+    :path: ".symlinks/plugins/flutter_ad_plugin/ios"
+  flutter_image_compress:
+    :path: ".symlinks/plugins/flutter_image_compress/ios"
+  flutter_local_notifications:
+    :path: ".symlinks/plugins/flutter_local_notifications/ios"
+  flutter_my_picker:
+    :path: ".symlinks/plugins/flutter_my_picker/ios"
+  flutter_nfc_reader:
+    :path: ".symlinks/plugins/flutter_nfc_reader/ios"
+  flutter_qr_reader:
+    :path: ".symlinks/plugins/flutter_qr_reader/ios"
+  flutter_sound:
+    :path: ".symlinks/plugins/flutter_sound/ios"
+  flutter_webview_plugin:
+    :path: ".symlinks/plugins/flutter_webview_plugin/ios"
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  fluwx:
+    :path: ".symlinks/plugins/fluwx/ios"
+  image_gallery_saver:
+    :path: ".symlinks/plugins/image_gallery_saver/ios"
+  image_picker:
+    :path: ".symlinks/plugins/image_picker/ios"
+  multi_image_picker:
+    :path: ".symlinks/plugins/multi_image_picker/ios"
+  package_info:
+    :path: ".symlinks/plugins/package_info/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
+  share:
+    :path: ".symlinks/plugins/share/ios"
+  shared_preferences:
+    :path: ".symlinks/plugins/shared_preferences/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
+  umeng_analytics_push:
+    :path: ".symlinks/plugins/umeng_analytics_push/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+  vibration:
+    :path: ".symlinks/plugins/vibration/ios"
+  video_player:
+    :path: ".symlinks/plugins/video_player/ios"
+  video_thumbnail:
+    :path: ".symlinks/plugins/video_thumbnail/ios"
+
+SPEC CHECKSUMS:
+  BSGridCollectionViewLayout: 333dcb457a5a3bdd9212607ab5756553dcfe06cb
+  BSImagePicker: 07404254f2fcdaf5a2eb403c0f8c337267ce8738
+  BSImageView: a149459433a2687157d034c78e059d30ac7f2544
+  city_pickers: b0370f4c35c201723b5b7fcce10ec29b59d5bc35
+  connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
+  device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
+  flt_im_plugin: 56b59132b8d4d9dd9474c2cd8cc224d10e2c05aa
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  flutter_ad_plugin: 3a77cf2094588d89b1f2933e201bc831ef15b4f8
+  flutter_image_compress: 082f8daaf6c1b0c9fe798251c750ef0ecd98d7ae
+  flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
+  flutter_my_picker: cc7c18b8de8b4d827df5140d6373d69cf6e68ab6
+  flutter_nfc_reader: 67d71071d779d28b827ea50dcbe00d09286f253d
+  flutter_qr_reader: 254fd9eea45a65ef461e050d6607daf9cfb753e8
+  flutter_sound: 160e34f84c63cffdb8f8435970967135a1e63af2
+  flutter_webview_plugin: ed9e8a6a96baf0c867e90e1bce2673913eeac694
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  fluwx: 07a55ed66bf3a4961e836a2a411b02dcada32902
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  image_gallery_saver: 259eab68fb271cfd57d599904f7acdc7832e7ef2
+  image_picker: 9c3312491f862b28d21ecd8fdf0ee14e601b3f09
+  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
+  mobile-ffmpeg-audio: adc36047b8032bc0f8e5c4e6ab7cb110189d9b37
+  multi_image_picker: 6dfd22d7e6441a1cb06f6876fe8cc5f32f7f6610
+  package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  permission_handler: eac8e15b4a1a3fba55b761d19f3f4e6b005d15b6
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+  SDWebImageWebPCoder: ce58a29621c2806dd5c36695ed192cf67163ff9d
+  share: bae0a282aab4483288913fc4dc0b935d4b491f2e
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  tau_sound_core: a7208b20147f366f1d90938cb5c937cd0e2f9f35
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  UMAPM: 2b966cff744dccdd9e2ed99efafce280be30833c
+  UMCCommon: f7480d316381612f90cdde3a3c0f39a7e2c0a788
+  UMCCommonLog: 9b7ddde5d14a52fc1986ba5ac3121b8b2f433638
+  UMCPush: af977ec99bbf34558825e907c58f6b76f6c7f897
+  UMDevice: 28d21a568c8e8322e5a03bbd53b138d0c098d3b3
+  umeng_analytics_push: b48308bf3a674d07430f2a2eceea4d46d59ffe90
+  url_launcher: a1c0cc845906122c4784c542523d8cacbded5626
+  vibration: 528f5ef88e90d4a8fd1ef04afbf0ed3ac7c9801d
+  video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
+  video_thumbnail: c4e2a3c539e247d4de13cd545344fd2d26ffafd1
+  VYNFCKit: 86a9b711fd1f34f6f7128a2a883cd58dbd781b9d
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
+
+PODFILE CHECKSUM: 87b505a7f9c0405accc1b6cefb642e58068375d8
+
+COCOAPODS: 1.10.1
