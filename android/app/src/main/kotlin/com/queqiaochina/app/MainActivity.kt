@@ -10,6 +10,7 @@ import io.flutter.plugins.GeneratedPluginRegistrant
 import io.github.zileyuan.umeng_analytics_push.UmengAnalyticsPushFlutterAndroid
 import io.github.zileyuan.umeng_analytics_push.UmengAnalyticsPushPlugin
 import android.os.Bundle
+import androidx.fragment.app.FragmentManager
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugins.GeneratedPluginRegistrant.registerWith
@@ -28,6 +29,7 @@ class MainActivity: FlutterActivity() {
                 moveTaskToBack(false)
             }
         }
+
     }
 
 
@@ -42,7 +44,7 @@ class MainActivity: FlutterActivity() {
         super.onResume()
         UmengAnalyticsPushFlutterAndroid.androidOnResume(this)
         if (getIntent().getExtras() != null) {
-            var message = getIntent().getExtras().getString("message")
+            var message = getIntent().getExtras()?.getString("message")
             if (message != null && message != "") {
                 // To start the interface, wait for the engine to load, and send it to the interface with a delay of 5 seconds
                 handler.postDelayed(object : Runnable {
@@ -59,4 +61,6 @@ class MainActivity: FlutterActivity() {
         super.onPause()
         UmengAnalyticsPushFlutterAndroid.androidOnPause(this)
     }
+
+
 }

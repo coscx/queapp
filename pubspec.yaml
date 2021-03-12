@@ -25,10 +25,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 #  amap_map_fluttify: ^0.30.1
-  sqflite: ^1.2.1 #数据库
+  sqflite: ^2.0.0+2 #数据库
   toggle_rotate: ^0.0.5
   flutter_star: ^0.1.2 # 星星组件
-  shared_preferences: ^0.5.6+3 # xml 固化
+  shared_preferences: ^0.5.12 # xml 固化
   url_launcher: ^5.4.2 # url
   share: ^0.6.3+6
   intl: ^0.16.1
