@@ -436,23 +436,23 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin<
                           title: bind,
                           ),
                        ),
-                      // new MenuItem(
-                      //   icon: "assets/packages/images/ic_profile_mentor_ship.svg",
-                      //   title: '师徒关系',
-                      // ),
-                      //
-                      // new MenuItem(
-                      //   icon: "assets/packages/images/ic_my_bag.svg",
-                      //   title: '我的背包',
-                      // ),
-                      // new MenuItem(
-                      //   icon: "assets/packages/images/ic_activity.svg",
-                      //   title: '订单',
-                      // ),
-                      // new MenuItem(
-                      //   icon: "assets/packages/images/ic_app_review.svg",
-                      //   title: '去好评',
-                      // ),
+                      new MenuItem(
+                        icon: "assets/packages/images/ic_profile_mentor_ship.svg",
+                        title: '我的相册',
+                      ),
+
+                      new MenuItem(
+                        icon: "assets/packages/images/ic_my_bag.svg",
+                        title: '个人基本资料',
+                      ),
+                      new MenuItem(
+                        icon: "assets/packages/images/ic_activity.svg",
+                        title: '择偶标准',
+                      ),
+                      new MenuItem(
+                        icon: "assets/packages/images/ic_app_review.svg",
+                        title: '内心独白',
+                      ),
                       // new MenuItem(
                       //   icon: "assets/packages/images/ic_contribute.svg",
                       //   title: '贡献题目',

@@ -28,8 +28,7 @@ import 'package:flt_im_plugin/value_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_geen/views/pages/user/User.dart';
-import 'package:flutter_geen/views/pages/user/pages/user_page.dart';
+import 'package:flutter_geen/views/pages/my/my_route.dart';
 import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
 import 'package:flutter_xupdate/flutter_xupdate.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
@@ -179,12 +178,13 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
               children: <Widget>[
                 DynamicPage(),
                 DiscoveryPage(),
-                MessagePage(),
-                UserCenterPage(),
+                //MessagePage(),
+                //UserCenterPage(),
                 // HomePage(),
                 // IndexPages(),
-                // ImConversationListPage(memberId: id,),
+                 ImConversationListPage(memberId: id,),
                 // MinePage(),
+                  MyRoute()
 
               ],
             ),
