@@ -52,7 +52,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
     _factor=0;
     _controller =
-        AnimationController(duration: Duration(milliseconds: 1000), vsync: this)
+        AnimationController(duration: Duration(milliseconds: 1), vsync: this)
           ..addStatusListener(_listenStatus)..forward();
 
     _curveAnim = CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
@@ -79,7 +79,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     if (status == AnimationStatus.completed) {
       setState(() {
         _animEnd = true;
-        Future.delayed(Duration(milliseconds: 1000)).then((e) async {
+        Future.delayed(Duration(milliseconds: 100)).then((e) async {
           var ss = await LocalStorage.get("token");
           var sss =ss.toString();
           if(sss == "" || ss == null || ss == "null"){
@@ -128,17 +128,18 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
       body: Stack(
         alignment: Alignment.center,
         children: <Widget>[
-          _buildLogo(Colors.blue),
+          //_buildLogo(Colors.blue),
           Container(
             width: winW,
             height: winH,
-            child: CustomPaint(
-              painter: UnitPainter(repaint: _curveAnim),
-            ),
+            // child: CustomPaint(
+            //   painter: UnitPainter(repaint: _curveAnim),
+            // ),
+            child: Container(),
           ),
           _buildText(winH, winW),
           _buildHead(),
-          _buildPower(),
+          //_buildPower(),
         ],
       ),
     );
