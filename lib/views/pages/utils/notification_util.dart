@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'dart:convert';
-
+import 'package:flutter_geen/app/utils/xflog.dart';
 
 /*
 * 通知栏

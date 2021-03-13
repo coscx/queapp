@@ -32,6 +32,7 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:fluwx/fluwx.dart' as fluwx;
 import 'package:flutter_geen/views/items/share.dart';
+import 'package:flutter_geen/app/utils/xflog.dart';
 class WidgetDetailPage extends StatefulWidget {
 
 

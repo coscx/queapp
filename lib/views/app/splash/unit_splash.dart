@@ -48,14 +48,38 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _initFluwx();
+    Future.delayed(Duration(milliseconds: 1)).then((e) async {
+      var ss = await LocalStorage.get("token");
+      var sss =ss.toString();
+      if(sss == "" || ss == null || ss == "null"){
+
+
+        Navigator.of(context).pushReplacementNamed(UnitRouter.login);
+
+
+      } else{
+        //LocalStorage.save("token", '');
+        var agree = await LocalStorage.get("agree");
+        var agrees =agree.toString();
+        if("1" == "1"){
+          Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
+
+        } else{
+          //LocalStorage.save("token", '');
+          showDialog(context: context, builder: (ctx) => _buildDialog());
+        }
+
+      }
+
+    });
     SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-    _factor=0;
-    _controller =
-        AnimationController(duration: Duration(milliseconds: 1), vsync: this)
-          ..addStatusListener(_listenStatus)..forward();
-
-    _curveAnim = CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
+    // _factor=0;
+    // _controller =
+    //     AnimationController(duration: Duration(milliseconds: 1), vsync: this)
+    //       ..addStatusListener(_listenStatus)..forward();
+    //
+    // _curveAnim = CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
 
    // initPlatformState();
   }
@@ -63,7 +87,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
 
   @override
    void dispose() {
-     _controller.dispose();
+     //_controller.dispose();
      super.dispose();
   }
   _initFluwx() async {
@@ -73,36 +97,13 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
         doOnIOS: true,
         universalLink: "https://your.univerallink.com/link/");
     var result = await isWeChatInstalled;
-    print("is installed $result");
+    print("wx is installed $result");
   }
   void _listenStatus(AnimationStatus status) {
     if (status == AnimationStatus.completed) {
       setState(() {
         _animEnd = true;
-        Future.delayed(Duration(milliseconds: 100)).then((e) async {
-          var ss = await LocalStorage.get("token");
-          var sss =ss.toString();
-          if(sss == "" || ss == null || ss == "null"){
 
-
-                Navigator.of(context).pushReplacementNamed(UnitRouter.login);
-
-
-          } else{
-            //LocalStorage.save("token", '');
-            var agree = await LocalStorage.get("agree");
-            var agrees =agree.toString();
-            if("1" == "1"){
-              Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
-
-            } else{
-              //LocalStorage.save("token", '');
-              showDialog(context: context, builder: (ctx) => _buildDialog());
-            }
-
-          }
-
-        });
       });
     }
   }
@@ -137,8 +138,8 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
             // ),
             child: Container(),
           ),
-          _buildText(winH, winW),
-          _buildHead(),
+          //_buildText(winH, winW),
+          //_buildHead(),
           //_buildPower(),
         ],
       ),

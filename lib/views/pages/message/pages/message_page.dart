@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_geen/views/pages/message/widget/user_item_widget.dart';
 import 'package:flutter_geen/views/widget/app_bar.dart';
-
+import 'package:flutter_geen/app/utils/xflog.dart';
 class MessagePage extends StatefulWidget {
   @override
   _MessagePageState createState() => _MessagePageState();

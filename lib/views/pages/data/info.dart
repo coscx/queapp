@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_geen/app/utils/xflog.dart';
 class ItemModel {
   String imageUrl;
   String title;
@@ -47,7 +47,7 @@ class _CardlistPageState extends State<CardlistPage> {
     controller.addListener(() {
       setState(() {
         currentPage = controller.page;
-        print(currentPage);
+        xflog(currentPage,StackTrace.current);
       });
     });
 

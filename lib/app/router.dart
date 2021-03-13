@@ -131,7 +131,7 @@ class UnitRouter {
       case collect:
         return Right2LeftRouter(child: CollectPage());
       case nav:
-        return Left2RightRouter(child: UnitNavigation());
+        return NoAnimRouter(child: UnitNavigation());
       case setting:
         return Right2LeftRouter(child: SettingPage());
       case font_setting:
@@ -175,7 +175,8 @@ class UnitRouter {
       case login_phone:
         return Right2LeftRouter(child: LoginPhone());
       case recommended_card:
-        return Right2LeftRouter(child: RecommendedCard());
+        return Right2LeftRouter(child: RecommendedCard(title: '', onDelete: () {  },
+        child: Container(),));
       case create_user_page:
         return Right2LeftRouter(child: CreateUserPage());
       case person_page:

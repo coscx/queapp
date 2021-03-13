@@ -4,9 +4,9 @@ import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_selfie_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_video_page.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_geen/views/util/icon_font.dart';
-
+import 'package:flutter_geen/views/pages/utils/DyBehaviorNull.dart';
 import 'dynamic_list_page.dart';
 import 'follow_page.dart';
 
@@ -61,7 +61,12 @@ class _DynamicPageState extends State<DynamicPage>
               Row(
                 children: <Widget>[
                   Expanded(
-                    child: TabBar(
+                   child: Theme(
+                      data: ThemeData(
+                        splashColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                      ),
+                      child: TabBar(
                       labelColor: Color(0xFF0a0f1e),
                       indicatorColor: Color(0xffFF7E98),
                       tabs: <Widget>[
@@ -76,39 +81,43 @@ class _DynamicPageState extends State<DynamicPage>
                       labelPadding: EdgeInsets.symmetric(horizontal: 8),
                       isScrollable: true,
                       labelStyle: TextStyle(
-                        fontSize: 18,
+                        fontSize: 48.sp,
                         color: Color(0xffFF7E98),
                         fontWeight: FontWeight.w800,
                       ),
                       unselectedLabelColor: Color(0xff999999),
                       unselectedLabelStyle:
-                          TextStyle(fontSize: 14, color: Color(0xff999999)),
+                          TextStyle(fontSize: 32.sp, color: Color(0xff999999)),
                       indicatorSize: TabBarIndicatorSize.label,
                       onTap: (index) {
                         _pageController.jumpToPage(index);
                       },
                     ),
-                  ),
-                  FlatButton(
+                  )),
+                  TextButton(
                     onPressed: () {
                       //NavigatorUtils.push(context, DynamicsRouter.searchPage);
                       Navigator.of(context).pushNamed(UnitRouter.search_index);
                     },
                     child: Icon(
-                      IconFont.icon_sousuo,
-                      size: 24,
+                      Icons.search,
+                      size: 48.sp,
+                      color: Colors.black45,
                     ),
                   ),
                 ],
               ),
 
               Expanded(
-                child: PageView.builder(
+                child: ScrollConfiguration(
+                    behavior: DyBehaviorNull(),
+                    child:PageView.builder(
                     key: const Key('pageView'),
                     itemCount: pageList.length,
                     onPageChanged: _onPageChange,
                     controller: _pageController,
-                    itemBuilder: (_, index) => pageList[index]),
+                    itemBuilder: (_, index) => pageList[index])),
+
               ),
 
 

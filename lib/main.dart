@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_geen/views/app/bloc_wrapper.dart';
 import 'views/app/flutter_geen.dart';
 import 'package:device_info/device_info.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GestureBinding.instance.resamplingEnabled = true;
