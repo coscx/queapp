@@ -1,6 +1,7 @@
 
 import 'dart:io';
 
+import 'package:ali_auth/ali_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,6 +12,22 @@ import 'package:fluwx/fluwx.dart';
 import 'unit_paint.dart';
 /// 说明: app 闪屏页
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+/// 获取token成功
+const PNSCodeSuccess = "600000";
+
+/// 点击切换按钮，⽤户取消免密登录
+const NSCodeLoginControllerClickChangeBtn = "700001";
+
+/// 唤起授权页失败
+const PNSCodeFail = "600002";
+
+/// 一键登录秘钥
+const IosAliAuthSdk =
+    'Xp/g+ruMfutZaNk9pkZysTQN/p2MMieZ6CNKRZ8j/btZX1P+/SyDHQ1LMXoGR/DeWeCsKfKkf+ky2xu2VgF0h3YeTUCkkTI1QChnhQbAMFOsTBEidbVGMSN1sc//N1cuMXys6x0zjn1oMEx9h5HgH0DSGZ4LFMZNnpeRrNrlBV75Vgc/2LrgVkh66zQiCFgBTXyE4P4VcOhSmxp7oFGdJJyz3Dm94VXYbnagfEkOFmV48oUtVBls1tHonTllNA+IOXRc9d9rg50=';
+const AndroidAuthSdk =
+    'wP/+w7ufa22EHJyXSIDCUs9rb5FfEDwaYtZtit3o6TK67HkJUksDoZRzmXlXU/8oIdRE1eFHmpppNgqnA0KANCsQINVLiU9ML2w4h9Q+J6NCMaFwpm69EJsh1e477foeiN/DbLTbyHjOqonA4wyKGicAnwHK8bL9voXaCG2AsODZqJJCjW1QUG+QfY/L6uWiQ1puGERszOQTf2E/cxmgGpcUjEbyQn+py0qiy3tTuqLi9Lj2axh++jT8uix3ZcQjmNVvq16/grqrG5qZFfr4DWS03dkYT6dyYlkiBLoV8Z3VP+AFOfpJuw==';
+
 class UnitSplash extends StatefulWidget {
   final double size;
 
@@ -49,6 +66,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     super.initState();
     _initFluwx();
     Future.delayed(Duration(milliseconds: 1)).then((e) async {
+
       var ss = await LocalStorage.get("token");
       var sss =ss.toString();
       if(sss == "" || ss == null || ss == "null"){
@@ -62,6 +80,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
         var agree = await LocalStorage.get("agree");
         var agrees =agree.toString();
         if("1" == "1"){
+          //_quickLogin();
           Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
 
         } else{
@@ -82,6 +101,12 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     // _curveAnim = CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
 
    // initPlatformState();
+    // 初始化插件
+    if (Platform.isAndroid) {
+      AliAuthPlugin.initSdk(AndroidAuthSdk);
+    } else {
+      AliAuthPlugin.initSdk(IosAliAuthSdk);
+    }
   }
 
 
@@ -108,7 +133,45 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     }
   }
 
+  /// login 跳转到账号密码登录页
+  void _doLogin() {}
 
+  void _quickLogin() async {
+    bool checkVerifyEnable = false;
+
+    try {
+      checkVerifyEnable = await AliAuthPlugin.checkVerifyEnable;
+    } catch (e) {
+      print('sdk error $e');
+    }
+
+    if (!checkVerifyEnable) {
+      _doLogin();
+      return;
+    }
+
+    if (checkVerifyEnable) {
+      Map _result;
+
+      try {
+        _result = await AliAuthPlugin.login;
+      } catch (e) {
+        print('sdk error $e');
+      }
+
+      if (_result == null || _result['returnCode'] == PNSCodeFail) {
+        _doLogin();
+        return;
+      }
+
+      if (_result['returnCode'] == PNSCodeSuccess) {
+        String _accessToken = _result['returnData'];
+        /// 获取调token后走快速登录的的逻辑
+      } else if (_result['returnCode'] == NSCodeLoginControllerClickChangeBtn) {
+        /// 点击其他登录
+      }
+    }
+  }
   static Widget _buildDialog() => Dialog(
     backgroundColor: Colors.white,
     elevation: 5,

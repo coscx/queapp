@@ -34,8 +34,12 @@ class _TalkAppListViewState extends State<TalkAppListView> {
       header: MaterialHeader(
         backgroundColor: Colors.white,
         valueColor: AlwaysStoppedAnimation(Color(0xFFff7faa)),
+        completeDuration:const Duration(milliseconds: 500),
+
       ),
-      footer: NomoreWdiget(),
+      footer: NomoreWdiget(
+        completeDuration:const Duration(milliseconds: 500),
+      ),
       controller: widget.controller,
       child: widget.child,
       onRefresh: widget.onRefresh,

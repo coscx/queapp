@@ -62,7 +62,7 @@ class _DynamicListPageState extends State<DynamicListPage>
 
   /// 下拉刷新数据
   Future<Null> _refreshData() async {
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(Duration(milliseconds: 100), () {
       if (mounted) {
         _getPostData(false);
         if (!_enableControlFinish) {
@@ -75,11 +75,11 @@ class _DynamicListPageState extends State<DynamicListPage>
 
   /// 上拉加载数据
   Future<Null> _addMoreData() async {
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(Duration(milliseconds: 100), () {
       if (mounted) {
         _getPostData(true);
         if (!_enableControlFinish) {
-          _controller.finishLoad(noMore: dynamicList.length >= 3);
+          _controller.finishLoad(noMore: dynamicList.length >= 300);
         }
       }
     });
@@ -90,9 +90,17 @@ class _DynamicListPageState extends State<DynamicListPage>
     setState(() {
       if (!_beAdd) {
         dynamicList.clear();
-        dynamicList = [testData];
+        dynamicList = [testData,testData,testData,testData,testData,testData,testData];
       } else {
         dynamicList.add(testData);
+        dynamicList.add(testData);
+        dynamicList.add(testData);
+        dynamicList.add(testData);
+        dynamicList.add(testData);
+        dynamicList.add(testData);
+        dynamicList.add(testData);
+
+
       }
     });
   }

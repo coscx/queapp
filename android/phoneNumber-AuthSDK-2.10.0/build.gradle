@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('phoneNumber-AuthSDK-2.10.0.aar'))

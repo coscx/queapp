@@ -46,6 +46,9 @@ dependencies:
   flutter_ad_plugin:
     git:
       url: https://github.com/coscx/money.git
+  ali_auth:
+    git:
+      url: https://github.com/coscx/aliauth.git
   flutter_plugin_android_lifecycle: ^1.0.2
   badges: ^1.1.0
   video_player: ^1.0.1

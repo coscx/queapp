@@ -11,7 +11,7 @@ class NomoreWdiget extends Footer {
 
   NomoreWdiget({this.key,
     this.displacement = 40.0,
-    completeDuration = const Duration(seconds: 1),
+    completeDuration = const Duration(milliseconds: 10),
     bool enableHapticFeedback = false,
     bool enableInfiniteLoad = true,
   }): super(
@@ -19,8 +19,8 @@ class NomoreWdiget extends Footer {
     extent: 52.0,
     triggerDistance: 52.0,
     completeDuration: completeDuration == null
-        ? Duration(milliseconds: 300,)
-        : completeDuration + Duration(milliseconds: 300,),
+        ? Duration(milliseconds: 100,)
+        : completeDuration + Duration(milliseconds: 10,),
     enableHapticFeedback: enableHapticFeedback,
     enableInfiniteLoad: enableInfiniteLoad,
   );

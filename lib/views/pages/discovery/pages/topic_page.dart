@@ -94,7 +94,7 @@ class _TopicPageState extends State<TopicPage>
                   itemCount: newsList.length,
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
-                  physics: new NeverScrollableScrollPhysics(),
+                  physics: new BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return TopicItemWidget(data: newsList[index],);
                   }),
@@ -103,8 +103,12 @@ class _TopicPageState extends State<TopicPage>
         ),
       ),
       controller: _controller,
-      onRefresh: () {},
-      onloadMore: () {},
+      onRefresh: () {
+
+      },
+      onloadMore: () {
+
+      },
     ));
   }
 
@@ -171,7 +175,7 @@ class _TopicPageState extends State<TopicPage>
                   decoration: BoxDecoration(
                       color: Color(0xFFff7faa),
                       borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                  child: Text(''),
+                  child: Text('1'),
                 ),
                 Container(
                   width: 175,
@@ -179,7 +183,7 @@ class _TopicPageState extends State<TopicPage>
                   decoration: BoxDecoration(
                       color: Color(0xFFff7faa),
                       borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                  child: Text(''),
+                  child: Text('2'),
                 )
               ],
             ),
