@@ -80,8 +80,8 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
         var agree = await LocalStorage.get("agree");
         var agrees =agree.toString();
         if("1" == "1"){
-          //_quickLogin();
-          Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
+          _quickLogin();
+          //Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
 
         } else{
           //LocalStorage.save("token", '');
@@ -134,7 +134,9 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
   }
 
   /// login 跳转到账号密码登录页
-  void _doLogin() {}
+  void _doLogin() {
+    Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
+  }
 
   void _quickLogin() async {
     bool checkVerifyEnable = false;
@@ -166,9 +168,12 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
 
       if (_result['returnCode'] == PNSCodeSuccess) {
         String _accessToken = _result['returnData'];
+        _doLogin();
         /// 获取调token后走快速登录的的逻辑
+        /// Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
       } else if (_result['returnCode'] == NSCodeLoginControllerClickChangeBtn) {
         /// 点击其他登录
+       _doLogin();
       }
     }
   }

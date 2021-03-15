@@ -8,7 +8,7 @@
         <bitmap android:gravity="fill" android:src="@mipmap/bg"/>
     </item>
     <item android:top="144dp">
-        <bitmap android:gravity="top|center_vertical|center_horizontal|center" android:src="@mipmap/slogan"/>
+        <bitmap android:gravity="top|center_vertical|center_horizontal|center" android:src="@mipmap/logo"/>
     </item>
     <item>
         <bitmap android:gravity="bottom|left|right|center_vertical|center_horizontal|fill_horizontal|center" android:src="@mipmap/bottom"/>
