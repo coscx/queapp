@@ -39,7 +39,7 @@ import 'package:flutter_geen/views/pages/home/CreateUserPage.dart';
 import 'package:flutter_geen/views/items/select.dart';
 import 'package:flutter_geen/views/pages/user/User.dart';
 import 'package:flutter_geen/views/pages/widget_detail/widget_detail_page.dart';
-
+import 'package:flutter_geen/views/pages/login/login_new.dart';
 import 'package:flutter_geen/views/pages/setting/setting_page.dart';
 
 import 'utils/router_utils.dart';
@@ -97,7 +97,7 @@ class UnitRouter {
   static const String dynamicVideoPage = "dynamicVideoPage";
   static const String photoViewGalleryScreen = "photoViewGalleryScreen";
   static const String search_index = "searchIndexPage";
-
+  static const String login_new = "loginNewPage";
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       //根据名称跳转相应页面
@@ -105,7 +105,8 @@ class UnitRouter {
         return Right2LeftRouter(
             child: WidgetDetailPage(
         ));
-
+      case login_new:
+        return Right2LeftRouter(child: DevelopPage());
       case discoveryPage:
         return Right2LeftRouter(child: DiscoveryPage());
       case topicDetailPage:

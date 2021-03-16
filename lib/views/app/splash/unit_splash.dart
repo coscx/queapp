@@ -9,6 +9,7 @@ import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/storage/dao/local_storage.dart';
 import 'package:flutter_geen/views/dialogs/CustomDialog.dart';
 import 'package:fluwx/fluwx.dart';
+import 'package:lottie/lottie.dart';
 import 'unit_paint.dart';
 /// 说明: app 闪屏页
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -173,7 +174,8 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
         /// Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
       } else if (_result['returnCode'] == NSCodeLoginControllerClickChangeBtn) {
         /// 点击其他登录
-       _doLogin();
+        Navigator.of(context).pushReplacementNamed(UnitRouter.login_new);
+
       }
     }
   }
@@ -193,7 +195,19 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     final double winH = MediaQuery.of(context).size.height;
     final double winW = MediaQuery.of(context).size.width;
 
-    return Scaffold(
+    return Theme(
+        data: ThemeData(
+        appBarTheme: AppBarTheme.of(context).copyWith(
+      brightness: Brightness.light,
+    ),
+    ),
+    child:Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white10,
+        elevation: 0,
+        // 方式2,在这里设置的话会覆盖上面的方式1
+        brightness: Brightness.light,
+      ),
       body: Stack(
         alignment: Alignment.center,
         children: <Widget>[
@@ -206,12 +220,25 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
             // ),
             child: Container(),
           ),
+      Container(
+        child: Container(child:
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 0.h,
+            ),
+            //Image.asset("assets/images/loadings.gif"),
+            Lottie.asset('assets/packages/lottie_flutter/loadings.json'),
+          ],
+        )),
+      )
           //_buildText(winH, winW),
           //_buildHead(),
           //_buildPower(),
         ],
       ),
-    );
+    ));
   }
 
   Widget _buildText(double winH, double winW) {

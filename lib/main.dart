@@ -2,6 +2,7 @@ import 'dart:io';
 // import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_geen/views/app/bloc_wrapper.dart';
 import 'views/app/flutter_geen.dart';
 import 'package:device_info/device_info.dart';
@@ -19,6 +20,8 @@ Future<void> main() async {
     isIpad = info.utsname.machine.toLowerCase().contains("ipad");
     isIpad = info.model=="iPad";
   }
+  SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor:Colors.transparent);
+  SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   runApp(BlocWrapper(child: FlutterGeen(isPad: isIpad,)));
   // await enableFluttifyLog(false);
   // await AmapService.instance.init(
