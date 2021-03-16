@@ -194,7 +194,31 @@ class FilmContent extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-
+          Container(
+            margin:  EdgeInsets.only(left: 30.w,right: 30.w,top: 20.h),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                  maxHeight: 100.h,
+                  maxWidth: ScreenUtil().screenWidth
+              ),
+              child: new TextField(
+                decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.symmetric(vertical: 4,horizontal: 30),
+                  hintText: '请在此输入手机号码',
+                  hintStyle:  TextStyle(
+                    fontSize: 36.sp,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black26,
+                  ),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50.w),
+                      borderSide: BorderSide.none),
+                  filled: true,
+                  fillColor: Colors.black12,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
