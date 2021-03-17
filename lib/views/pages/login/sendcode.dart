@@ -212,6 +212,7 @@ class FilmContent extends StatefulWidget {
 }
 class FilmState extends State<FilmContent> {
   bool check =true;
+  String _location="";
   @override
   Future<void> initState()  {
     // TODO: implement initState
@@ -221,6 +222,10 @@ class FilmState extends State<FilmContent> {
        await requestLocationPermission();
       final location = await AmapLocation.instance.fetchLocation();
       print(location);
+      setState(() {
+        _location=location.address;
+      });
+
     });
   }
     /// 申请定位权限
@@ -304,7 +309,13 @@ class FilmState extends State<FilmContent> {
             ),
           ),
 
-
+          Row(
+            children: [
+              IconButton(icon: Icon(Icons.location_on), onPressed: (){}),
+              Text(_location,
+                  style: TextStyle(color: Colors.black45, fontSize: 24.sp)),
+            ],
+          ),
 
         ],
       ),
