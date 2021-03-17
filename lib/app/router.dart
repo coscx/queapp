@@ -29,6 +29,7 @@ import 'package:flutter_geen/views/pages/issues_point/issues_detail.dart';
 import 'package:flutter_geen/views/pages/issues_point/issues_point_page.dart';
 import 'package:flutter_geen/views/pages/login/login_page.dart';
 import 'package:flutter_geen/views/pages/login/logins.dart';
+import 'package:flutter_geen/views/pages/login/sendcode.dart';
 import 'package:flutter_geen/views/pages/search/serach_page.dart';
 import 'package:flutter_geen/views/pages/search/serach_page_appoint.dart';
 import 'package:flutter_geen/views/pages/setting/code_style_setting.dart';
@@ -98,15 +99,18 @@ class UnitRouter {
   static const String photoViewGalleryScreen = "photoViewGalleryScreen";
   static const String search_index = "searchIndexPage";
   static const String login_new = "loginNewPage";
+  static const String send_code = "sendCodePage";
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       //根据名称跳转相应页面
       case widget_detail:
-        return Right2LeftRouter(
+        return FadeRouter(
             child: WidgetDetailPage(
         ));
+      case send_code:
+        return FadeRouter(child: SendCodePage(tel: settings.arguments,));
       case login_new:
-        return Right2LeftRouter(child: DevelopPage());
+        return FadeRouter(child: DevelopPage());
       case discoveryPage:
         return Right2LeftRouter(child: DiscoveryPage());
       case topicDetailPage:

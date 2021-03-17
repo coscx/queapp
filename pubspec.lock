@@ -6,7 +6,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "77d5c73c15ea7c9405215f37ca3ca4d99c2719fb"
+      resolved-ref: "656357adbf17cd5769d427c5a39fa558ec79381d"
       url: "https://github.com/coscx/aliauth.git"
     source: git
     version: "0.0.1"

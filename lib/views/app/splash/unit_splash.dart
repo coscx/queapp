@@ -136,7 +136,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
 
   /// login 跳转到账号密码登录页
   void _doLogin() {
-    Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
+    Navigator.of(context).pushReplacementNamed(UnitRouter.login_new);
   }
 
   void _quickLogin() async {

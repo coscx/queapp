@@ -1,10 +1,13 @@
+import 'package:flui/flui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:svgaplayer_flutter/player.dart';
 
-class DevelopPage extends StatelessWidget {
+class SendCodePage extends StatelessWidget {
+  final String tel ;
+  SendCodePage({this.tel});
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -12,25 +15,27 @@ class DevelopPage extends StatelessWidget {
         child:Scaffold(
           extendBodyBehindAppBar: true,
 
-      body: CustomScrollView(
-         physics: const NeverScrollableScrollPhysics(),
-        slivers: <Widget>[
-          SliverPersistentHeader(
-            pinned: true,
-            delegate: SliverCustomHeaderDelegate(
-                title: '（现为新加功能测试页面）',
-                collapsedHeight: 40.h,
-                expandedHeight: 430.h,
-                paddingTop: MediaQuery.of(context).padding.top,
-                coverImgUrl: 'http://r.photo.store.qq.com/psb?/V14dALyK4PrHuj/iEyZ0zEnZQmbqfs.BUMe9Visc92Tqohh0OKKP0JOtVU!/r/dMMAAAAAAAAA'
-            ),
+          body: CustomScrollView(
+            physics: const NeverScrollableScrollPhysics(),
+            slivers: <Widget>[
+              SliverPersistentHeader(
+                pinned: true,
+                delegate: SliverCustomHeaderDelegate(
+                    title: '（现为新加功能测试页面）',
+                    collapsedHeight: 40.h,
+                    expandedHeight: 270.h,
+                    paddingTop: MediaQuery.of(context).padding.top,
+                    coverImgUrl: 'http://r.photo.store.qq.com/psb?/V14dALyK4PrHuj/iEyZ0zEnZQmbqfs.BUMe9Visc92Tqohh0OKKP0JOtVU!/r/dMMAAAAAAAAA',
+                    tel: tel
+
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: FilmContent(tel: tel,),
+              )
+            ],
           ),
-          SliverToBoxAdapter(
-            child: FilmContent(),
-          )
-        ],
-      ),
-    ));
+        ));
   }
 }
 
@@ -42,6 +47,7 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
   final double paddingTop;
   final String coverImgUrl;
   final String title;
+  final String tel;
   String statusBarMode = 'dark';
 
   SliverCustomHeaderDelegate({
@@ -50,6 +56,7 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
     this.paddingTop,
     this.coverImgUrl,
     this.title,
+    this.tel
   });
 
   @override
@@ -102,7 +109,7 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-             Container(
+          Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -112,7 +119,7 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
                     Colors.lightBlue,
                   ],
                 ),
-           )),
+              )),
 
           // Container(child: Image.network(this.coverImgUrl, fit: BoxFit.cover)),
 
@@ -132,7 +139,7 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
                     children: <Widget>[
 
                       Text(
-                        "手机号注册登录",
+                        "输入验证码",
                         style: TextStyle(
                           fontSize: 38.sp,
                           fontWeight: FontWeight.w900,
@@ -152,30 +159,38 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
               ),
             ),
           ),
-          Container(
-            margin:  EdgeInsets.only(top: 177.h),
-            child: Column(
-              children: [
-                Container(
-                    height: 90.h,
-                    child: Image.asset("assets/images/login_girl0.png")),
-                Container(
-                  margin:  EdgeInsets.only(top: 17.h),
-                  child: Text(
-                    "为您匹配到121位附近的异性,注册登录后可见！",
-                    style: TextStyle(
-                      fontSize: 25.sp,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.white,
-                    ),
+          Positioned(
+            left: 50.w,
+            right: 20.w,
+            top: 80.h,
+            child: Container(
+              color: this.makeStickyHeaderBgColor(shrinkOffset),
+              child: SafeArea(
+                bottom: false,
+                child: Container(
+                  height: this.collapsedHeight,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+
+                      Text(
+                        "已发送至"+tel,
+                        style: TextStyle(
+                          fontSize: 28.sp,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                        ),
+                      ),
+
+                    ],
                   ),
                 ),
-              ],
+              ),
             ),
           ),
 
           Container(
-          margin:  EdgeInsets.only(top: 317.h),
+            margin:  EdgeInsets.only(top: 157.h),
             child: SVGASimpleImage(
                 assetsName: "assets/svga/waves.svga"),
           ),
@@ -185,6 +200,8 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
   }
 }
 class FilmContent extends StatefulWidget {
+  final String tel ;
+  FilmContent({this.tel});
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -193,38 +210,49 @@ class FilmContent extends StatefulWidget {
 }
 class FilmState extends State<FilmContent> {
   bool check =true;
-  final TextEditingController _telController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.w),
+      padding: EdgeInsets.all(0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            margin:  EdgeInsets.only(left: 30.w,right: 30.w,top: 20.h),
+            margin:  EdgeInsets.only(left: 100.w,right: 80.w,top: 20.h),
             child: ConstrainedBox(
               constraints: BoxConstraints(
                   maxHeight: 100.h,
                   maxWidth: ScreenUtil().screenWidth
               ),
-              child: new TextField(
-                controller: _telController,
+              child:    FLPinCodeTextField(
+                //controller: _pinController,
+                obscure: false,
+                boxWidth: 100.w,
+                boxHeight: 100.h,
+                pinLength: 4,
+                minSpace: 40.w,
+                autofocus: false,
+                textStyle: TextStyle(fontSize: 42.sp, fontWeight: FontWeight.w900,color: Colors.black),
                 decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.symmetric(vertical: 4,horizontal: 30),
-                  hintText: '请在此输入手机号码',
-                  hintStyle:  TextStyle(
-                    fontSize: 36.sp,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.black26,
-                  ),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(50.w),
-                      borderSide: BorderSide.none),
-                  filled: true,
-                  fillColor: Colors.black12,
+                  contentPadding: EdgeInsets.fromLTRB(20.w, 15.h, 17.w, 22.h),
+                  border: OutlineInputBorder(),
+                  //hintStyle: TextStyle(fontSize: 42.sp, fontWeight: FontWeight.w900,color: Colors.black),
+                  //focusColor: Colors.redAccent,
+                  //fillColor: Colors.grey,
+                  //filled: true
                 ),
+                onChanged: (text) {
+                  print('change -- $text');
+                },
+                onSubmitted: (text) {
+                  print('submit -- $text');
+                },
+                onEditingComplete: () {
+                  print('editing complete');
 
+                  Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
+                },
               ),
 
             ),
@@ -240,50 +268,15 @@ class FilmState extends State<FilmContent> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(40.w))),
               color: Colors.redAccent,
-              onPressed: (){
-                if (_telController.text.isEmpty){
-                  return;
-                }
-                Navigator.of(context).pushReplacementNamed(UnitRouter.send_code,arguments: _telController.text);
-              },
-              child: Text("登   录",
+              onPressed: (){},
+              child: Text("重新发送验证码",
                   style: TextStyle(color: Colors.white, fontSize: 30.sp)),
             ),
           ),
 
 
-        Row(
 
-          children: [
-            Container(
-              margin: EdgeInsets.only( left: 70.w,),
-              child: Checkbox(
-              value: check,
-              tristate: false,
-              activeColor: Colors.red,
-              checkColor: Colors.white,
-              splashRadius: 20.h,
-              onChanged: (bool value) {
-                setState(() {
-                  check=!check;
-                });
-              }),
-            ),
-            Container(
-
-              child: Text(
-                "登陆后代表你同意用户协议和隐私政策",
-                style: TextStyle(
-                  fontSize: 25.sp,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.grey,
-                ),
-              ),
-            ),
-          ],
-        ),
-
-    ],
+        ],
       ),
     );
   }
