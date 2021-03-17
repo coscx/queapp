@@ -1,8 +1,10 @@
+import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 import 'package:flui/flui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:svgaplayer_flutter/player.dart';
 
 class SendCodePage extends StatelessWidget {
@@ -210,7 +212,35 @@ class FilmContent extends StatefulWidget {
 }
 class FilmState extends State<FilmContent> {
   bool check =true;
-
+  @override
+  Future<void> initState()  {
+    // TODO: implement initState
+    super.initState();
+    // 单次定位
+    Future.delayed(Duration(milliseconds: 1)).then((e) async {
+       await requestLocationPermission();
+      final location = await AmapLocation.instance.fetchLocation();
+      print(location);
+    });
+  }
+    /// 申请定位权限
+  /// 授予定位权限返回true， 否则返回false
+  Future<bool> requestLocationPermission() async {
+    //获取当前的权限
+    var status = await Permission.location.status;
+    if (status == PermissionStatus.granted) {
+      //已经授权
+      return true;
+    } else {
+      //未授权则发起一次申请
+      status = await Permission.location.request();
+      if (status == PermissionStatus.granted) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Padding(

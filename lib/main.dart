@@ -1,5 +1,5 @@
 import 'dart:io';
-// import 'package:amap_map_fluttify/amap_map_fluttify.dart';
+import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -23,11 +23,11 @@ Future<void> main() async {
   SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor:Colors.transparent);
   SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   runApp(BlocWrapper(child: FlutterGeen(isPad: isIpad,)));
-  // await enableFluttifyLog(false);
-  // await AmapService.instance.init(
-  //     iosKey: "75f93121afcd226f0e822a19cf40e0ca",
-  //     androidKey: "a130ae881342a409182da1c28197bf8e"
-  // );
+  await enableFluttifyLog(false);
+  await AmapService.instance.init(
+      iosKey: "c4be7cd9605ca4f1b20ec76030cd1f75",
+      androidKey: "e912257673899746091f6ba47674dc37"
+  );
 
   Future<bool> checkIpadFunc() async {
     bool isIpad =false;

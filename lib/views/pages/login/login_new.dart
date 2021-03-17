@@ -1,3 +1,4 @@
+import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -211,6 +212,7 @@ class FilmContent extends StatefulWidget {
 class FilmState extends State<FilmContent> {
   bool check =true;
   final TextEditingController _telController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
