@@ -189,11 +189,11 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
             ),
           ),
 
-          Container(
-            margin:  EdgeInsets.only(top: 157.h),
-            child: SVGASimpleImage(
-                assetsName: "assets/svga/waves.svga"),
-          ),
+          // Container(
+          //   margin:  EdgeInsets.only(top: 157.h),
+          //   child: SVGASimpleImage(
+          //       assetsName: "assets/svga/waves.svga"),
+          // ),
         ],
       ),
     );
@@ -219,7 +219,7 @@ class FilmState extends State<FilmContent> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            margin:  EdgeInsets.only(left: 100.w,right: 80.w,top: 20.h),
+            margin:  EdgeInsets.only(left: 100.w,right: 80.w,top: 60.h),
             child: ConstrainedBox(
               constraints: BoxConstraints(
                   maxHeight: 100.h,

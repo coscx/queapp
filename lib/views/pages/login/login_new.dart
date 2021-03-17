@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_geen/app/router.dart';
@@ -21,7 +22,7 @@ class DevelopPage extends StatelessWidget {
                 title: '（现为新加功能测试页面）',
                 collapsedHeight: 40.h,
                 expandedHeight: 430.h,
-                paddingTop: MediaQuery.of(context).padding.top,
+                paddingTop: 0,
                 coverImgUrl: 'http://r.photo.store.qq.com/psb?/V14dALyK4PrHuj/iEyZ0zEnZQmbqfs.BUMe9Visc92Tqohh0OKKP0JOtVU!/r/dMMAAAAAAAAA'
             ),
           ),
@@ -64,19 +65,19 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
   }
 
   void updateStatusBarBrightness(shrinkOffset) {
-    if(shrinkOffset <= 50 && this.statusBarMode == 'dark') {
-      this.statusBarMode = 'light';
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarBrightness: Brightness.light,
-        statusBarIconBrightness: Brightness.light,
-      ));
-    } else if(shrinkOffset > 50 && this.statusBarMode == 'light') {
-      this.statusBarMode = 'dark';
-      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarBrightness: Brightness.dark,
-        statusBarIconBrightness: Brightness.dark,
-      ));
-    }
+    // if(shrinkOffset <= 50 && this.statusBarMode == 'dark') {
+    //   this.statusBarMode = 'light';
+    //   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //     statusBarBrightness: Brightness.light,
+    //     statusBarIconBrightness: Brightness.light,
+    //   ));
+    // } else if(shrinkOffset > 50 && this.statusBarMode == 'light') {
+    //   this.statusBarMode = 'dark';
+    //   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //     statusBarBrightness: Brightness.dark,
+    //     statusBarIconBrightness: Brightness.dark,
+    //   ));
+    // }
   }
 
   Color makeStickyHeaderBgColor(shrinkOffset) {
@@ -113,9 +114,30 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
                   ],
                 ),
            )),
-
+          // Column(
+          //   verticalDirection: VerticalDirection.up,
+          //   crossAxisAlignment: CrossAxisAlignment.end,
+          //   children: [
+          //
+          //     SVGASimpleImage(
+          //         assetsName: "assets/svga/waves.svga"),
+          //
+          //   ],
+          // ),
           // Container(child: Image.network(this.coverImgUrl, fit: BoxFit.cover)),
 
+          //   Positioned(
+          //   //left: 50.w,
+          //   //right: 20.w,
+          //    // top: 323.h,
+          //     bottom: 0.h,
+          //   child: Container(
+          //
+          //   width: ScreenUtil().screenWidth,
+          //   margin:  EdgeInsets.only(top: 0.h),
+          //   child: SVGASimpleImage(
+          //       assetsName: "assets/svga/waves.svga"),
+          // )),
 
           Positioned(
             left: 50.w,
@@ -174,11 +196,6 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
             ),
           ),
 
-          Container(
-          margin:  EdgeInsets.only(top: 317.h),
-            child: SVGASimpleImage(
-                assetsName: "assets/svga/waves.svga"),
-          ),
         ],
       ),
     );
@@ -211,7 +228,7 @@ class FilmState extends State<FilmContent> {
               child: new TextField(
                 controller: _telController,
                 decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.symmetric(vertical: 4,horizontal: 30),
+                  contentPadding:  EdgeInsets.symmetric(vertical: 4.w,horizontal: 30.h),
                   hintText: '请在此输入手机号码',
                   hintStyle:  TextStyle(
                     fontSize: 36.sp,
