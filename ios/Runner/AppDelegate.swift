@@ -17,11 +17,11 @@ import Flutter
         super.application(application, didRegisterForRemoteNotificationsWithDeviceToken:deviceToken)
     }
 
-    override func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print(error)
-        super.application(application, didFailToRegisterForRemoteNotificationsWithError: error)
-        
-    }
+//    override func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+//        print(error)
+//        super.application(application, didFailToRegisterForRemoteNotificationsWithError: error)
+//        
+//    }
     // If you need to handle Push clicks, use the following code
     @available(iOS 10.0, *)
     override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {

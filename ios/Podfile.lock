@@ -1,4 +1,35 @@
 PODS:
+  - ali_auth (0.0.1):
+    - Flutter
+  - AMap3DMap-NO-IDFA (7.6.0):
+    - AMapFoundation-NO-IDFA (~> 1.6.3)
+  - amap_core_fluttify (0.0.1):
+    - AMapFoundation-NO-IDFA (= 1.6.4)
+    - Flutter
+    - foundation_fluttify
+  - amap_location_fluttify (0.0.1):
+    - amap_core_fluttify
+    - AMapLocation-NO-IDFA (= 2.6.7)
+    - Flutter
+    - foundation_fluttify
+  - amap_map_fluttify (0.0.1):
+    - AMap3DMap-NO-IDFA (= 7.6.0)
+    - amap_core_fluttify
+    - amap_location_fluttify
+    - amap_search_fluttify
+    - Flutter
+    - foundation_fluttify
+    - url_launcher
+  - amap_search_fluttify (0.0.1):
+    - amap_core_fluttify
+    - AMapSearch-NO-IDFA (= 7.7.0)
+    - Flutter
+    - foundation_fluttify
+  - AMapFoundation-NO-IDFA (1.6.4)
+  - AMapLocation-NO-IDFA (2.6.7):
+    - AMapFoundation-NO-IDFA (~> 1.6.4)
+  - AMapSearch-NO-IDFA (7.7.0):
+    - AMapFoundation-NO-IDFA (~> 1.6.4)
   - BSGridCollectionViewLayout (1.2.5)
   - BSImagePicker (2.10.3):
     - BSGridCollectionViewLayout (= 1.2.5)
@@ -9,6 +40,9 @@ PODS:
   - connectivity (0.0.1):
     - Flutter
     - Reachability
+  - core_location_fluttify (0.0.1):
+    - Flutter
+    - foundation_fluttify
   - device_info (0.0.1):
     - Flutter
   - flt_im_plugin (0.1.0):
@@ -44,6 +78,13 @@ PODS:
     - Flutter
     - Mantle
     - SDWebImageWebPCoder
+  - flutter_inappwebview (0.0.1):
+    - Flutter
+    - flutter_inappwebview/Core (= 0.0.1)
+    - OrderedSet (~> 5.0)
+  - flutter_inappwebview/Core (0.0.1):
+    - Flutter
+    - OrderedSet (~> 5.0)
   - flutter_local_notifications (0.0.1):
     - Flutter
   - flutter_my_picker (0.0.1):
@@ -68,19 +109,21 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - foundation_fluttify (0.0.1):
+    - Flutter
   - image_gallery_saver (1.5.0):
     - Flutter
   - image_picker (0.0.1):
     - Flutter
-  - libwebp (1.1.0):
-    - libwebp/demux (= 1.1.0)
-    - libwebp/mux (= 1.1.0)
-    - libwebp/webp (= 1.1.0)
-  - libwebp/demux (1.1.0):
+  - libwebp (1.2.0):
+    - libwebp/demux (= 1.2.0)
+    - libwebp/mux (= 1.2.0)
+    - libwebp/webp (= 1.2.0)
+  - libwebp/demux (1.2.0):
     - libwebp/webp
-  - libwebp/mux (1.1.0):
+  - libwebp/mux (1.2.0):
     - libwebp/demux
-  - libwebp/webp (1.1.0)
+  - libwebp/webp (1.2.0)
   - Mantle (2.1.6):
     - Mantle/extobjc (= 2.1.6)
   - Mantle/extobjc (2.1.6)
@@ -91,6 +134,7 @@ PODS:
   - multi_image_picker (4.8.00):
     - BSImagePicker (~> 2.10.3)
     - Flutter
+  - OrderedSet (5.0.0)
   - package_info (0.0.1):
     - Flutter
   - path_provider (0.0.1):
@@ -113,7 +157,7 @@ PODS:
     - FMDB (>= 2.7.5)
   - "tau_sound_core (7.6.2+6)"
   - Toast (4.0.0)
-  - UMAPM (1.1.0)
+  - UMAPM (1.1.1)
   - UMCCommon (7.2.5):
     - UMAPM
     - UMDevice
@@ -139,13 +183,20 @@ PODS:
   - WechatOpenSDK (1.8.7.1)
 
 DEPENDENCIES:
+  - ali_auth (from `.symlinks/plugins/ali_auth/ios`)
+  - amap_core_fluttify (from `.symlinks/plugins/amap_core_fluttify/ios`)
+  - amap_location_fluttify (from `.symlinks/plugins/amap_location_fluttify/ios`)
+  - amap_map_fluttify (from `.symlinks/plugins/amap_map_fluttify/ios`)
+  - amap_search_fluttify (from `.symlinks/plugins/amap_search_fluttify/ios`)
   - city_pickers (from `.symlinks/plugins/city_pickers/ios`)
   - connectivity (from `.symlinks/plugins/connectivity/ios`)
+  - core_location_fluttify (from `.symlinks/plugins/core_location_fluttify/ios`)
   - device_info (from `.symlinks/plugins/device_info/ios`)
   - flt_im_plugin (from `.symlinks/plugins/flt_im_plugin/ios`)
   - Flutter (from `Flutter`)
   - flutter_ad_plugin (from `.symlinks/plugins/flutter_ad_plugin/ios`)
   - flutter_image_compress (from `.symlinks/plugins/flutter_image_compress/ios`)
+  - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_my_picker (from `.symlinks/plugins/flutter_my_picker/ios`)
   - flutter_nfc_reader (from `.symlinks/plugins/flutter_nfc_reader/ios`)
@@ -154,6 +205,7 @@ DEPENDENCIES:
   - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - fluwx (from `.symlinks/plugins/fluwx/ios`)
+  - foundation_fluttify (from `.symlinks/plugins/foundation_fluttify/ios`)
   - image_gallery_saver (from `.symlinks/plugins/image_gallery_saver/ios`)
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
   - multi_image_picker (from `.symlinks/plugins/multi_image_picker/ios`)
@@ -171,6 +223,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AMap3DMap-NO-IDFA
+    - AMapFoundation-NO-IDFA
+    - AMapLocation-NO-IDFA
+    - AMapSearch-NO-IDFA
     - BSGridCollectionViewLayout
     - BSImagePicker
     - BSImageView
@@ -181,6 +237,7 @@ SPEC REPOS:
     - MBProgressHUD
     - MJExtension
     - mobile-ffmpeg-audio
+    - OrderedSet
     - Reachability
     - SDWebImage
     - SDWebImageWebPCoder
@@ -195,10 +252,22 @@ SPEC REPOS:
     - WechatOpenSDK
 
 EXTERNAL SOURCES:
+  ali_auth:
+    :path: ".symlinks/plugins/ali_auth/ios"
+  amap_core_fluttify:
+    :path: ".symlinks/plugins/amap_core_fluttify/ios"
+  amap_location_fluttify:
+    :path: ".symlinks/plugins/amap_location_fluttify/ios"
+  amap_map_fluttify:
+    :path: ".symlinks/plugins/amap_map_fluttify/ios"
+  amap_search_fluttify:
+    :path: ".symlinks/plugins/amap_search_fluttify/ios"
   city_pickers:
     :path: ".symlinks/plugins/city_pickers/ios"
   connectivity:
     :path: ".symlinks/plugins/connectivity/ios"
+  core_location_fluttify:
+    :path: ".symlinks/plugins/core_location_fluttify/ios"
   device_info:
     :path: ".symlinks/plugins/device_info/ios"
   flt_im_plugin:
@@ -209,6 +278,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_ad_plugin/ios"
   flutter_image_compress:
     :path: ".symlinks/plugins/flutter_image_compress/ios"
+  flutter_inappwebview:
+    :path: ".symlinks/plugins/flutter_inappwebview/ios"
   flutter_local_notifications:
     :path: ".symlinks/plugins/flutter_local_notifications/ios"
   flutter_my_picker:
@@ -225,6 +296,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/fluttertoast/ios"
   fluwx:
     :path: ".symlinks/plugins/fluwx/ios"
+  foundation_fluttify:
+    :path: ".symlinks/plugins/foundation_fluttify/ios"
   image_gallery_saver:
     :path: ".symlinks/plugins/image_gallery_saver/ios"
   image_picker:
@@ -255,16 +328,27 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/video_thumbnail/ios"
 
 SPEC CHECKSUMS:
+  ali_auth: 3718e5f37fc3a4810d27089f4ac91877b5990316
+  AMap3DMap-NO-IDFA: 5e5b483ef230d1bed6c8d989d36254a66c67a6fc
+  amap_core_fluttify: 9e5af179f8151193fa1c9a420bcbcbf2701f648c
+  amap_location_fluttify: baa3007e3f215456ab2ea2f4ccccf5bc1a9a164b
+  amap_map_fluttify: 6b64256d6ccea7813e1b6423fcf7b5ef10d3c984
+  amap_search_fluttify: 874f1e9cf85df4fb95547d07df54d1c5d6b9c1d2
+  AMapFoundation-NO-IDFA: 68a24362b110b8e0a3677605d0fd36bdf521f2bb
+  AMapLocation-NO-IDFA: 2a3edfee336b38481b892e1ecc85df0f6b365851
+  AMapSearch-NO-IDFA: 061479dd567486fb59bf3d01b1076c81d910f1b6
   BSGridCollectionViewLayout: 333dcb457a5a3bdd9212607ab5756553dcfe06cb
   BSImagePicker: 07404254f2fcdaf5a2eb403c0f8c337267ce8738
   BSImageView: a149459433a2687157d034c78e059d30ac7f2544
   city_pickers: b0370f4c35c201723b5b7fcce10ec29b59d5bc35
   connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
+  core_location_fluttify: 9466a411ea7d22c6349c7e6a767ae4623f01eb1d
   device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
   flt_im_plugin: 56b59132b8d4d9dd9474c2cd8cc224d10e2c05aa
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   flutter_ad_plugin: 3a77cf2094588d89b1f2933e201bc831ef15b4f8
   flutter_image_compress: 082f8daaf6c1b0c9fe798251c750ef0ecd98d7ae
+  flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
   flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
   flutter_my_picker: cc7c18b8de8b4d827df5140d6373d69cf6e68ab6
   flutter_nfc_reader: 67d71071d779d28b827ea50dcbe00d09286f253d
@@ -274,15 +358,17 @@ SPEC CHECKSUMS:
   fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
   fluwx: 07a55ed66bf3a4961e836a2a411b02dcada32902
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  foundation_fluttify: 0c45145e3fad1fb99188e4979daed5b24cd9b278
   image_gallery_saver: 259eab68fb271cfd57d599904f7acdc7832e7ef2
   image_picker: 9c3312491f862b28d21ecd8fdf0ee14e601b3f09
-  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
+  libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
   Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
   mobile-ffmpeg-audio: adc36047b8032bc0f8e5c4e6ab7cb110189d9b37
   multi_image_picker: 6dfd22d7e6441a1cb06f6876fe8cc5f32f7f6610
+  OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
   permission_handler: eac8e15b4a1a3fba55b761d19f3f4e6b005d15b6
@@ -294,7 +380,7 @@ SPEC CHECKSUMS:
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
   tau_sound_core: a7208b20147f366f1d90938cb5c937cd0e2f9f35
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  UMAPM: 2b966cff744dccdd9e2ed99efafce280be30833c
+  UMAPM: d0623e0b3ca8b1a1df855e0bddb91b5c002d097d
   UMCCommon: f7480d316381612f90cdde3a3c0f39a7e2c0a788
   UMCCommonLog: 9b7ddde5d14a52fc1986ba5ac3121b8b2f433638
   UMCPush: af977ec99bbf34558825e907c58f6b76f6c7f897
