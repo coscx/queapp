@@ -225,15 +225,19 @@ class FilmState extends State<FilmContent> {
       setState(() {
         _location=location.address;
       });
-       await Pangolin.registerPangolin(
-           appId: "Your AppID",
+      var dd= await Pangolin.registerPangolin(
+           appId: "5144905",
            useTextureView: true,
-           appName: "Your AppName",
+           appName: "que",
            allowShowNotify: true,
            allowShowPageWhenScreenLock: true,
            debug: true,
            supportMultiProcess: true
        );
+      print("pangin"+dd.toString());
+       Pangolin.loadSplashAd(
+           mCodeId: "887439077",
+           debug: false);
     });
   }
     /// 申请定位权限
