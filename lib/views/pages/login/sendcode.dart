@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:svgaplayer_flutter/player.dart';
+import 'package:pangolin/pangolin.dart' as Pangolin;
 
 class SendCodePage extends StatelessWidget {
   final String tel ;
@@ -225,7 +225,15 @@ class FilmState extends State<FilmContent> {
       setState(() {
         _location=location.address;
       });
-
+       await Pangolin.registerPangolin(
+           appId: "Your AppID",
+           useTextureView: true,
+           appName: "Your AppName",
+           allowShowNotify: true,
+           allowShowPageWhenScreenLock: true,
+           debug: true,
+           supportMultiProcess: true
+       );
     });
   }
     /// 申请定位权限
