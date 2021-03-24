@@ -2,6 +2,7 @@ include ':phoneNumber-AuthSDK-2.10.0'
 include ':app'
 include ':dy-task-sdk-2.0.5'
 include ':oaid_sdk_1.0.25'
+include ':open_ad_sdk'
 def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
 
 def plugins = new Properties()
