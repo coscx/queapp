@@ -49,7 +49,7 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
             //显示是否重发1、发送2中按钮，发送成功0或者null不显示
             (entity.flags == 0 || entity.flags == 8)
                 ? IconButton(
-                icon: Icon(Icons.error, color: Colors.red, size: 18),
+                icon: Icon(Icons.error, color: Colors.red, size: 30.sp),
                 onPressed: () {
                   if (null != onResend) {
                     onResend(entity);
@@ -58,12 +58,12 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                 : ((entity.flags == 1)
                 ? Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.only(top: 20, right: 20),
-              width: 32.0,
-              height: 32.0,
+              padding: EdgeInsets.only(top: 20.h, right: 20.w),
+              width: 32.w,
+              height: 32.h,
               child: SizedBox(
-                  width: 12.0,
-                  height: 12.0,
+                  width: 12.w,
+                  height: 12.h,
                   child: CircularProgressIndicator(
                     valueColor: AlwaysStoppedAnimation(
                         ObjectUtil.getThemeSwatchColor()),
@@ -101,7 +101,7 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                     ],
                   ),
                 )),
-            SizedBox(width: 10),
+            SizedBox(width: 10.w),
             _headPortrait('', 0),
           ],
         ),
@@ -472,12 +472,13 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
     } else {
       width = 300.w;
     }
+
     return Stack(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(8.w),
           child: Container(
-              padding: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
+              padding: EdgeInsets.only(left: 30.w, right: 30.w, top: 20.h, bottom: 20.h),
               width: width,
               color: entity.sender == tfSender
                   ? Colors.white
@@ -490,19 +491,19 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                   entity.sender == tfSender
                       ? Text('')
                       : Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 18, color: Colors.black)),
+                      style: TextStyle(fontSize: 38.sp, color: Colors.black)),
                   SizedBox(
-                    width: 5,
+                    width: 5.w,
                   ),
                   entity.playing == 1
                       ? Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 1, right: 1),
-                    width: 18.0,
-                    height: 18.0,
+                    padding: EdgeInsets.only(top: 1.h, right: 1.w),
+                    width: 32.w,
+                    height: 32.h,
                     child: SizedBox(
-                        width: 14.0,
-                        height: 14.0,
+                        width: 14.w,
+                        height: 14.h,
                         child: CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(Colors.black),
                           strokeWidth: 2,
@@ -511,16 +512,16 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                       : Image.asset(
                     FileUtil.getImagePath('audio_player_3',
                         dir: 'icon', format: 'png'),
-                    width: 18,
-                    height: 18,
+                    width: 32.w,
+                    height: 32.h,
                     color: Colors.black,
                   ),
                   SizedBox(
-                    width: 5,
+                    width: 5.w,
                   ),
                   entity.sender == tfSender
                       ? Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 18, color: Colors.black))
+                      style: TextStyle(fontSize: 32.sp, color: Colors.black))
                       : Text(''),
                 ],
               )),
@@ -529,8 +530,8 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
           padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 60.h, bottom: 10.h),
           width: width,
           child: LinearProgressIndicator(
-            value: 0.3,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+            value: 0.0,
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             backgroundColor: Colors.transparent,
           ),
         ),
