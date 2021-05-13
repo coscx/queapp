@@ -171,7 +171,7 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
           height: 88.h,
           fit: BoxFit.fill,
         )
-            : Image.asset(url, width: 88, height: 88)));
+            : Image.asset(url, width: 88.w, height: 88.h)));
   }
 
   /*
@@ -474,9 +474,9 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
     return Stack(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(8.w),
           child: Container(
-              padding: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
+              padding: EdgeInsets.only(left: 30.w, right: 30.w, top: 20.h, bottom: 20.h),
               width: width,
               color: entity.sender == tfSender
                   ? Colors.white
@@ -489,19 +489,19 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
                   entity.sender == tfSender
                       ? Text('')
                       : Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 18, color: Colors.black)),
+                      style: TextStyle(fontSize: 32.sp, color: Colors.black)),
                   SizedBox(
-                    width: 5,
+                    width: 5.w,
                   ),
                   entity.playing == 1
                       ? Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 1, right: 1),
-                    width: 18.0,
-                    height: 18.0,
+                    padding: EdgeInsets.only(top: 1.h, right: 1.w),
+                    width: 38.w,
+                    height: 38.h,
                     child: SizedBox(
-                        width: 14.0,
-                        height: 14.0,
+                        width: 20.w,
+                        height: 20.h,
                         child: CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(Colors.black),
                           strokeWidth: 2,
@@ -510,16 +510,16 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
                       : Image.asset(
                     FileUtil.getImagePath('audio_player_3',
                         dir: 'icon', format: 'png'),
-                    width: 18,
-                    height: 18,
+                    width: 38.sp,
+                    height: 38.sp,
                     color: Colors.black,
                   ),
                   SizedBox(
-                    width: 5,
+                    width: 9.w,
                   ),
                   entity.sender == tfSender
                       ? Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 18, color: Colors.black))
+                      style: TextStyle(fontSize: 32.sp, color: Colors.black))
                       : Text(''),
                 ],
               )),
@@ -528,8 +528,8 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
           padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 60.h, bottom: 10.h),
           width: width,
           child: LinearProgressIndicator(
-            value: 0.3,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+            value: 0.0,
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             backgroundColor: Colors.transparent,
           ),
         ),
