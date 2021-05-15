@@ -1,5 +1,6 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ad_plugin/flutter_ad_plugin.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -439,6 +440,7 @@ class _MinePageState extends State<MinePage> with AutomaticKeepAliveClientMixin<
                       new MenuItem(
                         icon: "assets/packages/images/ic_profile_mentor_ship.svg",
                         title: '我的相册',
+
                       ),
 
                       new MenuItem(

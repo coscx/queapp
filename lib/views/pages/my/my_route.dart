@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ad_plugin/flutter_ad_plugin.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class MyRoute extends StatefulWidget {
@@ -69,10 +70,17 @@ class _MyPage extends State<MyRoute> with AutomaticKeepAliveClientMixin {
           child: Column(
             children: <Widget>[
               Padding(padding: EdgeInsets.only(top: 16.h)),
-              CircleAvatar(
-                backgroundImage: new NetworkImage(
-                    'https://queqiaoerp.oss-cn-shanghai.aliyuncs.com/customers/images/2020/07/1594898594_JA79FDbma4.jpg'),
-                radius: 100.w,
+              GestureDetector(
+                onTap: (){
+
+                    FlutterAdPlugin.jumpAdList;
+
+                },
+                child: CircleAvatar(
+                  backgroundImage: new NetworkImage(
+                      'https://queqiaoerp.oss-cn-shanghai.aliyuncs.com/customers/images/2020/07/1594898594_JA79FDbma4.jpg'),
+                  radius: 100.w,
+                ),
               ),
               Padding(padding: EdgeInsets.only(top: 16.h)),
               Text('上传头像'),

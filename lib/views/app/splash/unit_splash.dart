@@ -81,8 +81,8 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
         var agree = await LocalStorage.get("agree");
         var agrees =agree.toString();
         if("1" == "1"){
-          //_quickLogin();
-          Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
+          _quickLogin();
+          //Navigator.of(context).pushReplacementNamed(UnitRouter.nav);
 
         } else{
           //LocalStorage.save("token", '');
