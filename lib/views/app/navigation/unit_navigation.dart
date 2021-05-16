@@ -56,7 +56,7 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
   void initState() {
     super.initState();
     FltImPlugin().init(host: "mm.3dsqq.com", apiURL: "http://mm.3dsqq.com:8000");
-    FlutterAdPlugin.init;
+    FlutterAdPlugin().init;
     _controller = PageController();
     tfSender = ValueUtil.toStr(2);
     Future.delayed(Duration(milliseconds: 500)).then((e) async {

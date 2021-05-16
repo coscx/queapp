@@ -73,7 +73,7 @@ class _MyPage extends State<MyRoute> with AutomaticKeepAliveClientMixin {
               GestureDetector(
                 onTap: (){
 
-                    FlutterAdPlugin.jumpAdList;
+                    FlutterAdPlugin().jumpAdList;
 
                 },
                 child: CircleAvatar(
