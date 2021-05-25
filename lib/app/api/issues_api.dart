@@ -8,7 +8,7 @@ import 'package:flutter_geen/storage/dao/local_storage.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:flutter_geen/views/items/SearchParamModel.dart';
 import 'package:city_pickers/modal/result.dart';
-
+import 'dart:io';
 import '../router.dart';
 const kBaseUrl = 'https://ctx.gugu2019.com';
 
@@ -324,7 +324,12 @@ class IssuesApi {
   static Future<Map<String,dynamic>> addToken( String token ) async {
     var ss = await LocalStorage.get("memberId");
     var memberId =ss.toString();
-    var data={'memberId':memberId,'token':token,"pageSize":20};
+    var device =1;
+    if (Platform.isAndroid == false) {
+       device = 2;
+    }
+    var data={'memberId':memberId,'token':token,"pageSize":20,"device":device};
+
     Dio dioA= Dio();
     try {
       Response<dynamic> rep = await dioA.get('http://mm.3dsqq.com:8000/addtoken',queryParameters:data );

@@ -1,0 +1,106 @@
+-dontwarn com.umeng.**
+-dontwarn com.taobao.**
+-dontwarn anet.channel.**
+-dontwarn anetwork.channel.**
+-dontwarn org.android.**
+-dontwarn org.apache.thrift.**
+-dontwarn com.xiaomi.**
+-dontwarn com.huawei.**
+-dontwarn com.meizu.**
+
+-keepattributes *Annotation*
+
+-keep class com.taobao.** {*;}
+-keep class org.android.** {*;}
+-keep class anet.channel.** {*;}
+-keep class com.umeng.** {*;}
+-keep class com.xiaomi.** {*;}
+-keep class com.huawei.** {*;}
+-keep class com.meizu.** {*;}
+-keep class org.apache.thrift.** {*;}
+
+-keep class com.alibaba.sdk.android.** {*;}
+-keep class com.ut.** {*;}
+-keep class com.uc.** {*;}
+-keep class com.ta.** {*;}
+
+-keep public class **.R$* {
+    public static final int *;
+}
+-keep class XI.**  { *; }
+-keep class android.**  { *; }
+-keep class androidx.**  { *; }
+-keep class anet.**  { *; }
+-keep class anetwork.**  { *; }
+-keep class cn.**  { *; }
+-keep class co.lujun.**  { *; }
+-keep class defpackage.**  { *; }
+#-keep class io.**  { *; }
+-keep class it.**  { *; }
+-keep class javax.**  { *; }
+-keep class kotlin.**  { *; }
+-keep class kotlinx.**  { *; }
+-keep class me.**  { *; }
+-keep class okhttp3.**  { *; }
+-keep class okio.**  { *; }
+-keep class org.**  { *; }
+-keep class retrofit.**  { *; }
+-keep class top.**  { *; }
+-keep class uk.**  { *; }
+-keep class xyz.**  { *; }
+#Flutter Wrapper
+-dontwarn io.flutter.**
+-keep class io.flutter.app.** { *; }
+-keep class io.flutter.plugin.**  { *; }
+-keep class io.flutter.util.**  { *; }
+-keep class io.flutter.view.**  { *; }
+-keep class io.flutter.**  { *; }
+-keep class io.flutter.plugins.**  { *; }
+-keep class com.beetle.im.** { *; }
+-keep class com.beetle.imkit.** { *; }
+-keep class com.beetle.imlib.** { *; }
+-keep class com.beetle.bauhinia.** { *; }
+-keep class com.amap.** { *; }
+-keep class com.arthenica.** { *; }
+-keep class com.asus.** { *; }
+-keep class com.autonavi.** { *; }
+-keep class com.baseflow.** { *; }
+-keep class com.benjaminabel.** { *; }
+-keep class com.bumptech.** { *; }
+-keep class com.bun.** { *; }
+-keep class com.bytedance.** { *; }
+-keep class com.cjt2325.** { *; }
+-keep class com.cmic.** { *; }
+-keep class com.dexterous.** { *; }
+-keep class com.dooboolab.** { *; }
+-keep class com.douyou.** { *; }
+-keep class com.example.** { *; }
+-keep class com.flutter_webview_plugin.** { *; }
+-keep class com.google.** { *; }
+-keep class com.heytap.mcssdk.** { *; }
+-keep class com.jakewharton.** { *; }
+-keep class com.jarvan.** { *; }
+-keep class com.joomob.** { *; }
+-keep class com.linkedin.** { *; }
+-keep class com.loc.** { *; }
+-keep class com.mbridge.** { *; }
+-keep class com.mcs.** { *; }
+-keep class com.mobile.** { *; }
+-keep class com.netbase.** { *; }
+-keep class com.pgl.** { *; }
+-keep class com.pichilllilorenzo.** { *; }
+-keep class com.qq.** { *; }
+-keep class com.queqiaochina.** { *; }
+-keep class com.samsung.** { *; }
+-keep class com.sangcomz.** { *; }
+-keep class com.sigmob.** { *; }
+-keep class com.squareup.** { *; }
+-keep class com.ss.** { *; }
+-keep class com.tekartik.** { *; }
+-keep class com.tencent.** { *; }
+-keep class com.tonfyangsheng.** { *; }
+-keep class com.tradeplus.** { *; }
+-keep class com.vitanov.** { *; }
+-keep class com.xuexiang.** { *; }
+-keep class com.zhy.** { *; }
+-keep class com.zui.** { *; }
