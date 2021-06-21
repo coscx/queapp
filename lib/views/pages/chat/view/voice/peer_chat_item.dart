@@ -11,10 +11,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_geen/components/imageview/image_preview_page.dart';
 import 'package:flutter_geen/components/imageview/image_preview_view.dart';
 import 'package:flutter_geen/views/pages/chat/view/util/ImMessage.dart';
-import 'package:flutter_geen/views/pages/utils/dialog_util.dart';
-import 'package:flutter_geen/views/pages/utils/file_util.dart';
-import 'package:flutter_geen/views/pages/utils/functions.dart';
-import 'package:flutter_geen/views/pages/utils/object_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/dialog_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/file_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/functions.dart';
+import 'package:flutter_geen/views/pages/chat/utils/object_util.dart';
 
 class PeerChatItemWidget extends StatefulWidget {
   final Message entity;
@@ -38,8 +38,12 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
 
 
   Widget _chatItemWidget(Message entity, OnItemClick onResend, OnItemClick onItemClick,OnItemClick onItemLongClick,String tfSender) {
+    if (entity.type == MessageType.MESSAGE_REVOKE) {
+      //文本
+      return buildRevokeWidget(entity,tfSender);
+    }
     if (entity.sender == tfSender) {
-
+   {
       //自己的消息
       return Container(
         margin: EdgeInsets.only(left: 40.w, right: 10.w, bottom: 6.h, top: 6.h),
@@ -49,7 +53,7 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
             //显示是否重发1、发送2中按钮，发送成功0或者null不显示
             (entity.flags == 0 || entity.flags == 8)
                 ? IconButton(
-                icon: Icon(Icons.error, color: Colors.red, size: 30.sp),
+                icon: Icon(Icons.error, color: Colors.red, size: 18.sp),
                 onPressed: () {
                   if (null != onResend) {
                     onResend(entity);
@@ -101,17 +105,16 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                     ],
                   ),
                 )),
-            SizedBox(width: 10.w),
+            SizedBox(width: 10),
             _headPortrait('', 0),
           ],
         ),
       );
+    }
 
 
-    } else if (entity.type == MessageType.MESSAGE_GROUP_NOTIFICATION) {
-      //文本
-      return buildGroupNotifitionWidget(entity,tfSender);
-    }else {
+
+    } else {
       //其他人的消息
       return Container(
         margin: EdgeInsets.only(left: 10.w, right: 40.w, bottom: 6.h, top: 6.h),
@@ -133,12 +136,12 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                             onItemClick(entity);
                           }
                         },
-                        onLongPress: () {
-                          if (null != onItemClick) {
-                            onItemLongClick(entity);
-                          }
-
-                        },
+                        // onLongPress: () {
+                        //   if (null != onItemClick) {
+                        //     onItemLongClick(entity);
+                        //   }
+                        //
+                        // },
                       ),
                     ],
                   ),
@@ -182,10 +185,12 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
     Widget widget;
     if (entity.type == MessageType.MESSAGE_TEXT) {
       //文本
-      if (entity.content['text'].contains('assets/images/face') ||
-          entity.content['text'].contains('assets/images/figure')) {
+      if ((entity.content['text'] != null && entity.content['text'].contains('assets/images/face') )||
+          (entity.content['text'] != null && entity.content['text'].contains('assets/images/figure'))) {
         widget = buildImageWidget(entity,tfSender);
       } else {
+        if(entity.content['text'] == null)
+        entity.content['text'] ="err";
         widget = buildTextWidget(entity,tfSender);
       }
 
@@ -195,7 +200,10 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
     }else if (entity.type == MessageType.MESSAGE_AUDIO) {
       //文本
       widget = buildVoiceWidget(entity,tfSender);
-    }else {
+    }else if (entity.type == MessageType.MESSAGE_REVOKE) {
+      //文本
+      widget = buildRevokeWidget(entity,tfSender);
+    } else {
       widget = ClipRRect(
         borderRadius: BorderRadius.circular(12.w),
         child: Container(
@@ -210,7 +218,25 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
     }
     return widget;
   }
+  Widget buildRevokeWidget(Message entity,String  tfSender) {
+    var type = entity.content['notificationType'];
+    //var raw = json.decode(entity.content['raw']);
+    String content ="";
 
+   content = entity.sender == tfSender ?"你撤回了一条消息" : entity.sender + "撤回了一条消息";
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16.w),
+      child: Container(
+        padding: EdgeInsets.only(left: 12.w, right: 12.w, top: 16.h, bottom: 16.h),
+        color:  Colors.transparent,
+        child: Text(
+          content,
+          style: TextStyle(fontSize: 28.sp, color: Colors.black45),
+        ),
+      ),
+    );
+  }
   Widget buildTextWidget(Message entity,String  tfSender) {
 
     return ClipRRect(
@@ -472,13 +498,12 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
     } else {
       width = 300.w;
     }
-
     return Stack(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(8.w),
+          borderRadius: BorderRadius.circular(8.0),
           child: Container(
-              padding: EdgeInsets.only(left: 30.w, right: 30.w, top: 20.h, bottom: 20.h),
+              padding: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
               width: width,
               color: entity.sender == tfSender
                   ? Colors.white
@@ -491,19 +516,19 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                   entity.sender == tfSender
                       ? Text('')
                       : Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 38.sp, color: Colors.black)),
+                      style: TextStyle(fontSize: 18, color: Colors.black)),
                   SizedBox(
-                    width: 5.w,
+                    width: 5,
                   ),
                   entity.playing == 1
                       ? Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 1.h, right: 1.w),
-                    width: 32.w,
-                    height: 32.h,
+                    padding: EdgeInsets.only(top: 1, right: 1),
+                    width: 18.0,
+                    height: 18.0,
                     child: SizedBox(
-                        width: 14.w,
-                        height: 14.h,
+                        width: 14.0,
+                        height: 14.0,
                         child: CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(Colors.black),
                           strokeWidth: 2,
@@ -512,16 +537,16 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
                       : Image.asset(
                     FileUtil.getImagePath('audio_player_3',
                         dir: 'icon', format: 'png'),
-                    width: 32.w,
-                    height: 32.h,
+                    width: 18,
+                    height: 18,
                     color: Colors.black,
                   ),
                   SizedBox(
-                    width: 5.w,
+                    width: 5,
                   ),
                   entity.sender == tfSender
                       ? Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 32.sp, color: Colors.black))
+                      style: TextStyle(fontSize: 18, color: Colors.black))
                       : Text(''),
                 ],
               )),
@@ -530,8 +555,8 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
           padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 60.h, bottom: 10.h),
           width: width,
           child: LinearProgressIndicator(
-            value: 0.0,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            value: 0.3,
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
             backgroundColor: Colors.transparent,
           ),
         ),

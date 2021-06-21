@@ -41,7 +41,14 @@ class EventGroupSendNewMessage extends GroupEvent {
   EventGroupSendNewMessage(this.currentUID,this.GroupUID,this.content,);
 
 }
+class EventSendGroupRevokeMessage extends GroupEvent {
 
+  final String currentUID;
+  final String GroupUID;
+  final String msg;
+  EventSendGroupRevokeMessage(this.currentUID,this.GroupUID,this.msg,);
+
+}
 class EventGroupSendNewImageMessage extends GroupEvent {
 
   final String currentUID;

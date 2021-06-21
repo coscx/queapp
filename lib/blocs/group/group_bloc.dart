@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_geen/app/res/cons.dart';
+import 'package:flutter_geen/views/pages/chat/utils/encrypt.dart';
 import 'group_event.dart';
 import 'group_state.dart';
 
@@ -44,9 +45,41 @@ class GroupBloc extends Bloc<GroupEvent, GroupState> {
           var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
 
           newMessage.addAll(messages.reversed.toList());
-
-        yield GroupMessageSuccess(newMessage,event.GroupUID);
+        List<Message> newMessageList =[];
+        for(var i=0; i< newMessage.length;i++){
+          if (i == 0){
+            newMessage[i].flags = 1;
+            newMessageList.add(newMessage[i]);
+          }else{
+            newMessageList.add(newMessage[i]);
+          }
+        }
+        yield GroupMessageSuccess(newMessageList,event.GroupUID);
       }
+    if (event is EventSendGroupRevokeMessage) {
+      FltImPlugin im = FltImPlugin();
+      Map result = await im.sendGroupRevokeMessage(
+        secret: false,
+        sender: event.currentUID,
+        receiver: event.GroupUID,
+        uuid: event.msg,
+      );
+      List<Message> newMessage =[];
+      Map response = await im.loadData();
+      var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
+
+      newMessage.addAll(messages.reversed.toList());
+      List<Message> newMessageList =[];
+      // for(var i=0; i< newMessage.length;i++){
+      //   if (i == 0){
+      //     newMessage[i].flags = 1;
+      //     newMessageList.add(newMessage[i]);
+      //   }else{
+      //     newMessageList.add(newMessage[i]);
+      //   }
+      // }
+      yield GroupMessageSuccess(newMessage,event.GroupUID);
+    }
     if (event is EventGroupSendNewImageMessage) {
       FltImPlugin im = FltImPlugin();
       Map result = await im.sendGroupImageMessage(
@@ -60,8 +93,41 @@ class GroupBloc extends Bloc<GroupEvent, GroupState> {
       var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
 
       newMessage.addAll(messages.reversed.toList());
+      List<Message> newMessageList =[];
+      for(var i=0; i< newMessage.length;i++){
+        if (i == 0){
+          newMessage[i].flags = 1;
+          newMessageList.add(newMessage[i]);
+        }else{
+          newMessageList.add(newMessage[i]);
+        }
+      }
+      yield GroupMessageSuccess(newMessageList,event.GroupUID);
+    }
+    if (event is EventGroupSendNewVoiceMessage) {
+      FltImPlugin im = FltImPlugin();
+      Map result = await im.sendGroupAudioMessage(
+          secret: false,
+          sender: event.currentUID,
+          receiver: event.peerUID,
+          path: event.path ??'',
+          second: event.second
+      );
+      List<Message> newMessage =[];
+      Map response = await im.loadData();
+      var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
 
-      yield GroupMessageSuccess(newMessage,event.GroupUID);
+      newMessage.addAll(messages.reversed.toList());
+      List<Message> newMessageList =[];
+      for(var i=0; i< newMessage.length;i++){
+        if (i == 0){
+          newMessage[i].flags = 1;
+          newMessageList.add(newMessage[i]);
+        }else{
+          newMessageList.add(newMessage[i]);
+        }
+      }
+      yield GroupMessageSuccess(newMessageList,event.peerUID);
     }
     if (event is EventGroupReceiveNewMessage) {
 
@@ -80,8 +146,16 @@ class GroupBloc extends Bloc<GroupEvent, GroupState> {
               newMessage.addAll(history);
             }else{
               List<Message> history=state.props.elementAt(0);
-              newMessage.add(mess);
-              newMessage.addAll(history);
+              if(mess.type == MessageType.MESSAGE_REVOKE){
+                FltImPlugin im = FltImPlugin();
+                Map response = await im.loadData();
+                var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
+
+                newMessage.addAll(messages.reversed.toList());
+              }else{
+                newMessage.add(mess);
+                newMessage.addAll(history);
+              }
             }
 
 
@@ -117,23 +191,49 @@ class GroupBloc extends Bloc<GroupEvent, GroupState> {
       }
 
     }
-    if (event is EventGroupSendNewVoiceMessage) {
-      FltImPlugin im = FltImPlugin();
-      Map result = await im.sendGroupAudioMessage(
-          secret: false,
-          sender: event.currentUID,
-          receiver: event.peerUID,
-          path: event.path ??'',
-          second: event.second
-      );
-      List<Message> newMessage =[];
-      Map response = await im.loadData();
-      var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
+    if (event is EventGroupReceiveNewMessageAck) {
 
-      newMessage.addAll(messages.reversed.toList());
+      try {
 
-      yield GroupMessageSuccess(newMessage,event.peerUID);
+        String cunrrentId;
+        List<Message> newMessage =[];
+        FltImPlugin im = FltImPlugin();
+        var res = await im.createGroupConversion(
+          currentUID: event.message['sender'].toString(),
+          groupUID: event.message['receiver'].toString(),
+        );
+        cunrrentId=event.message['receiver'].toString();
+        Map response = await im.loadData();
+        var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
+        var newMessages= messages.map((item) {
+          if(item.msgLocalID == event.message['msgLocalID']){
+            item.flags=2;
+            return item;
+          }else{
+            return item;
+          }
+
+        }).toList();
+
+        newMessage.addAll(newMessages.reversed.toList());
+
+        newMessages.map((e) {
+          if(e.type==MessageType.MESSAGE_TEXT){
+            e.content['text'] = encrypt.aes_dec(e.content['text']);
+            return e;
+          }else{
+            return e;
+          }
+
+        }).toList();
+        yield GroupMessageSuccess(newMessage,cunrrentId);
+      } catch (err) {
+        print(err);
+        yield GetGroupFailed();
+      }
+
     }
+
     if (event is EventGroupReceiveNewMessageAck) {
 
       try {

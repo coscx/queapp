@@ -1,4 +1,5 @@
 import 'package:flt_im_plugin/flt_im_plugin.dart';
+import 'package:flt_im_plugin/message.dart';
 import 'package:flt_im_plugin/value_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,8 +15,8 @@ import 'package:flutter_geen/blocs/peer/peer_state.dart';
 import 'package:flutter_geen/views/pages/chat/view/util/date.dart';
 import 'package:flutter_geen/views/pages/chat/widget/more_widgets.dart';
 import 'package:flutter_geen/views/pages/home/home_page.dart';
-import 'package:flutter_geen/views/pages/utils/DyBehaviorNull.dart';
-import 'package:flutter_geen/views/pages/utils/dialog_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/DyBehaviorNull.dart';
+import 'package:flutter_geen/views/pages/chat/utils/dialog_util.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:flt_im_plugin/conversion.dart';
@@ -326,14 +327,14 @@ class ImConversationListPage extends StatelessWidget{
                     conversation.type == ConversionType.CONVERSATION_PEER ?Container(
                       constraints: BoxConstraints(maxWidth: 0.6.sw),
                       margin: EdgeInsets.only(top: 8.w),
-                      child: Text((conversation.detail.contains('assets/images/face') || conversation.detail.contains('assets/images/figure'))?'[表情消息]':conversation.detail,
+                      child: Text((conversation.message.type == MessageType.MESSAGE_REVOKE ? (conversation.message.sender == memberId ?"你撤回了一条消息" : conversation.message.sender +"撤回了一条消息") : (conversation.detail.contains('assets/images/face') || conversation.detail.contains('assets/images/figure'))?'[表情消息]':conversation.detail),
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: TextStyle(color: Colors.grey, fontSize: 30.sp)),
                     ):Container(
                       constraints: BoxConstraints(maxWidth: 0.6.sw),
                       margin: EdgeInsets.only(top: 8.w),
-                      child: Text((conversation.message.sender + ":"+((conversation.detail.contains('assets/images/face') || conversation.detail.contains('assets/images/figure'))?'[表情消息]':conversation.detail)),
+                      child: Text((conversation.message.type == MessageType.MESSAGE_REVOKE ? (conversation.message.sender == memberId ?"你撤回了一条消息" : conversation.message.sender +"撤回了一条消息") :(conversation.message.sender + ":"+((conversation.detail.contains('assets/images/face') || conversation.detail.contains('assets/images/figure'))?'[表情消息]':conversation.detail))),
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: TextStyle(color: Colors.grey, fontSize: 30.sp)),

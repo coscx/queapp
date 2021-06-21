@@ -11,17 +11,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_geen/components/imageview/image_preview_page.dart';
 import 'package:flutter_geen/components/imageview/image_preview_view.dart';
 import 'package:flutter_geen/views/pages/chat/view/util/ImMessage.dart';
-import 'package:flutter_geen/views/pages/utils/dialog_util.dart';
-import 'package:flutter_geen/views/pages/utils/file_util.dart';
-import 'package:flutter_geen/views/pages/utils/functions.dart';
-import 'package:flutter_geen/views/pages/utils/object_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/dialog_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/file_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/functions.dart';
+import 'package:flutter_geen/views/pages/chat/utils/object_util.dart';
 import 'dart:convert';
 class GroupChatItemWidget extends StatefulWidget {
   final Message entity;
   final OnItemClick onResend;
   final OnItemClick onItemClick;
+  final OnItemClick onItemLongClick;
   final String  tfSender;
-  GroupChatItemWidget({@required this.entity,@required this.onResend, @required this.onItemClick,@required this.tfSender});
+  GroupChatItemWidget({@required this.entity,@required this.onResend, @required this.onItemClick,@required this.onItemLongClick,@required this.tfSender});
   @override
   _GroupChatItemWidgetState createState() => _GroupChatItemWidgetState();
 }
@@ -31,12 +32,16 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return _chatItemWidget(widget.entity,widget.onResend,widget.onItemClick,widget.tfSender);
+    return _chatItemWidget(widget.entity,widget.onResend,widget.onItemClick,widget.onItemLongClick,widget.tfSender);
   }
 
 
 
-  Widget _chatItemWidget(Message entity, OnItemClick onResend, OnItemClick onItemClick,String tfSender) {
+  Widget _chatItemWidget(Message entity, OnItemClick onResend, OnItemClick onItemClick,OnItemClick onItemLongClick,String tfSender) {
+    if (entity.type == MessageType.MESSAGE_REVOKE) {
+      //文本
+      return buildRevokeWidget(entity,tfSender);
+    }
     if (entity.sender == tfSender) {
 
       //自己的消息
@@ -45,6 +50,34 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            //显示是否重发1、发送2中按钮，发送成功0或者null不显示
+            (entity.flags == 0 || entity.flags == 8)
+                ? IconButton(
+                icon: Icon(Icons.error, color: Colors.red, size: 36.sp),
+                onPressed: () {
+                  if (null != onResend) {
+                    onResend(entity);
+                  }
+                })
+                : ((entity.flags == 1)
+                ? Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(top: 20.h, right: 20.w),
+              width: 32.w,
+              height: 32.h,
+              child: SizedBox(
+                  width: 12.w,
+                  height: 12.h,
+                  child: CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation(
+                        ObjectUtil.getThemeSwatchColor()),
+                    strokeWidth: 2,
+                  )),
+            )
+                : SizedBox(
+              width: 0,
+              height: 0,
+            )),
             Expanded(
                 child: Container(
                   margin: EdgeInsets.only(left: 0.w, right: 0.w, bottom: 0.h, top: 12.h),
@@ -62,37 +95,13 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
                           }
                         },
                         onLongPress: () {
-                          DialogUtil.buildToast('长按了消息');
+                          if (null != onItemClick) {
+                            onItemLongClick(entity);
+                          }
+
                         },
                       ),
-                      //显示是否重发1、发送2中按钮，发送成功0或者null不显示
-                      // entity.flags == 11
-                      //     ? IconButton(
-                      //     icon: Icon(Icons.refresh, color: Colors.red, size: 18),
-                      //     onPressed: () {
-                      //       if (null != onResend) {
-                      //         onResend(entity);
-                      //       }
-                      //     })
-                      //     : (entity.flags == 10
-                      //     ? Container(
-                      //   alignment: Alignment.center,
-                      //   padding: EdgeInsets.only(top: 20, right: 20),
-                      //   width: 32.0,
-                      //   height: 32.0,
-                      //   child: SizedBox(
-                      //       width: 12.0,
-                      //       height: 12.0,
-                      //       child: CircularProgressIndicator(
-                      //         valueColor: AlwaysStoppedAnimation(
-                      //             ObjectUtil.getThemeSwatchColor()),
-                      //         strokeWidth: 2,
-                      //       )),
-                      // )
-                      //     : SizedBox(
-                      //   width: 0,
-                      //   height: 0,
-                      // )),
+
                     ],
                   ),
                 )),
@@ -171,7 +180,7 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
           height: 88.h,
           fit: BoxFit.fill,
         )
-            : Image.asset(url, width: 88.w, height: 88.h)));
+            : Image.asset(url, width: 88, height: 88)));
   }
 
   /*
@@ -194,7 +203,10 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
     }else if (entity.type == MessageType.MESSAGE_AUDIO) {
       //文本
       widget = buildVoiceWidget(entity,tfSender);
-    }else {
+    }else if (entity.type == MessageType.MESSAGE_REVOKE) {
+      //文本
+      widget = buildRevokeWidget(entity,tfSender);
+    } else {
       widget = ClipRRect(
         borderRadius: BorderRadius.circular(12.w),
         child: Container(
@@ -209,7 +221,25 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
     }
     return widget;
   }
+  Widget buildRevokeWidget(Message entity,String  tfSender) {
+    var type = entity.content['notificationType'];
+    //var raw = json.decode(entity.content['raw']);
+    String content ="";
 
+    content = entity.sender == tfSender ?"你撤回了一条消息" : entity.sender + "撤回了一条消息";
+
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16.w),
+      child: Container(
+        padding: EdgeInsets.only(left: 12.w, right: 12.w, top: 16.h, bottom: 16.h),
+        color:  Colors.transparent,
+        child: Text(
+          content,
+          style: TextStyle(fontSize: 28.sp, color: Colors.black45),
+        ),
+      ),
+    );
+  }
   Widget buildTextWidget(Message entity,String  tfSender) {
 
     return ClipRRect(
@@ -474,9 +504,9 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
     return Stack(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(8.w),
+          borderRadius: BorderRadius.circular(8.0),
           child: Container(
-              padding: EdgeInsets.only(left: 30.w, right: 30.w, top: 20.h, bottom: 20.h),
+              padding: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
               width: width,
               color: entity.sender == tfSender
                   ? Colors.white
@@ -489,19 +519,19 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
                   entity.sender == tfSender
                       ? Text('')
                       : Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 32.sp, color: Colors.black)),
+                      style: TextStyle(fontSize: 18, color: Colors.black)),
                   SizedBox(
-                    width: 5.w,
+                    width: 5,
                   ),
                   entity.playing == 1
                       ? Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.only(top: 1.h, right: 1.w),
-                    width: 38.w,
-                    height: 38.h,
+                    padding: EdgeInsets.only(top: 1, right: 1),
+                    width: 18.0,
+                    height: 18.0,
                     child: SizedBox(
-                        width: 20.w,
-                        height: 20.h,
+                        width: 14.0,
+                        height: 14.0,
                         child: CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(Colors.black),
                           strokeWidth: 2,
@@ -510,16 +540,16 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
                       : Image.asset(
                     FileUtil.getImagePath('audio_player_3',
                         dir: 'icon', format: 'png'),
-                    width: 38.sp,
-                    height: 38.sp,
+                    width: 18,
+                    height: 18,
                     color: Colors.black,
                   ),
                   SizedBox(
-                    width: 9.w,
+                    width: 5,
                   ),
                   entity.sender == tfSender
                       ? Text((entity.content['duration']).toString() + 's',
-                      style: TextStyle(fontSize: 32.sp, color: Colors.black))
+                      style: TextStyle(fontSize: 18, color: Colors.black))
                       : Text(''),
                 ],
               )),
@@ -528,8 +558,8 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
           padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 60.h, bottom: 10.h),
           width: width,
           child: LinearProgressIndicator(
-            value: 0.0,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            value: 0.3,
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
             backgroundColor: Colors.transparent,
           ),
         ),

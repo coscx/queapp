@@ -11,7 +11,7 @@ import 'package:flutter_geen/app/enums.dart';
 import 'package:flutter_geen/app/res/cons.dart';
 import 'package:flutter_geen/repositories/itf/widget_repository.dart';
 import 'package:flutter_geen/storage/dao/local_storage.dart';
-import 'package:flutter_geen/views/pages/utils/encrypt.dart';
+import 'package:flutter_geen/views/pages/chat/utils/encrypt.dart';
 import 'chat_event.dart';
 import 'chat_state.dart';
 

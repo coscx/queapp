@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_geen/app/res/cons.dart';
-import 'package:flutter_geen/views/pages/utils/encrypt.dart';
+import 'package:flutter_geen/views/pages/chat/utils/encrypt.dart';
 import 'peer_event.dart';
 import 'peer_state.dart';
 
@@ -60,6 +60,34 @@ class PeerBloc extends Bloc<PeerEvent, PeerState> {
 
         yield PeerMessageSuccess(newMessageList,event.peerUID);
       }
+    if (event is EventSendPeerRevokeMessage) {
+      FltImPlugin im = FltImPlugin();
+      Map result = await im.sendRevokeMessage(
+        secret: false,
+        sender: event.currentUID,
+        receiver: event.peerUID,
+        uuid:  event.msg,
+      );
+      List<Message> newMessage =[];
+      Map response = await im.loadData();
+      var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
+      newMessage.addAll(messages.reversed.toList());
+      newMessage.map((e) {
+        e.content['text'] = encrypt.aes_dec(e.content['text']);
+        return e;
+      }).toList();
+      List<Message> newMessageList =[];
+      // for(var i=0; i< newMessage.length;i++){
+      //   if (i == 0){
+      //     newMessage[i].flags = 1;
+      //     newMessageList.add(newMessage[i]);
+      //   }else{
+      //     newMessageList.add(newMessage[i]);
+      //   }
+      // }
+
+      yield PeerMessageSuccess(newMessage,event.peerUID);
+    }
     if (event is EventSendNewVoiceMessage) {
       FltImPlugin im = FltImPlugin();
       Map result = await im.sendAudioMessage(
@@ -158,13 +186,20 @@ class PeerBloc extends Bloc<PeerEvent, PeerState> {
               newMessage.addAll(history);
             }else{
               List<Message> history=state.props.elementAt(0);
-              newMessage.add(mess);
-              newMessage.addAll(history);
+              if(mess.type == MessageType.MESSAGE_REVOKE){
+                FltImPlugin im = FltImPlugin();
+                Map response = await im.loadData();
+                var  messages = ValueUtil.toArr(response["data"]).map((e) => Message.fromMap((e))).toList();
+
+                newMessage.addAll(messages.reversed.toList());
+              }else{
+                newMessage.add(mess);
+                newMessage.addAll(history);
+              }
+
             }
 
-          } else
-
-            if (state is LoadMorePeerMessageSuccess){
+          } else if (state is LoadMorePeerMessageSuccess){
               FltImPlugin im = FltImPlugin();
               var res = await im.createConversion(
                 currentUID: event.message['receiver'].toString(),

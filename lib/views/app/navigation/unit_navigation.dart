@@ -10,6 +10,7 @@ import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_page.dart';
 import 'package:flutter_geen/views/pages/index/index_page.dart';
 import 'package:flutter_geen/views/pages/message/pages/message_page.dart';
+import 'package:flutter_geen/views/pages/message/pages/private_chat_page.dart';
 import 'package:flutter_geen/views/pages/search/serach_page.dart';
 import 'package:flutter_geen/views/app/navigation/unit_bottom_bar.dart';
 import 'package:flutter_geen/views/pages/category/home_right_drawer.dart';
@@ -35,7 +36,8 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:package_info/package_info.dart';
 import 'package:umeng_analytics_push/umeng_analytics_push.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
+import 'package:umeng_analytics_push/umeng_analytics_push.dart';
+import 'package:umeng_analytics_push/message_model.dart';
 /// 说明: 主题结构 左右滑页 + 底部导航栏
 
 class UnitNavigation extends StatefulWidget {
@@ -65,7 +67,7 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
       if(memberId != "" && memberId != null){
         tfSender=memberId.toString();
       }
-      if(ss !="" || ss != null){
+      if(ss =="" || ss == null){
 
         login(success: () {
           listenNative();
@@ -135,6 +137,9 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
 
     setState(() {
       debugLable = platformVersion;
+    });
+    UmengAnalyticsPush.addPushMessageCallback((MessageModel message) {
+      print("UmengAnalyticsPush Message ======> $message");
     });
   }
   @override
@@ -274,6 +279,8 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
           onPeerSecretMessage(result);
         }  else if (type == 'onGroupMessage') {
            onGroupMessage(result);
+         } else if (type == 'onGroupMessageACK') {
+           onGroupMessageACK(result);
         } else if (type == 'onImageUploadSuccess') {
           String url = ValueUtil.toStr(data['URL']);
           onImageUploadSuccess(result, url);
@@ -495,6 +502,24 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
 
     //_showNotification(title,content);
     BlocProvider.of<GroupBloc>(context).add(EventGroupReceiveNewMessage(message));
+  }
+    void onGroupMessageACK(result) {
+    Map<String, dynamic> message= Map<String, dynamic>.from(result);
+    String title="通知";
+    String content="消息";
+    var type =message['type'];
+    if(type == "MESSAGE_TEXT"){
+      title="通知";
+      content= message['content']['text'];
+    }else{
+      title="通知";
+      content= '聊天消息';
+    }
+
+
+
+    //_showNotification(title,content);
+    BlocProvider.of<GroupBloc>(context).add(EventGroupReceiveNewMessageAck(message));
   }
   void onNewMessage(result, int error)async {
     var count = 1;

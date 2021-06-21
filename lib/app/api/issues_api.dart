@@ -10,7 +10,7 @@ import 'package:flutter_geen/views/items/SearchParamModel.dart';
 import 'package:city_pickers/modal/result.dart';
 
 import '../router.dart';
-const kBaseUrl = 'https://ctx.gugu2019.com';
+const kBaseUrl = 'https://coretest.queqiaochina.com';
 
 class IssuesApi {
   /// 自定义Header

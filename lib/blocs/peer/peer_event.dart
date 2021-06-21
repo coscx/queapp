@@ -44,7 +44,14 @@ class EventSendNewMessage extends PeerEvent {
   EventSendNewMessage(this.currentUID,this.peerUID,this.content,);
 
 }
+class EventSendPeerRevokeMessage extends PeerEvent {
 
+  final String currentUID;
+  final String peerUID;
+  final String msg;
+  EventSendPeerRevokeMessage(this.currentUID,this.peerUID,this.msg,);
+
+}
 class EventSendNewImageMessage extends PeerEvent {
 
   final String currentUID;
