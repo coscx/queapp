@@ -125,7 +125,7 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
             _headPortrait('', 1),
             Container(
               margin: EdgeInsets.only(left: 5.w, right: 0.w, bottom: 0.h, top: 26.h),
-              width: 20.w,
+              width: 40.w,
               child:Text(
                 entity.sender,
                 style: new TextStyle(color: Colors.black, fontSize: 32.sp),
@@ -297,13 +297,13 @@ class _GroupChatItemWidgetState extends State<GroupChatItemWidget> {
     if (message.type== MessageType.MESSAGE_TEXT&&
         message.content['text'].contains('assets/images/face')) {
       //assets/images/face中的表情
-      size = 50.w;
+      size = 150.w;
       image = Image.asset(message.content['text'], width: size, height: size);
       isFace=1;
     } else if (message.type== MessageType.MESSAGE_TEXT &&
         message.content['text'].contains('assets/images/figure')) {
       //assets/images/figure中的表情
-      size = 120.w;
+      size = 300.w;
       image = Image.asset(message.content['text'], width: size, height: size);
       isFace=1;
     }

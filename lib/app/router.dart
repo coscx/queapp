@@ -10,6 +10,9 @@ import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_detail_page.dart'
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_video_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/search_page.dart';
+import 'package:flutter_geen/views/pages/login/login_page.dart';
+import 'package:flutter_geen/views/pages/user/pages/User.dart';
+
 
 import 'utils/router_utils.dart';
 
@@ -86,14 +89,16 @@ class UnitRouter {
         return Right2LeftRouter(child: DynamicVideoPage());
       case search_index:
         return Right2LeftRouter(child: SearchIndexPage());
-
+      case login:
+        return Right2LeftRouter(child: LoginPage());
 
       case nav:
         return NoAnimRouter(child: UnitNavigation());
 
       // case baidu_map:
       //   return Right2LeftRouter(child: SelectLocationFromMapPage());
-
+      case user:
+        return Right2LeftRouter(child: UserPage());
 
       case to_chats:
         return Right2LeftRouter(child: ChatsPage(model: settings.arguments,));

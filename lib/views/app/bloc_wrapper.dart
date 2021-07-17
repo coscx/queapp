@@ -5,6 +5,9 @@ import 'package:flutter_geen/blocs/bloc_exp.dart';
 import 'package:flutter_geen/storage/app_storage.dart';
 import 'package:flutter_geen/views/pages/chat/bloc/chat/chat_bloc.dart';
 import 'package:flutter_geen/views/pages/chat/bloc/chat_bloc_exp.dart';
+import 'package:flutter_geen/views/pages/discovery/bloc/discovery_bloc_exp.dart';
+import 'package:flutter_geen/views/pages/login/bloc/login/login_bloc.dart';
+import 'package:flutter_geen/views/pages/user/bloc/user/user_bloc.dart';
 
 /// 说明: Bloc提供器包裹层
 
@@ -39,7 +42,11 @@ class _BlocWrapperState extends State<BlocWrapper> {
 
           BlocProvider<GroupBloc>(create: (_) => GroupBloc()),
 
+          BlocProvider<DiscoveryBloc>(create: (_) => DiscoveryBloc()),
 
+          BlocProvider<LoginBloc>(create: (_) => LoginBloc()),
+
+          BlocProvider<UserBloc>(create: (_) => UserBloc()),
         ], child: widget.child);
   }
 

@@ -110,7 +110,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     } else {
       AliAuthPlugin.initSdk(IosAliAuthSdk);
     }
-    UmengAnalyticsPush.initUmeng(false, true);
+    UmengAnalyticsPush.initUmeng(true, true);
   }
 
 

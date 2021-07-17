@@ -294,13 +294,13 @@ class PeerChatItemWidgetState extends State<PeerChatItemWidget> {
     if (message.type== MessageType.MESSAGE_TEXT&&
         message.content['text'].contains('assets/images/face')) {
       //assets/images/face中的表情
-      size = 50.w;
+      size = 150.w;
       image = Image.asset(message.content['text'], width: size, height: size);
       isFace=1;
     } else if (message.type== MessageType.MESSAGE_TEXT &&
         message.content['text'].contains('assets/images/figure')) {
       //assets/images/figure中的表情
-      size = 120.w;
+      size = 300.w;
       image = Image.asset(message.content['text'], width: size, height: size);
       isFace=1;
     }

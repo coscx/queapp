@@ -1,6 +1,7 @@
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_easyrefresh/material_footer.dart';
 import 'package:flutter_easyrefresh/material_header.dart';
@@ -10,6 +11,10 @@ import 'package:flutter_geen/net/base_entity.dart';
 import 'package:flutter_geen/net/dio_utils.dart';
 import 'package:flutter_geen/net/http_api.dart';
 import 'package:flutter_geen/repositories/impl/net_work_repository.dart';
+import 'package:flutter_geen/views/pages/discovery/bloc/discovery/discovery_bloc.dart';
+import 'package:flutter_geen/views/pages/discovery/bloc/discovery/discovery_bloc.dart';
+import 'package:flutter_geen/views/pages/discovery/bloc/discovery/discovery_bloc.dart';
+import 'package:flutter_geen/views/pages/discovery/bloc/discovery_bloc_exp.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_widget.dart';
 import 'package:flutter_geen/views/pages/user/pages/user_page.dart';
 import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
@@ -108,26 +113,9 @@ class _NearbyPageState extends State<NearbyPage>
   /// 获取数据
   void _getPostData(bool _beAdd) async {
 
-    var dio =NetWorkRepository();
 
-    FormData formData = FormData.fromMap({
-      "codes": "await MultipartFile.fromFile(path, filename: name)"
-    });
-    await dio.requestNetwork<Map<dynamic, dynamic>>(Method.post,
-          url: HttpApi.login,
-          params: formData,
-          onSuccess: (data){
-            Map<dynamic, dynamic> user = (data);
-            print(user['msg']);
-            //sprintf("s%",data);
-          }, onError: (code,data){
-             //sprintf("s%",data);
-          print(code);
-          print(data);
-      }
-      );
-
-
+    BlocProvider.of<DiscoveryBloc>(context).add(EventGetDiscoveryData()
+    );
 
     setState(() {
       if (!_beAdd) {
@@ -151,60 +139,151 @@ class _NearbyPageState extends State<NearbyPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+        body:BlocListener<DiscoveryBloc, DiscoveryState>(
+            listener: (ctx, state) {
+              if (state is DisMessageSuccess) {
+                //_scrollToBottom();
+                print(state.message);
+
+              }
+            },
+            child:BlocBuilder<DiscoveryBloc, DiscoveryState>(builder: (ctx, state) {
+              return _body(ctx, state);
+            }))
+    );
+  }
+
+  Widget _body (BuildContext b, DiscoveryState state) {
+  if(state is DisMessageSuccess){
+    return  Container(
       child: TalkAppListView(
         controller: _controller,
         child: Container(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 10, bottom: 10, left: 8, right: 8),
-              margin: EdgeInsets.only(top: 15,),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Color(0xfff5f5f5),
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(top: 10, bottom: 10, left: 8, right: 8),
+                  margin: EdgeInsets.only(top: 15,),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xfff5f5f5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(IconFont.icon_dingwei,
+                          size: 20, color: Color(0xFFff7faa)),
+                      Gaps.hGap4,
+                      Text(
+                        state.message['msg'],
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: Color(0xFF333333)),
+                      )
+                    ],
+                  ),
+                ),
+                Gaps.vGap15,
+                Cell(
+                  title: '为你推荐附近人',
+                  desc: '有缘数里来相会',
+                  onTap: () {
+                    Navigator.of(context).pushNamed(UnitRouter.nearListPage);
+                  },
+                ),
+                Gaps.vGap15,
+                Row(
+                  children: <Widget>[
+                    _NearItemWidget(testData2),
+                    Gaps.hGap15,
+                    _NearItemWidget(testData2),
+                  ],
+                ),
+                Gaps.vGap15,
+                Cell(
+                  title: '为你推荐的动态',
+                  desc: '小哥哥们快来玩呀',
+                ),
+                Container(
+                  child: ListView.separated(
+                    itemCount: dynamicList.length > 0 ? dynamicList.length : 0,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    physics: new NeverScrollableScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
+                      return DynamicItemWidget(
+                        index: index,
+                        data: dynamicList[index],
+                        onTapImage: () {},
+                      );
+                    },
+                    separatorBuilder: (BuildContext context, int index) => new Divider(),
+                  ),
+                )
+              ],
+            )),
+        onRefresh: _refreshData,
+        onloadMore: _addMoreData,
+      ),
+    );
+  }
+  return    Container(
+    child: TalkAppListView(
+      controller: _controller,
+      child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(top: 10, bottom: 10, left: 8, right: 8),
+                margin: EdgeInsets.only(top: 15,),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color(0xfff5f5f5),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(IconFont.icon_dingwei,
+                        size: 20, color: Color(0xFFff7faa)),
+                    Gaps.hGap4,
+                    Text(
+                      '闵行区沪闵路6088号莘庄龙之梦',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFF333333)),
+                    )
+                  ],
+                ),
               ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
+              Gaps.vGap15,
+              Cell(
+                title: '为你推荐附近人',
+                desc: '有缘数里来相会',
+                onTap: () {
+                  Navigator.of(context).pushNamed(UnitRouter.nearListPage);
+                },
+              ),
+              Gaps.vGap15,
+              Row(
                 children: <Widget>[
-                  Icon(IconFont.icon_dingwei,
-                      size: 20, color: Color(0xFFff7faa)),
-                  Gaps.hGap4,
-                  Text(
-                    '闵行区沪闵路6088号莘庄龙之梦',
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFF333333)),
-                  )
+                  _NearItemWidget(testData2),
+                  Gaps.hGap15,
+                  _NearItemWidget(testData2),
                 ],
               ),
-            ),
-            Gaps.vGap15,
-            Cell(
-              title: '为你推荐附近人',
-              desc: '有缘数里来相会',
-              onTap: () {
-                Navigator.of(context).pushNamed(UnitRouter.nearListPage);
-              },
-            ),
-            Gaps.vGap15,
-            Row(
-              children: <Widget>[
-                _NearItemWidget(testData2),
-                Gaps.hGap15,
-                _NearItemWidget(testData2),
-              ],
-            ),
-            Gaps.vGap15,
-            Cell(
-              title: '为你推荐的动态',
-              desc: '小哥哥们快来玩呀',
-            ),
-            Container(
-              child: ListView.separated(
+              Gaps.vGap15,
+              Cell(
+                title: '为你推荐的动态',
+                desc: '小哥哥们快来玩呀',
+              ),
+              Container(
+                child: ListView.separated(
                   itemCount: dynamicList.length > 0 ? dynamicList.length : 0,
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
@@ -217,17 +296,16 @@ class _NearbyPageState extends State<NearbyPage>
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) => new Divider(),
-                  ),
-            )
-          ],
-        )),
-        onRefresh: _refreshData,
-        onloadMore: _addMoreData,
-      ),
-    ));
+                ),
+              )
+            ],
+          )),
+      onRefresh: _refreshData,
+      onloadMore: _addMoreData,
+    ),
+  );
+
   }
-
-
   Widget _NearItemWidget (NearModel data) {
     return Container(
       width: 140,
