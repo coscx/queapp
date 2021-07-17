@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
+import 'package:flutter_geen/views/pages/chat/widget/dialogs/delete_category_dialog.dart';
 import 'package:flutter_geen/views/pages/utils/DyBehaviorNull.dart';
 import 'package:flutter_geen/views/pages/chat/utils/common_util.dart';
 import 'package:flutter_geen/views/pages/chat/utils/event_bus.dart';
@@ -16,10 +17,8 @@ import 'package:flutter_geen/views/pages/chat/widget/Swipers.dart';
 import 'package:flutter_geen/views/pages/chat/widget/more_widgets.dart';
 import 'package:flutter_geen/views/pages/chat/widget/popupwindow_widget.dart';
 import 'package:flutter_geen/views/pages/resource/colors.dart';
-import 'package:flutter_geen/views/dialogs/delete_category_dialog.dart';
-import 'package:flutter_geen/blocs/peer/peer_bloc.dart';
-import 'package:flutter_geen/blocs/peer/peer_event.dart';
-import 'package:flutter_geen/blocs/peer/peer_state.dart';
+
+
 import 'package:flt_im_plugin/conversion.dart';
 import 'package:flt_im_plugin/flt_im_plugin.dart';
 import 'package:flt_im_plugin/message.dart';
@@ -33,6 +32,8 @@ import 'package:vibration/vibration.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'bloc/chat_bloc_exp.dart';
 
 /*
 *  发送聊天信息

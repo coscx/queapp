@@ -1,15 +1,23 @@
+import 'package:date_time_picker/date_time_picker.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_easyrefresh/material_footer.dart';
 import 'package:flutter_easyrefresh/material_header.dart';
 import 'package:flutter_geen/app/router.dart';
+import 'package:flutter_geen/app/utils/xflog.dart';
+import 'package:flutter_geen/net/base_entity.dart';
+import 'package:flutter_geen/net/dio_utils.dart';
+import 'package:flutter_geen/net/http_api.dart';
+import 'package:flutter_geen/repositories/impl/net_work_repository.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_widget.dart';
 import 'package:flutter_geen/views/pages/user/pages/user_page.dart';
-import 'package:flutter_geen/views/util/icon_font.dart';
+import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
 import 'package:flutter_geen/views/widget/avatar_widget.dart';
 import 'package:flutter_geen/views/widget/cell.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';
 import 'package:flutter_geen/views/widget/talk_app_list_view.dart';
+import 'dart:convert' as convert;
 
 class NearbyPage extends StatefulWidget {
   @override
@@ -74,7 +82,7 @@ class _NearbyPageState extends State<NearbyPage>
 
   /// 下拉刷新数据
   Future<Null> _refreshData() async {
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(Duration(milliseconds: 1), () {
       if (mounted) {
         _getPostData(false);
         if (!_enableControlFinish) {
@@ -99,6 +107,28 @@ class _NearbyPageState extends State<NearbyPage>
 
   /// 获取数据
   void _getPostData(bool _beAdd) async {
+
+    var dio =NetWorkRepository();
+
+    FormData formData = FormData.fromMap({
+      "codes": "await MultipartFile.fromFile(path, filename: name)"
+    });
+    await dio.requestNetwork<Map<dynamic, dynamic>>(Method.post,
+          url: HttpApi.login,
+          params: formData,
+          onSuccess: (data){
+            Map<dynamic, dynamic> user = (data);
+            print(user['msg']);
+            //sprintf("s%",data);
+          }, onError: (code,data){
+             //sprintf("s%",data);
+          print(code);
+          print(data);
+      }
+      );
+
+
+
     setState(() {
       if (!_beAdd) {
         dynamicList.clear();

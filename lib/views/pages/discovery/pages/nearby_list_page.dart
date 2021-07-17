@@ -4,7 +4,7 @@ import 'package:flutter_easyrefresh/material_footer.dart';
 import 'package:flutter_easyrefresh/material_header.dart';
 import 'package:flutter_geen/views/pages/discovery/widget/near_item_widget.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_widget.dart';
-import 'package:flutter_geen/views/util/icon_font.dart';
+import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
 import 'package:flutter_geen/views/widget/app_bar.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';
 

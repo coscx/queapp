@@ -1,19 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_geen/views/app/navigation/unit_navigation.dart';
-import 'package:flutter_geen/views/items/QrCode.dart';
-import 'package:flutter_geen/views/pages/about/about_me_page.dart';
-import 'package:flutter_geen/views/pages/about/about_app_page.dart';
-import 'package:flutter_geen/views/pages/about/person_center_page.dart';
-import 'package:flutter_geen/views/pages/about/recommendedCard.dart';
-import 'package:flutter_geen/views/pages/about/time_line.dart';
-import 'package:flutter_geen/views/pages/about/version_info.dart';
-import 'package:flutter_geen/views/pages/category/category_detail.dart';
-import 'package:flutter_geen/views/pages/category/collect_page.dart';
 import 'package:flutter_geen/views/pages/chat/chat_page.dart';
 import 'package:flutter_geen/views/pages/chat/conversation_list.dart';
 import 'package:flutter_geen/views/pages/chat/group_page.dart';
-import 'package:flutter_geen/views/pages/data/brower.dart';
-import 'package:flutter_geen/views/pages/data/card.dart';
 import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
 import 'package:flutter_geen/views/pages/discovery/pages/nearby_list_page.dart';
 import 'package:flutter_geen/views/pages/discovery/pages/topic_detail_page.dart';
@@ -21,27 +10,6 @@ import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_detail_page.dart'
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_video_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/search_page.dart';
-import 'package:flutter_geen/views/pages/gallery/gallery_page.dart';
-import 'package:flutter_geen/views/pages/index/amap.dart';
-import 'package:flutter_geen/views/pages/index/amap_index.dart';
-import 'package:flutter_geen/views/pages/index/map.dart';
-import 'package:flutter_geen/views/pages/issues_point/issues_detail.dart';
-import 'package:flutter_geen/views/pages/issues_point/issues_point_page.dart';
-import 'package:flutter_geen/views/pages/login/login_page.dart';
-import 'package:flutter_geen/views/pages/login/logins.dart';
-import 'package:flutter_geen/views/pages/login/sendcode.dart';
-import 'package:flutter_geen/views/pages/search/serach_page.dart';
-import 'package:flutter_geen/views/pages/search/serach_page_appoint.dart';
-import 'package:flutter_geen/views/pages/setting/code_style_setting.dart';
-import 'package:flutter_geen/views/pages/setting/font_setting.dart';
-import 'package:flutter_geen/views/pages/setting/item_style_setting.dart';
-import 'package:flutter_geen/views/pages/setting/theme_color_setting.dart';
-import 'package:flutter_geen/views/pages/home/CreateUserPage.dart';
-import 'package:flutter_geen/views/items/select.dart';
-import 'package:flutter_geen/views/pages/user/User.dart';
-import 'package:flutter_geen/views/pages/widget_detail/widget_detail_page.dart';
-import 'package:flutter_geen/views/pages/login/login_new.dart';
-import 'package:flutter_geen/views/pages/setting/setting_page.dart';
 
 import 'utils/router_utils.dart';
 
@@ -102,15 +70,7 @@ class UnitRouter {
   static const String send_code = "sendCodePage";
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      //根据名称跳转相应页面
-      case widget_detail:
-        return FadeRouter(
-            child: WidgetDetailPage(
-        ));
-      case send_code:
-        return FadeRouter(child: SendCodePage(tel: settings.arguments,));
-      case login_new:
-        return FadeRouter(child: DevelopPage());
+
       case discoveryPage:
         return Right2LeftRouter(child: DiscoveryPage());
       case topicDetailPage:
@@ -127,77 +87,22 @@ class UnitRouter {
       case search_index:
         return Right2LeftRouter(child: SearchIndexPage());
 
-      case search:
-        return Right2LeftRouter(child: SearchPage());
-      case search_page_appoint:
-        return Right2LeftRouter(child: SearchPageAppoint());
-      case select_page:
-        return Right2LeftRouter(child: SelectPage(title: "ttt",));
-      case collect:
-        return Right2LeftRouter(child: CollectPage());
+
       case nav:
         return NoAnimRouter(child: UnitNavigation());
-      case setting:
-        return Right2LeftRouter(child: SettingPage());
-      case font_setting:
-        return Right2LeftRouter(child: FontSettingPage());
-      case theme_color_setting:
-        return Right2LeftRouter(child: ThemeColorSettingPage());
-      case code_style_setting:
-        return Right2LeftRouter(child: CodeStyleSettingPage());
-      case item_style_setting:
-        return Right2LeftRouter(child: ItemStyleSettingPage());
-      case user:
-        return Right2LeftRouter(child: UserPage());
-      case version_info:
-        return Right2LeftRouter(child: VersionInfo());
-      case issues_point:
-        return Right2LeftRouter(child: IssuesPointPage());
-      case qr_view:
-        return Right2LeftRouter(child: ScanView());
-      case login:
-        return Right2LeftRouter(child: LoginPage());
+
       // case baidu_map:
       //   return Right2LeftRouter(child: SelectLocationFromMapPage());
 
-      case galley:
-        return Right2LeftRouter(child: GalleryPage());
 
-      case about_app:
-        return Right2LeftRouter(child: AboutAppPage());
-      case about_me:
-        return Right2LeftRouter(child: AboutMePage());
-      case to_chat:
-        return Right2LeftRouter(child: AboutMePage());
       case to_chats:
         return Right2LeftRouter(child: ChatsPage(model: settings.arguments,));
       case to_group_chat:
         return Right2LeftRouter(child: GroupChatPage(model: settings.arguments,));
-      case point_detail:
-        return Right2LeftRouter(child: IssuesDetailPage());
-      case index_page:
-        return Right2LeftRouter(child: IndexPage());
-      case login_phone:
-        return Right2LeftRouter(child: LoginPhone());
-      case recommended_card:
-        return Right2LeftRouter(child: RecommendedCard(title: '', onDelete: () {  },
-        child: Container(),));
-      case create_user_page:
-        return Right2LeftRouter(child: CreateUserPage());
-      case person_page:
-        return Right2LeftRouter(child: MinePage());
 
-      case time_line:
-        return Right2LeftRouter(child: TimelinePage(title: settings.arguments,));
-      case brower:
-        return Right2LeftRouter(child: Brower(url: settings.arguments,));
       case chat_list:
         return Right2LeftRouter(child: ImConversationListPage(memberId: settings.arguments,));
-      case category_show:
-        return Right2LeftRouter(
-            child: CategoryShow(
-          model: settings.arguments,
-        ));
+
 
       default:
         return MaterialPageRoute(

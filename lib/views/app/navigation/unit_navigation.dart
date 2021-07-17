@@ -3,21 +3,14 @@ import 'dart:math' as math;
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter_geen/app/api/issues_api.dart';
-import 'package:flutter_geen/views/pages/about/bottom_sheet.dart';
-import 'package:flutter_geen/views/pages/about/person_center_page.dart';
-import 'package:flutter_geen/views/pages/data/card.dart';
+import 'package:flutter_geen/views/pages/chat/bloc/chat/chat_bloc.dart';
+import 'package:flutter_geen/views/pages/chat/bloc/chat/chat_event.dart';
+import 'package:flutter_geen/views/pages/chat/bloc/chat_bloc_exp.dart';
 import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_page.dart';
-import 'package:flutter_geen/views/pages/index/index_page.dart';
-import 'package:flutter_geen/views/pages/message/pages/message_page.dart';
-import 'package:flutter_geen/views/pages/message/pages/private_chat_page.dart';
-import 'package:flutter_geen/views/pages/search/serach_page.dart';
 import 'package:flutter_geen/views/app/navigation/unit_bottom_bar.dart';
-import 'package:flutter_geen/views/pages/category/home_right_drawer.dart';
 import 'package:flutter_geen/views/pages/chat/conversation_list.dart';
 import 'package:flutter_geen/views/pages/chat/view/util/ImMessage.dart';
-import 'package:flutter_geen/views/pages/home/home_drawer.dart';
-import 'package:flutter_geen/views/pages/home/home_page.dart';
 import 'package:flutter_geen/app/res/cons.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/blocs/bloc_exp.dart';
@@ -30,13 +23,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_geen/views/pages/my/my_route.dart';
+import 'package:flutter_geen/views/widget/bottom_sheet.dart';
 import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
 import 'package:flutter_xupdate/flutter_xupdate.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:package_info/package_info.dart';
 import 'package:umeng_analytics_push/umeng_analytics_push.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:umeng_analytics_push/umeng_analytics_push.dart';
 import 'package:umeng_analytics_push/message_model.dart';
 /// 说明: 主题结构 左右滑页 + 底部导航栏
 
@@ -119,8 +112,15 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
     Future.delayed(Duration(seconds: 1)).then((e) async {
 
       _checkUpdateVersion();
-
+      // var result = await EncryptUtils.encodeRSAString("content");
+      // print("aabbcc");
+      // print(result);
     });
+
+   // var mobile ="15666035163";
+   // var area ="86";
+   //
+   // var result = IssuesApi.testFlutter("token", mobile, area);
 
 
 
@@ -151,31 +151,16 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
   @override
   Widget build(BuildContext context) {
 
-
+    ;
+    final String id =  BlocProvider.of<GlobalBloc>(context).state.memberId;
     return WillPopScope(
         onWillPop: AndroidBackTop.backDesktop, //页面将要消失时，调用原生的返回桌面方法
-        child:BlocListener<HomeBloc, HomeState>(
-    listener: (ctx, state) {
+        child:Scaffold(
 
-          if (state is GetCreditIdSuccess) {
-
-          }
-
-    },
-    child:BlocBuilder<HomeBloc, HomeState>(
-      builder: (_, state) {
-
-        final Color color =  BlocProvider.of<HomeBloc>(context).activeHomeColor;
-        final String id =  BlocProvider.of<GlobalBloc>(context).state.memberId;
-
-        return Scaffold(
-          drawer: HomeDrawer(),
-          //左滑页
-          endDrawer: HomeRightDrawer(),
           //右滑页
           floatingActionButtonLocation:  const _CenterDockedFloatingActionButtonLocation(offset),
 
-          floatingActionButton: _buildSearchButton(color),
+          floatingActionButton: _buildSearchButton(Colors.white),
           body: wrapOverlayTool(
             child: PageView(
               physics: const NeverScrollableScrollPhysics(),
@@ -197,9 +182,10 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
           bottomNavigationBar: UnitBottomBar(
               color: Colors.white,
               itemData: Cons.ICONS_MAP,
-              onItemClick: _onTapNav));
-      },
-    )));
+              onItemClick: _onTapNav)
+
+        )
+    );
   }
 
   _userDetail(BuildContext context) {

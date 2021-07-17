@@ -5,7 +5,8 @@ import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/blocs/bloc_exp.dart';
 import 'package:flutter_geen/components/permanent/circle.dart';
 import 'package:flutter_geen/components/permanent/feedback_widget.dart';
-import 'package:flutter_geen/views/pages/gallery/picture_frame.dart';
+import 'package:flutter_geen/components/permanent/picture_frame.dart';
+
 
 /// 说明:
 
@@ -154,7 +155,7 @@ class OverlayToolWrapperState extends State<OverlayToolWrapper>
                   runSpacing: 10,
                   children: [
                     buildItem(TolyIcon.icon_bug, () {
-                      BlocProvider.of<PointBloc>(context).add(EventLoadPoint());
+
                       Navigator.of(context).pushNamed(UnitRouter.point);
                     }),
                     buildItem(Icons.palette, () {
