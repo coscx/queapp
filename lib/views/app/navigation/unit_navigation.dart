@@ -399,7 +399,7 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
         versionData['apkSize']=response["data"]['apkSize'];
         // 后台返回的版本号是带小数点的（2.8.1）所以去除小数点用于做对比
         var targetVersion = response["data"]['versionCode'].replaceAll('.', '') ;//response["data"]["versionCode"].replaceAll('.', '');
-        var version="110";
+        var version="120";
         // 当前App运行版本
         var currentVersion = version;//.replaceAll('.', '');
         if (int.parse(targetVersion) > int.parse(currentVersion)) {

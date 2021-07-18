@@ -549,7 +549,7 @@ class ChatsState extends State<ChatsPage> {
           ),
           (_isShowTools || _isShowFace || _isShowVoice)
               ? Container(
-            height: 418.h,
+            height: ScreenUtil().screenHeight/3.2,
             child: _bottomWidget(),
           )
               : SizedBox(
@@ -870,6 +870,7 @@ class ChatsState extends State<ChatsPage> {
     return Column(
       children: <Widget>[
         Flexible(
+
             child: Stack(
               children: <Widget>[
                 Offstage(
@@ -1026,8 +1027,8 @@ class ChatsState extends State<ChatsPage> {
                 }
               },
               icon: Image.asset(name,
-                  width: crossAxisCount == 5 ? 60.w : 32.w,
-                  height: crossAxisCount == 5 ? 60.h : 32.h));
+                  width: crossAxisCount == 5 ? 120.w : 64.w,
+                  height: crossAxisCount == 5 ? 120.h : 64.h));
         }).toList());
   }
 

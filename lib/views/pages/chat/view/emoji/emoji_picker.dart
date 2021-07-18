@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'dart:math';
 import 'emoji_lists.dart' as emojiList;
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// All the possible categories that [Emoji] can be put into
@@ -126,11 +126,11 @@ class EmojiPicker extends StatefulWidget {
     }
 
     if (this.noRecommendationsStyle == null) {
-      noRecommendationsStyle = TextStyle(fontSize: 20, color: Colors.black26);
+      noRecommendationsStyle = TextStyle(fontSize: 20.sp, color: Colors.black26);
     }
 
     if (this.noRecentsStyle == null) {
-      noRecentsStyle = TextStyle(fontSize: 20, color: Colors.black26);
+      noRecentsStyle = TextStyle(fontSize: 20.sp, color: Colors.black26);
     }
 
     if (this.bgColor == null) {
@@ -521,7 +521,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             recommendedEmojis[
                                     index + (widget.columns * widget.rows * i)]
                                 .emoji,
-                            style: TextStyle(fontSize: 24),
+                            style: TextStyle(fontSize: 48.sp),
                           ),
                         ),
                         onPressed: () {
@@ -548,7 +548,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             recommendedEmojis[
                                     index + (widget.columns * widget.rows * i)]
                                 .emoji,
-                            style: TextStyle(fontSize: 24),
+                            style: TextStyle(fontSize: 48.sp),
                           ),
                         ),
                         onPressed: () {
@@ -621,7 +621,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                     child: Center(
                       child: Text(
                         emojiTxt,
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -643,7 +643,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                     child: Center(
                       child: Text(
                         emojiTxt,
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -693,7 +693,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         animalMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -716,7 +716,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         animalMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -767,7 +767,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         foodMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -790,7 +790,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         foodMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -841,7 +841,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         travelMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -864,7 +864,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         travelMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -918,7 +918,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         activityMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -940,7 +940,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                     child: Center(
                       child: Text(
                         emojiTxt,
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -991,7 +991,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         objectMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -1014,7 +1014,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         objectMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -1065,7 +1065,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         symbolMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -1088,7 +1088,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         symbolMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -1139,7 +1139,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         flagMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -1162,7 +1162,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Text(
                         flagMap.values.toList()[
                             index + (widget.columns * widget.rows * i)],
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize: 48.sp),
                       ),
                     ),
                     onPressed: () {
@@ -1224,7 +1224,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Center(
                         child: Text(
                           allEmojis[allNames.indexOf(recentEmojis[index])],
-                          style: TextStyle(fontSize: 24),
+                          style: TextStyle(fontSize: 48.sp),
                         ),
                       ),
                       onPressed: () {
@@ -1245,7 +1245,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       child: Center(
                         child: Text(
                           allEmojis[allNames.indexOf(recentEmojis[index])],
-                          style: TextStyle(fontSize: 24),
+                          style: TextStyle(fontSize: 48.sp),
                         ),
                       ),
                       onPressed: () {
@@ -1290,7 +1290,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
         child: Center(
           child: Icon(
             categoryIcon.icon,
-            size: 22,
+            size: 42.sp,
             color: categoryIcon.color,
           ),
         ),
@@ -1375,8 +1375,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
       return Column(
         children: <Widget>[
           SizedBox(
-            height: (MediaQuery.of(context).size.width / widget.columns) *
-                widget.rows,
+            height: ScreenUtil().screenHeight/5,
             width: MediaQuery.of(context).size.width,
             child: PageView(
                 children: pages,
@@ -1448,9 +1447,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
           ),
           Container(
               color: widget.bgColor,
-              height: 6,
+              height: 12.h,
               width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.only(top: 4, bottom: 0, right: 2, left: 2),
+              padding: EdgeInsets.only(top: 4.h, bottom: 4.h, right: 4.w, left: 4.w),
               child: CustomPaint(
                 painter: _ProgressPainter(
                     context,
@@ -1482,7 +1481,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                     widget.indicatorColor),
               )),
           Container(
-              height: 50,
+              height: 84.h,
               color: widget.bgColor,
               child: Row(
                 children: <Widget>[
@@ -1504,7 +1503,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                                     child: Icon(
                                       widget.categoryIcons.recommendationIcon
                                           .icon,
-                                      size: 22,
+                                      size: 42.sp,
                                       color: widget.selectedCategory ==
                                               Category.RECOMMENDED
                                           ? widget.categoryIcons
@@ -1535,7 +1534,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                                     child: Icon(
                                       widget.categoryIcons.recommendationIcon
                                           .icon,
-                                      size: 22,
+                                      size: 42.sp,
                                       color: widget.selectedCategory ==
                                               Category.RECOMMENDED
                                           ? widget.categoryIcons
@@ -1572,7 +1571,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.recentIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.RECENT
                                         ? widget.categoryIcons.recentIcon
@@ -1599,7 +1598,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.recentIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.RECENT
                                         ? widget.categoryIcons.recentIcon
@@ -1634,7 +1633,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.smileyIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.SMILEYS
                                         ? widget.categoryIcons.smileyIcon
@@ -1661,7 +1660,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.smileyIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.SMILEYS
                                         ? widget.categoryIcons.smileyIcon
@@ -1696,7 +1695,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.animalIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.ANIMALS
                                         ? widget.categoryIcons.animalIcon
@@ -1724,7 +1723,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.animalIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.ANIMALS
                                         ? widget.categoryIcons.animalIcon
@@ -1760,7 +1759,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.foodIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color: widget.selectedCategory == Category.FOODS
                                     ? widget
                                         .categoryIcons.foodIcon.selectedColor
@@ -1788,7 +1787,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.foodIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color: widget.selectedCategory == Category.FOODS
                                     ? widget
                                         .categoryIcons.foodIcon.selectedColor
@@ -1824,7 +1823,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.travelIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.TRAVEL
                                         ? widget.categoryIcons.travelIcon
@@ -1854,7 +1853,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.travelIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.TRAVEL
                                         ? widget.categoryIcons.travelIcon
@@ -1893,7 +1892,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.activityIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color: widget.selectedCategory ==
                                         Category.ACTIVITIES
                                     ? widget.categoryIcons.activityIcon
@@ -1926,7 +1925,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.activityIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color: widget.selectedCategory ==
                                         Category.ACTIVITIES
                                     ? widget.categoryIcons.activityIcon
@@ -1966,7 +1965,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.objectIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.OBJECTS
                                         ? widget.categoryIcons.objectIcon
@@ -1998,7 +1997,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.objectIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.OBJECTS
                                         ? widget.categoryIcons.objectIcon
@@ -2038,7 +2037,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.symbolIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.SYMBOLS
                                         ? widget.categoryIcons.symbolIcon
@@ -2071,7 +2070,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.symbolIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color:
                                     widget.selectedCategory == Category.SYMBOLS
                                         ? widget.categoryIcons.symbolIcon
@@ -2112,7 +2111,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.flagIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color: widget.selectedCategory == Category.FLAGS
                                     ? widget
                                         .categoryIcons.flagIcon.selectedColor
@@ -2145,7 +2144,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             child: Center(
                               child: Icon(
                                 widget.categoryIcons.flagIcon.icon,
-                                size: 22,
+                                size: 42.sp,
                                 color: widget.selectedCategory == Category.FLAGS
                                     ? widget
                                         .categoryIcons.flagIcon.selectedColor
@@ -2177,8 +2176,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
       return Column(
         children: <Widget>[
           SizedBox(
-            height: (MediaQuery.of(context).size.width / widget.columns) *
-                widget.rows,
+            height: ScreenUtil().screenHeight/5,
             width: MediaQuery.of(context).size.width,
             child: Container(
               color: widget.bgColor,
@@ -2188,16 +2186,16 @@ class _EmojiPickerState extends State<EmojiPicker> {
             ),
           ),
           Container(
-            height: 6,
+            height: 12.h,
             width: MediaQuery.of(context).size.width,
             color: widget.bgColor,
-            padding: EdgeInsets.only(top: 4, left: 2, right: 2),
+            padding: EdgeInsets.only(top: 8.h, left: 4.w, right: 4.w),
             child: Container(
               color: widget.indicatorColor,
             ),
           ),
           Container(
-            height: 50,
+            height: 84.h,
             child: Row(
               children: <Widget>[
                 widget.recommendKeywords != null

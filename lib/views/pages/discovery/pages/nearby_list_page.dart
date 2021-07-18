@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_easyrefresh/material_footer.dart';
 import 'package:flutter_easyrefresh/material_header.dart';
+import 'package:flutter_geen/views/pages/discovery/provider/nearby/nearby_provider.dart';
 import 'package:flutter_geen/views/pages/discovery/widget/near_item_widget.dart';
-import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_widget.dart';
+import 'package:provider/provider.dart';
 import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
 import 'package:flutter_geen/views/widget/app_bar.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';
@@ -16,7 +17,7 @@ class NearbyListPage extends StatefulWidget {
 }
 
 class _NearbyListPageState extends State<NearbyListPage> with AutomaticKeepAliveClientMixin<NearbyListPage> {
-
+  NearByProvider p;
   @override
   bool get wantKeepAlive => true;
 
@@ -41,6 +42,8 @@ class _NearbyListPageState extends State<NearbyListPage> with AutomaticKeepAlive
     Future.delayed(Duration(seconds: 2), () {
       if (mounted) {
         _getPostData(false);
+        if(p !=null)
+         p.loadConversions();
         if (!_enableControlFinish) {
           _controller.resetLoadState();
           _controller.finishRefresh();
@@ -89,6 +92,8 @@ class _NearbyListPageState extends State<NearbyListPage> with AutomaticKeepAlive
 
   @override
   Widget build(BuildContext context) {
+    Map<String,dynamic> params = new Map<String,dynamic>();
+    params['currentUID']=1;
     return Scaffold(
       appBar: MyAppBar(title: '附近人'),
       body: EasyRefresh(
@@ -104,49 +109,58 @@ class _NearbyListPageState extends State<NearbyListPage> with AutomaticKeepAlive
           valueColor: AlwaysStoppedAnimation(Color(0xFFff7faa)),
         ),
         controller: _controller,
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 15),
-          child: Column(
-            children: <Widget>[
-              Container(
-                padding:
-                    EdgeInsets.only(top: 10, bottom: 10, left: 0, right: 8),
-                margin: EdgeInsets.only(
-                  top: 15,
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Icon(IconFont.icon_dingwei,
-                        size: 20, color: Color(0xFFff7faa)),
-                    Gaps.hGap4,
-                    Text(
-                      '闵行区沪闵路6088号莘庄龙之梦',
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xFF333333)),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                color: Colors.white,
-                child: ListView.separated(
-                  itemCount: dynamicList.length > 0 ? dynamicList.length : 0,
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  physics: new NeverScrollableScrollPhysics(),
-                  itemBuilder: (BuildContext context, int index) {
-                    return NearItemWidget(data: dynamicList[index]);
-                  },
-                  separatorBuilder: (BuildContext context, int index) =>
-                      new Divider(),
-                ),
-              )
-            ],
-          ),
+        child: ChangeNotifierProvider(
+          create: (ctx) => NearByProvider(params),
+            child: Consumer<NearByProvider>(builder: (ctx, model, child) {
+                 p = Provider.of<NearByProvider>(ctx);
+
+                 return Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          padding:
+                          EdgeInsets.only(top: 10, bottom: 10, left: 0, right: 8),
+                          margin: EdgeInsets.only(
+                            top: 15,
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              Icon(IconFont.icon_dingwei,
+                                  size: 20, color: Color(0xFFff7faa)),
+                              Gaps.hGap4,
+                              Text(
+                                model.tfSender,
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color(0xFF333333)),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          color: Colors.white,
+                          child: ListView.separated(
+                            itemCount: dynamicList.length > 0 ? dynamicList.length : 0,
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            physics: new NeverScrollableScrollPhysics(),
+                            itemBuilder: (BuildContext context, int index) {
+                              return NearItemWidget(data: dynamicList[index]);
+                            },
+                            separatorBuilder: (BuildContext context, int index) =>
+                            new Divider(),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+             }
+           )
         ),
+
         onRefresh: _refreshData,
         onLoad: _addMoreData,
       ),

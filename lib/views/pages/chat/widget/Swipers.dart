@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 /// A controller for [Swiper].
 ///
 /// A page controller lets you manipulate which page is visible in a [Swiper].
@@ -163,7 +163,7 @@ class _SwiperIndicator implements SwiperIndicator {
   Widget build(BuildContext context, int index, int itemCount) {
     if (itemCount == 1) return SizedBox(width: .0, height: .0);
     return Padding(
-      padding: padding ?? const EdgeInsets.all(10.0),
+      padding: padding ??  EdgeInsets.all(10.w),
       child: Wrap(
         runSpacing: spacing,
         spacing: spacing,
