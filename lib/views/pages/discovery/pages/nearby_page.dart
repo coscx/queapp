@@ -6,6 +6,7 @@ import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_easyrefresh/material_footer.dart';
 import 'package:flutter_easyrefresh/material_header.dart';
 import 'package:flutter_geen/app/router.dart';
+import 'package:flutter_geen/app/utils/icon_font.dart';
 import 'package:flutter_geen/app/utils/xflog.dart';
 import 'package:flutter_geen/net/base_entity.dart';
 import 'package:flutter_geen/net/dio_utils.dart';
@@ -17,7 +18,6 @@ import 'package:flutter_geen/views/pages/discovery/bloc/discovery/discovery_bloc
 import 'package:flutter_geen/views/pages/discovery/bloc/discovery_bloc_exp.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_widget.dart';
 import 'package:flutter_geen/views/pages/user/pages/user_page.dart';
-import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
 import 'package:flutter_geen/views/widget/avatar_widget.dart';
 import 'package:flutter_geen/views/widget/cell.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';

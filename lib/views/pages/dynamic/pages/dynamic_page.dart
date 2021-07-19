@@ -5,7 +5,7 @@ import 'package:flutter_geen/views/pages/discovery/pages/discovery_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_selfie_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_video_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
+
 import 'package:flutter_geen/views/pages/utils/DyBehaviorNull.dart';
 import 'dynamic_list_page.dart';
 import 'follow_page.dart';

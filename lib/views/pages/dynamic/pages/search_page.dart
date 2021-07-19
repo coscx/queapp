@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
+import 'package:flutter_geen/app/utils/icon_font.dart';
+
 import 'package:flutter_geen/views/widget/avatar_widget.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';
 
