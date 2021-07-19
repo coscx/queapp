@@ -10,14 +10,14 @@ import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_widget.dart
 import 'package:flutter_geen/views/widget/gaps.dart';
 import 'package:flutter_geen/views/widget/load_image.dart';
 
-class UserPage extends StatefulWidget {
+class UserPage2 extends StatefulWidget {
   @override
-  _UserPageState createState() => _UserPageState();
+  _UserPage2State createState() => _UserPage2State();
 }
 
-class _UserPageState extends State<UserPage>
+class _UserPage2State extends State<UserPage2>
     with
-        AutomaticKeepAliveClientMixin<UserPage>,
+        AutomaticKeepAliveClientMixin<UserPage2>,
         SingleTickerProviderStateMixin {
   @override
   // TODO: implement wantKeepAlive

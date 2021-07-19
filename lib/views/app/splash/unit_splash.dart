@@ -7,9 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/storage/dao/local_storage.dart';
-import 'package:flutter_geen/views/dialogs/CustomDialog.dart';
+import 'package:flutter_geen/views/pages/chat/widget/dialogs/CustomDialog.dart';
+
 import 'package:fluwx/fluwx.dart';
 import 'package:lottie/lottie.dart';
+import 'package:umeng_analytics_push/umeng_analytics_push.dart';
 import 'unit_paint.dart';
 /// 说明: app 闪屏页
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -108,6 +110,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     } else {
       AliAuthPlugin.initSdk(IosAliAuthSdk);
     }
+    UmengAnalyticsPush.initUmeng(true, true);
   }
 
 

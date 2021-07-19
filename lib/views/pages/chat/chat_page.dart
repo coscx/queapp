@@ -1,25 +1,24 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
+import 'package:flutter_geen/views/pages/chat/widget/dialogs/delete_category_dialog.dart';
 import 'package:flutter_geen/views/pages/utils/DyBehaviorNull.dart';
-import 'package:flutter_geen/views/pages/utils/common_util.dart';
-import 'package:flutter_geen/views/pages/utils/event_bus.dart';
-import 'package:flutter_geen/views/pages/utils/time_util.dart';
-import 'package:flutter_geen/views/pages/utils/dialog_util.dart';
-import 'package:flutter_geen/views/pages/utils/file_util.dart';
-import 'package:flutter_geen/views/pages/utils/functions.dart';
-import 'package:flutter_geen/views/pages/utils/image_util.dart';
-import 'package:flutter_geen/views/pages/utils/object_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/common_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/event_bus.dart';
+import 'package:flutter_geen/views/pages/chat/utils/time_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/dialog_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/file_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/functions.dart';
+import 'package:flutter_geen/views/pages/chat/utils/image_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/object_util.dart';
 import 'package:flutter_geen/views/pages/chat/view/emoji/emoji_picker.dart';
 import 'package:flutter_geen/views/pages/chat/view/voice/peer_chat_item.dart';
 import 'package:flutter_geen/views/pages/chat/widget/Swipers.dart';
 import 'package:flutter_geen/views/pages/chat/widget/more_widgets.dart';
 import 'package:flutter_geen/views/pages/chat/widget/popupwindow_widget.dart';
 import 'package:flutter_geen/views/pages/resource/colors.dart';
-import 'package:flutter_geen/views/dialogs/delete_category_dialog.dart';
-import 'package:flutter_geen/blocs/peer/peer_bloc.dart';
-import 'package:flutter_geen/blocs/peer/peer_event.dart';
-import 'package:flutter_geen/blocs/peer/peer_state.dart';
+
+
 import 'package:flt_im_plugin/conversion.dart';
 import 'package:flt_im_plugin/flt_im_plugin.dart';
 import 'package:flt_im_plugin/message.dart';
@@ -33,6 +32,9 @@ import 'package:vibration/vibration.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'bloc/chat_bloc_exp.dart';
+
 /*
 *  发送聊天信息
 */
@@ -547,7 +549,7 @@ class ChatsState extends State<ChatsPage> {
           ),
           (_isShowTools || _isShowFace || _isShowVoice)
               ? Container(
-            height: 418.h,
+            height: ScreenUtil().screenHeight/3.2,
             child: _bottomWidget(),
           )
               : SizedBox(
@@ -868,6 +870,7 @@ class ChatsState extends State<ChatsPage> {
     return Column(
       children: <Widget>[
         Flexible(
+
             child: Stack(
               children: <Widget>[
                 Offstage(
@@ -1024,8 +1027,8 @@ class ChatsState extends State<ChatsPage> {
                 }
               },
               icon: Image.asset(name,
-                  width: crossAxisCount == 5 ? 60.w : 32.w,
-                  height: crossAxisCount == 5 ? 60.h : 32.h));
+                  width: crossAxisCount == 5 ? 120.w : 64.w,
+                  height: crossAxisCount == 5 ? 120.h : 64.h));
         }).toList());
   }
 
@@ -1260,45 +1263,47 @@ class ChatsState extends State<ChatsPage> {
     //list最后一条消息（时间上是最老的），是没有下一条了
     Message _nextEntity = (index == messageList.length - 1) ? null : messageList[index + 1];
     Message _entity = messageList[index];
-    return buildChatListItem(key, _nextEntity, _entity,tfSender,
-        onResend: (reSendEntity) {
-          _onResend(reSendEntity);
-        },
-        onItemLongClick: (entity) {
-          DialogUtil.buildToast('长按了消息');
-          _deletePeerMessage(context,entity);
-        },
+     return buildChatListItem(key, _nextEntity, _entity,tfSender,
+              onResend: (reSendEntity) {
+                _onResend(reSendEntity);
+              },
+              onItemLongClick: (entity) {
+                DialogUtil.buildToast('长按了消息');
+                _deletePeerMessage(context,entity);
 
-        onItemClick: (onClickEntity) async {
-          Message entity = onClickEntity;
-          if (entity.type == MessageType.MESSAGE_AUDIO){
-            //点击了语音
-            if (_entity.playing == 1) {
-              //正在播放，就停止播放
-              await _stopPlayer();
-              setState(() {
-                _entity.playing = 0;
-              });
-            } else {
-              setState(()  {
-                for (Message other in messageList) {
-                  other.playing = 0;
-                  //停止其他正在播放的
+              },
+
+              onItemClick: (onClickEntity) async {
+                Message entity = onClickEntity;
+                if (entity.type == MessageType.MESSAGE_AUDIO){
+                  //点击了语音
+                  if (_entity.playing == 1) {
+                    //正在播放，就停止播放
+                    await _stopPlayer();
+                    setState(() {
+                      _entity.playing = 0;
+                    });
+                  } else {
+                    setState(()  {
+                      for (Message other in messageList) {
+                        other.playing = 0;
+                        //停止其他正在播放的
+                      }
+                    });
+                    _entity.playing = 1;
+                    await _startPlayer(_entity.content['url']);
+                    Future.delayed(Duration(milliseconds: _entity.content['duration']*1000), () async {
+                      if (_alive) {
+                        setState(()  {
+                          _entity.playing = 0;
+                        });
+                        await  _stopPlayer();
+                      }
+                    });
+                  }
                 }
               });
-              _entity.playing = 1;
-              await _startPlayer(_entity.content['url']);
-              Future.delayed(Duration(milliseconds: _entity.content['duration']*1000), () async {
-                if (_alive) {
-                  setState(()  {
-                    _entity.playing = 0;
-                  });
-                  await  _stopPlayer();
-                }
-              });
-            }
-          }
-        });
+
   }
   _deletePeerMessage(BuildContext context,Message entity ) {
     showDialog(
@@ -1310,12 +1315,13 @@ class ChatsState extends State<ChatsPage> {
           child: Container(
             width: 50.w,
             child: DeleteCategoryDialog(
-              title: '隐藏该用户',
+              title: '撤回消息',
               content: '是否确定继续执行?',
               onSubmit: () {
                 FltImPlugin im = FltImPlugin();
                 if (Platform.isAndroid == true) {
-                  im.deletePeerMessage(id:entity.content['uUID']);
+                  //im.deletePeerMessage(id:entity.content['uUID']);
+                  BlocProvider.of<PeerBloc>(context).add(EventSendPeerRevokeMessage(tfSender,widget.model.cid,entity.content['uUID']));
                 }else{
                   im.deletePeerMessage(id:entity.content['uuid']);
                 }
@@ -1379,6 +1385,7 @@ class ChatsState extends State<ChatsPage> {
   }
   //重发
   _onResend(Message entity) {
+
   }
 
   _buildTextMessage(String content) {

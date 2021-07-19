@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_geen/app/enums.dart';
 import 'package:flutter_geen/blocs/bloc_exp.dart';
-import 'package:flutter_geen/blocs/chat/chat_bloc.dart';
-import 'package:flutter_geen/repositories/impl/catagory_db_repository.dart';
-import 'package:flutter_geen/repositories/impl/widget_db_repository.dart';
 import 'package:flutter_geen/storage/app_storage.dart';
+import 'package:flutter_geen/views/pages/chat/bloc/chat/chat_bloc.dart';
+import 'package:flutter_geen/views/pages/chat/bloc/chat_bloc_exp.dart';
+import 'package:flutter_geen/views/pages/discovery/bloc/discovery_bloc_exp.dart';
+import 'package:flutter_geen/views/pages/login/bloc/login/login_bloc.dart';
+import 'package:flutter_geen/views/pages/user/bloc/user/user_bloc.dart';
 
 /// 说明: Bloc提供器包裹层
 
@@ -21,9 +23,8 @@ class BlocWrapper extends StatefulWidget {
 }
 
 class _BlocWrapperState extends State<BlocWrapper> {
-  final repository = WidgetDbRepository(storage);
+  //final repository = WidgetDbRepository(storage);
 
-  final categoryBloc = CategoryBloc(repository: CategoryDbRepository(storage));
 
   @override
   Widget build(BuildContext context) {
@@ -33,45 +34,25 @@ class _BlocWrapperState extends State<BlocWrapper> {
       BlocProvider<GlobalBloc>(
           create: (_) => GlobalBloc(storage)..add(EventInitApp())),
 
-      BlocProvider<HomeBloc>(
-          create: (_) => HomeBloc(repository: repository)
-            ..add(EventTabTap())),
 
-      BlocProvider<DetailBloc>(
-          create: (_) => DetailBloc(repository: repository)),
-
-      BlocProvider<CategoryBloc>(
-          create: (_) => categoryBloc..add(EventLoadCategory())),
-
-      BlocProvider<CollectBloc>(
-          create: (_) =>
-              CollectBloc(repository: repository)..add(EventSetCollectData())),
-
-      BlocProvider<CategoryWidgetBloc>(
-          create: (_) => CategoryWidgetBloc(categoryBloc: categoryBloc)),
-
-      BlocProvider<SearchBloc>(
-          create: (_) => SearchBloc(repository: repository)),
-      BlocProvider<PointBloc>(create: (_) => PointBloc()),
-          BlocProvider<DataBloc>(create: (_) => DataBloc()),
-          BlocProvider<BigDataBloc>(create: (_) => BigDataBloc()),
-      BlocProvider<PointCommentBloc>(create: (_) => PointCommentBloc()),
-
-          BlocProvider<LoginBloc>(create: (_) => LoginBloc()),
 
           BlocProvider<ChatBloc>(create: (_) => ChatBloc()),
 
           BlocProvider<PeerBloc>(create: (_) => PeerBloc()),
-          BlocProvider<UserBloc>(create: (_) => UserBloc()),
-          BlocProvider<GroupBloc>(create: (_) => GroupBloc()),
-          BlocProvider<TimeBloc>(create: (_) => TimeBloc()),
 
+          BlocProvider<GroupBloc>(create: (_) => GroupBloc()),
+
+          BlocProvider<DiscoveryBloc>(create: (_) => DiscoveryBloc()),
+
+          BlocProvider<LoginBloc>(create: (_) => LoginBloc()),
+
+          BlocProvider<UserBloc>(create: (_) => UserBloc()),
         ], child: widget.child);
   }
 
   @override
   void dispose() {
-    categoryBloc.close();
+
     super.dispose();
   }
 }

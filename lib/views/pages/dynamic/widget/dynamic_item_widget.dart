@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_geen/views/pages/discovery/widget/topic_item.dart';
 import 'package:flutter_geen/views/pages/user/pages/user_page.dart';
-import 'package:flutter_geen/views/util/icon_font.dart';
+import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
 import 'package:flutter_geen/views/widget/avatar_widget.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';
 import 'package:flutter_geen/views/widget/load_image.dart';

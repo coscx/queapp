@@ -2,7 +2,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_geen/views/util/image_util.dart';
+import 'package:flutter_geen/app/utils/image_util.dart';
+
 
 /// 图片加载（支持本地与网络图片）
 class LoadImage extends StatelessWidget {

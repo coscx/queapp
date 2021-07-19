@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_geen/views/pages/dynamic/widget/dynamic_item_image.dart';
 
-import 'package:flutter_geen/views/util/icon_font.dart';
+import 'file:///E:/flutter/queapp/lib/app/utils/icon_font.dart';
 import 'package:flutter_geen/views/widget/app_bar.dart';
 import 'package:flutter_geen/views/widget/avatar_widget.dart';
 import 'package:flutter_geen/views/widget/gaps.dart';

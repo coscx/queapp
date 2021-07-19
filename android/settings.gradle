@@ -1,3 +1,4 @@
+include ':libwebrtc'
 include ':GDTSDK.unionNormal.4.351.1221'
 include ':phoneNumber-AuthSDK-2.10.0'
 include ':app'

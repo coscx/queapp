@@ -7,142 +7,150 @@ class PrivateChatPage extends StatefulWidget {
   @override
   _PrivateChatPageState createState() => _PrivateChatPageState();
 }
+class MessageModelss {
+  final String message;
 
+  final String avatar;
+
+  final bool self;
+
+  const MessageModelss({this.message, this.avatar, this.self});
+}
 class _PrivateChatPageState extends State<PrivateChatPage> {
-  List<MessageModel> data = [
-    MessageModel(
+  List<MessageModelss> data = [
+    MessageModelss(
       message: '你好呀~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: false,
     ),
-    MessageModel(
+    MessageModelss(
       message: '你好~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/98a96d81d9e9492c84ce3b3e74548a10!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '怎么称呼？',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: false,
     ),
-    MessageModel(
+    MessageModelss(
       message: 'Martin',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/98a96d81d9e9492c84ce3b3e74548a10!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '人间迷惑行为',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: false,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
       self: true,
     ),
-    MessageModel(
+    MessageModelss(
       message: '重启大法~',
       avatar:
           'https://img2.woyaogexing.com/2020/02/24/6b47fc86451b4f00af229e0136bca59e!400x400.jpeg',
@@ -215,7 +223,7 @@ class _PrivateChatPageState extends State<PrivateChatPage> {
 }
 
 class MessageItem extends StatelessWidget {
-  final MessageModel data;
+  final MessageModelss data;
 
   const MessageItem({Key key, this.data}) : super(key: key);
   @override
@@ -284,12 +292,4 @@ class MessageItem extends StatelessWidget {
   }
 }
 
-class MessageModel {
-  final String message;
 
-  final String avatar;
-
-  final bool self;
-
-  const MessageModel({this.message, this.avatar, this.self});
-}

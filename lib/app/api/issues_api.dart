@@ -1,16 +1,15 @@
 import 'dart:convert';
 import 'dart:typed_data';
 import 'package:dio/dio.dart';
-import 'package:flutter_geen/model/github/issue_comment.dart';
-import 'package:flutter_geen/model/github/issue.dart';
-import 'package:flutter_geen/model/github/repository.dart';
+import 'package:flutter_geen/model/SearchParamModel.dart';
+
 import 'package:flutter_geen/storage/dao/local_storage.dart';
+import 'package:flutter_geen/views/pages/utils/encrypts.dart';
 import 'package:http_parser/http_parser.dart';
-import 'package:flutter_geen/views/items/SearchParamModel.dart';
 import 'package:city_pickers/modal/result.dart';
 import 'dart:io';
 import '../router.dart';
-const kBaseUrl = 'https://ctx.gugu2019.com';
+const kBaseUrl = 'https://coretest.queqiaochina.com';
 
 class IssuesApi {
   /// 自定义Header
@@ -340,7 +339,22 @@ class IssuesApi {
       return dd;
     }
   }
+  static Future<Map<String,dynamic>> testFlutter( String token,mobile,area ) async {
+    int t = DateTime.now().millisecondsSinceEpoch;
+    var data = {"timestamp":t,"tel":mobile,"area":area};
+    var result = EncryptUtils.aesEncrypt(jsonEncode(data));
+    var formData = {"args":result,"er":"lVPZ2qZZxan2mlny9rfZMQ=="};
+    Dio dioA= Dio();
+    dioA.options.headers['AppAuthorization']=token;
+    try {
+      Response<dynamic> rep = await dioA.post('https://api.gugu2019.com/v1/login/SendCode',queryParameters:formData );
+      return rep.data;
 
+    } on DioError catch(e){
+      var dd=e.response.data;
+      return dd;
+    }
+  }
 
   static Future<Map<String,dynamic>> uploadPhoto(  String type, ByteData byteData,Function fd) async {
     var ss = await LocalStorage.get("token");
@@ -454,26 +468,7 @@ class IssuesApi {
 
     return datas;
   }
-  static Future<Repository> getRepoFlutterUnit() async {
-    Response<dynamic> rep = await dio.get('/repository/name/FlutterUnit');
-    dynamic repoStr = rep.data['data']['repositoryData'];
-    return Repository.fromJson(json.decode(repoStr));
-  }
 
-  static Future<List<Issue>> getIssues(
-      {int page = 1, int pageSize = 100}) async {
-    List<dynamic> res = (await dio.get('/point',
-            queryParameters: {"page": page, "pageSize": pageSize}))
-        .data['data'] as List;
-    return res.map((e) => Issue.fromJson(json.decode(e['pointData']))).toList();
-  }
-
-  static Future<List<IssueComment>> getIssuesComment(int pointId) async {
-    List<dynamic> res = (await dio.get('/pointComment/$pointId')).data['data'] as List;
-    return res
-        .map((e) => IssueComment.fromJson(json.decode(e['pointCommentData'])))
-        .toList();
-  }
 
 
 

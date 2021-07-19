@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_geen/views/pages/resource/colors.dart';
-import 'package:flutter_geen/views/pages/utils/constants.dart';
-import 'package:flutter_geen/views/pages/utils/dialog_util.dart';
-import 'package:flutter_geen/views/pages/utils/file_util.dart';
-import 'package:flutter_geen/views/pages/utils/functions.dart';
-import 'package:flutter_geen/views/pages/utils/object_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/constants.dart';
+import 'package:flutter_geen/views/pages/chat/utils/dialog_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/file_util.dart';
+import 'package:flutter_geen/views/pages/chat/utils/functions.dart';
+import 'package:flutter_geen/views/pages/chat/utils/object_util.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class MoreWidgets {
   /*
