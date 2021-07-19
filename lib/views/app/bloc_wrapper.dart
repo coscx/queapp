@@ -30,24 +30,23 @@ class _BlocWrapperState extends State<BlocWrapper> {
   Widget build(BuildContext context) {
     return MultiBlocProvider(//使用MultiBlocProvider包裹
         providers: [
-      //Bloc提供器
-      BlocProvider<GlobalBloc>(
-          create: (_) => GlobalBloc(storage)..add(EventInitApp())),
+        //Bloc提供器
+        BlocProvider<GlobalBloc>(
+            create: (_) => GlobalBloc(storage)..add(EventInitApp())),
 
+            BlocProvider<ChatBloc>(create: (_) => ChatBloc()),
 
+            BlocProvider<PeerBloc>(create: (_) => PeerBloc()),
 
-          BlocProvider<ChatBloc>(create: (_) => ChatBloc()),
+            BlocProvider<GroupBloc>(create: (_) => GroupBloc()),
 
-          BlocProvider<PeerBloc>(create: (_) => PeerBloc()),
+            BlocProvider<DiscoveryBloc>(create: (_) => DiscoveryBloc()),
 
-          BlocProvider<GroupBloc>(create: (_) => GroupBloc()),
+            BlocProvider<LoginBloc>(create: (_) => LoginBloc()),
 
-          BlocProvider<DiscoveryBloc>(create: (_) => DiscoveryBloc()),
+            BlocProvider<UserBloc>(create: (_) => UserBloc()),
 
-          BlocProvider<LoginBloc>(create: (_) => LoginBloc()),
-
-          BlocProvider<UserBloc>(create: (_) => UserBloc()),
-        ], child: widget.child);
+          ], child: widget.child);
   }
 
   @override

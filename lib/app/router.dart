@@ -11,6 +11,8 @@ import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/dynamic_video_page.dart';
 import 'package:flutter_geen/views/pages/dynamic/pages/search_page.dart';
 import 'package:flutter_geen/views/pages/login/login_page.dart';
+import 'package:flutter_geen/views/pages/login/login_new.dart';
+import 'package:flutter_geen/views/pages/login/send_code.dart';
 import 'package:flutter_geen/views/pages/user/pages/User.dart';
 
 
@@ -99,6 +101,10 @@ class UnitRouter {
       //   return Right2LeftRouter(child: SelectLocationFromMapPage());
       case user:
         return Right2LeftRouter(child: UserPage());
+      case login_new:
+        return Right2LeftRouter(child: LoginNewPage());
+      case send_code:
+        return Right2LeftRouter(child: SendCodePage());
 
       case to_chats:
         return Right2LeftRouter(child: ChatsPage(model: settings.arguments,));

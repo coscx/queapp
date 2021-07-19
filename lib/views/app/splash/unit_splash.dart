@@ -26,9 +26,9 @@ const NSCodeLoginControllerClickChangeBtn = "700001";
 const PNSCodeFail = "600002";
 
 /// 一键登录秘钥
-const IosAliAuthSdk =
+const IosAliAuthSdk   =
     'Xp/g+ruMfutZaNk9pkZysTQN/p2MMieZ6CNKRZ8j/btZX1P+/SyDHQ1LMXoGR/DeWeCsKfKkf+ky2xu2VgF0h3YeTUCkkTI1QChnhQbAMFOsTBEidbVGMSN1sc//N1cuMXys6x0zjn1oMEx9h5HgH0DSGZ4LFMZNnpeRrNrlBV75Vgc/2LrgVkh66zQiCFgBTXyE4P4VcOhSmxp7oFGdJJyz3Dm94VXYbnagfEkOFmV48oUtVBls1tHonTllNA+IOXRc9d9rg50=';
-const AndroidAuthSdk =
+const AndroidAuthSdk  =
     'wP/+w7ufa22EHJyXSIDCUs9rb5FfEDwaYtZtit3o6TK67HkJUksDoZRzmXlXU/8oIdRE1eFHmpppNgqnA0KANCsQINVLiU9ML2w4h9Q+J6NCMaFwpm69EJsh1e477foeiN/DbLTbyHjOqonA4wyKGicAnwHK8bL9voXaCG2AsODZqJJCjW1QUG+QfY/L6uWiQ1puGERszOQTf2E/cxmgGpcUjEbyQn+py0qiy3tTuqLi9Lj2axh++jT8uix3ZcQjmNVvq16/grqrG5qZFfr4DWS03dkYT6dyYlkiBLoV8Z3VP+AFOfpJuw==';
 
 class UnitSplash extends StatefulWidget {
@@ -74,9 +74,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
       var sss =ss.toString();
       if(sss == "" || ss == null || ss == "null"){
 
-
         Navigator.of(context).pushReplacementNamed(UnitRouter.login);
-
 
       } else{
         //LocalStorage.save("token", '');
@@ -146,8 +144,8 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
     bool checkVerifyEnable = false;
 
     try {
-      checkVerifyEnable = await AliAuthPlugin.checkVerifyEnable;
-    } catch (e) {
+        checkVerifyEnable = await AliAuthPlugin.checkVerifyEnable;
+      } catch (e) {
       print('sdk error $e');
     }
 

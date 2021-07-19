@@ -25,28 +25,29 @@ class FlutterGeen extends StatelessWidget {
     return BlocBuilder<GlobalBloc, GlobalState>(builder: (_, state) {
       return ScreenUtilInit(
           designSize: isPad?Size(1536,2048):Size(750, 1334),
-      allowFontScaling: true,
-      child:MaterialApp(
-//            debugShowMaterialGrid: true,
-            showPerformanceOverlay: state.showPerformanceOverlay,
-//            showSemanticsDebugger: true,
-//            checkerboardOffscreenLayers:true,
-//            checkerboardRasterCacheImages:true,
-            title: '鹊桥',
-            debugShowCheckedModeBanner: false,
-            onGenerateRoute: UnitRouter.generateRoute,
-            theme: ThemeData(
-              primarySwatch: state.themeColor,
-              fontFamily: state.fontFamily,
-            ),
-            home: UnitSplash(),
-            builder: (context, child) {
-              child = EasyLoadingBuilder(context,child);  //do something
-              child = botToastBuilder(context,child);
-              return child;
-            },
-            navigatorObservers: [BotToastNavigatorObserver()], //2.注册路由观察者
-      ));
+          allowFontScaling: true,
+          child:MaterialApp(
+  //            debugShowMaterialGrid: true,
+  //            showSemanticsDebugger: true,
+  //            checkerboardOffscreenLayers:true,
+  //            checkerboardRasterCacheImages:true,
+                showPerformanceOverlay: state.showPerformanceOverlay,
+                title: '鹊桥',
+                debugShowCheckedModeBanner: false,
+                onGenerateRoute: UnitRouter.generateRoute,
+                theme: ThemeData(
+                  primarySwatch: state.themeColor,
+                  fontFamily: state.fontFamily,
+                ),
+                home: UnitSplash(),
+                builder: (context, child) {
+                  child = EasyLoadingBuilder(context,child);  //do something
+                  child = botToastBuilder(context,child);
+                  return child;
+                },
+                navigatorObservers: [BotToastNavigatorObserver()], //2.注册路由观察者
+          )
+      );
     });
   }
 
