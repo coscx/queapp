@@ -8,7 +8,7 @@ import 'user_state.dart';
 class UserBloc extends Bloc<UserEvent, UserState> {
 
 
-  UserBloc();
+  UserBloc() : super(null);
 
   @override
   UserState get initialState => UserInitals();

@@ -16,7 +16,7 @@ import 'group_state.dart';
 class GroupBloc extends Bloc<GroupEvent, GroupState> {
 
 
-  GroupBloc();
+  GroupBloc() : super(GroupInital());
 
   @override
   GroupState get initialState => GroupInital();

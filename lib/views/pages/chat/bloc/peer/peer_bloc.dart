@@ -16,7 +16,7 @@ import 'peer_state.dart';
 class PeerBloc extends Bloc<PeerEvent, PeerState> {
 
 
-  PeerBloc();
+  PeerBloc() : super(PeerInital());
 
   @override
   PeerState get initialState => PeerInital();

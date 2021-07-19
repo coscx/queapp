@@ -17,7 +17,7 @@ class GlobalBloc extends Bloc<GlobalEvent, GlobalState> {
 
   final AppStorage storage;
 
-  GlobalBloc(this.storage);
+  GlobalBloc(this.storage) : super(GlobalState());
 
   Future<SharedPreferences> get sp => storage.sp;
 

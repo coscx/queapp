@@ -168,9 +168,7 @@ class MarkdownWidget extends StatelessWidget {
           styleSheet: _getStyle(context),
           syntaxHighlighter: new GSYHighlighter(),
           data: _getMarkDownData(markdownData),
-          onTapLink: (String source) {
-//            CommonUtils.launchUrl(context, source);
-          },
+
         ),
       ),
     );

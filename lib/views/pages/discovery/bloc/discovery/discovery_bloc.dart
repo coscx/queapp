@@ -13,7 +13,7 @@ import 'discovery_state.dart';
 
 
 class DiscoveryBloc extends Bloc<DiscoveryEvent, DiscoveryState> {
-  DiscoveryBloc();
+  DiscoveryBloc() : super(DiscoveryInitial());
 
   @override
   Stream<DiscoveryState> mapEventToState(

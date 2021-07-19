@@ -20,7 +20,7 @@ import 'chat_state.dart';
 class ChatBloc extends Bloc<ChatEvent, ChatState> {
 
 
-  ChatBloc();
+  ChatBloc() : super(ChatInital());
 
   @override
   ChatState get initialState => ChatInital();

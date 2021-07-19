@@ -1,4 +1,4 @@
-import 'package:amap_map_fluttify/amap_map_fluttify.dart';
+//import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 import 'package:flui/flui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -220,10 +220,10 @@ class FilmState extends State<FilmContent> {
     // 单次定位
     Future.delayed(Duration(milliseconds: 1)).then((e) async {
       await requestLocationPermission();
-      final location = await AmapLocation.instance.fetchLocation();
-      print(location);
+      //final location = await AmapLocation.instance.fetchLocation();
+     // print(location);
       setState(() {
-        _location=location.address;
+      //  _location=location.address;
       });
       var dd= await Pangolin.registerPangolin(
           appId: "5144905",

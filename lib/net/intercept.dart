@@ -14,13 +14,13 @@ import 'error_handle.dart';
 
 class AuthInterceptor extends Interceptor{
   @override
-  onRequest(RequestOptions options) {
+  onRequest(RequestOptions options , RequestInterceptorHandler handler) {
     String accessToken = SpUtil.getString(Constant.access_Token);
     if (accessToken.isNotEmpty){
       options.headers["Authorization"] = "Bearer $accessToken";
     }
    
-    return super.onRequest(options);
+    return super.onRequest(options,handler);
   }
 }
 
@@ -45,7 +45,7 @@ class TokenInterceptor extends Interceptor{
   Dio _tokenDio = Dio();
 
   @override
-  onResponse(Response response) async{
+  onResponse(Response response,ResponseInterceptorHandler handler) async{
     //401代表token过期
     if (response != null && response.statusCode == ExceptionHandle.unauthorized) {
       Log.d("-----------自动刷新Token------------");
@@ -58,7 +58,7 @@ class TokenInterceptor extends Interceptor{
 
       if (accessToken != null){{
         // 重新请求失败接口
-        var request = response.request;
+        var request = response.requestOptions;
         request.headers["Authorization"] = "Bearer $accessToken";
         try {
           Log.e("----------- 重新请求接口 ------------");
@@ -67,15 +67,15 @@ class TokenInterceptor extends Interceptor{
               data: request.data,
               queryParameters: request.queryParameters,
               cancelToken: request.cancelToken,
-              options: request,
+              //options: request.,
               onReceiveProgress: request.onReceiveProgress);
-          return response;
+          //return response;
         } on DioError catch (e) {
-          return e;
+          //return e;
         }
       }}
     }
-    return super.onResponse(response);
+    return super.onResponse(response,handler);
   }
 }
 
@@ -85,7 +85,7 @@ class LoggingInterceptor extends Interceptor{
   DateTime endTime;
   
   @override
-  onRequest(RequestOptions options) {
+  onRequest(RequestOptions options,RequestInterceptorHandler handler) {
     startTime = DateTime.now();
     Log.d("----------Start----------");
     if (options.queryParameters.isEmpty){
@@ -97,11 +97,11 @@ class LoggingInterceptor extends Interceptor{
     Log.d("RequestHeaders:" + options.headers.toString());
     Log.d("RequestContentType: ${options.contentType}");
     Log.d("RequestData: ${options.data.toString()}");
-    return super.onRequest(options);
+    return super.onRequest(options,handler);
   }
   
   @override
-  onResponse(Response response) {
+  onResponse(Response response ,ResponseInterceptorHandler handler) {
     endTime = DateTime.now();
     int duration = endTime.difference(startTime).inMilliseconds;
     if (response.statusCode == ExceptionHandle.success){
@@ -112,13 +112,13 @@ class LoggingInterceptor extends Interceptor{
     // 输出结果
     Log.json(response.data.toString());
     Log.d("----------End: $duration 毫秒----------");
-    return super.onResponse(response);
+    return super.onResponse(response,handler);
   }
   
   @override
-  onError(DioError err) {
+  onError(DioError err,ErrorInterceptorHandler handler) {
     Log.d("----------Error-----------");
-    return super.onError(err);
+    return super.onError(err,handler);
   }
 }
 
@@ -135,17 +135,17 @@ class AdapterInterceptor extends Interceptor{
   static const String SUCCESS_FORMAT = "{\"code\":0,\"data\":%s,\"message\":\"\"}";
   
   @override
-  onResponse(Response response) {
+  onResponse(Response response,ResponseInterceptorHandler handler) {
     Response r = adapterData(response);
-    return super.onResponse(r);
+    return super.onResponse(r,handler);
   }
   
   @override
-  onError(DioError err) {
+  onError(DioError err,ErrorInterceptorHandler handler) {
     if (err.response != null){
       adapterData(err.response);
     }
-    return super.onError(err);
+    return super.onError(err,handler );
   }
 
   Response adapterData(Response response){
