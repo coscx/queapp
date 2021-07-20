@@ -24,10 +24,11 @@ Future<void> main() async {
   SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor:Colors.transparent);
   SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
 
+  runApp( BlocWrapper(child: FlutterGeen(isPad: isIpad,)));
+  // runApp(MediaQueryFromWindow(
+  //   child: ScreenApp(isPad: isIpad,),
+  // ));
 
-  runApp(MediaQueryFromWindow(
-    child: ScreenApp(isPad: isIpad,),
-  ));
   // await enableFluttifyLog(false);
   // await AmapService.instance.init(
   //     iosKey: "c4be7cd9605ca4f1b20ec76030cd1f75",
