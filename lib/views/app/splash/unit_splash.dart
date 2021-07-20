@@ -33,8 +33,8 @@ const AndroidAuthSdk  =
 
 class UnitSplash extends StatefulWidget {
   final double size;
-
-  UnitSplash({this.size = 200});
+  final bool isPad;
+  UnitSplash({this.size = 200,this.isPad});
 
   @override
   _UnitSplashState createState() => _UnitSplashState();

@@ -47,7 +47,7 @@ class _MessageVideoGalleryViewState extends State<MessageVideoGalleryView> {
           backgroundColor: Colors.black,
         ),
         body: Center(
-          child: _controller.value.initialized
+          child: _controller.value.isInitialized
               ? AspectRatio(
                   aspectRatio: _controller.value.aspectRatio,
                   child: VideoPlayer(_controller),
