@@ -195,7 +195,12 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final double winH = MediaQuery.of(context).size.height;
     final double winW = MediaQuery.of(context).size.width;
-
+    ScreenUtil.init(
+      BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width,
+          maxHeight: MediaQuery.of(context).size.height),
+      designSize: widget.isPad?Size(1536,2048):Size(750, 1334),
+    );
     return Theme(
         data: ThemeData(
         appBarTheme: AppBarTheme.of(context).copyWith(
