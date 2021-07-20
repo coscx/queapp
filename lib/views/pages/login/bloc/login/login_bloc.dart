@@ -18,7 +18,7 @@ import 'login_state.dart';
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
 
-  LoginBloc() : super(null);
+  LoginBloc() : super(LoginInital());
 
   @override
   LoginState get initialState => LoginInital();

@@ -7,8 +7,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_geen/blocs/bloc_exp.dart';
 import 'package:flutter_geen/views/app/splash/unit_splash.dart';
-import 'package:flutter_screenutil/screenutil_init.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// 说明: 主程序
 
@@ -22,11 +21,9 @@ class FlutterGeen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
     return BlocBuilder<GlobalBloc, GlobalState>(builder: (_, state) {
-      return ScreenUtilInit(
-          designSize: isPad?Size(1536,2048):Size(750, 1334),
-          allowFontScaling: true,
-          child:MaterialApp(
+      return MaterialApp(
   //            debugShowMaterialGrid: true,
   //            showSemanticsDebugger: true,
   //            checkerboardOffscreenLayers:true,
@@ -39,15 +36,15 @@ class FlutterGeen extends StatelessWidget {
                   primarySwatch: state.themeColor,
                   fontFamily: state.fontFamily,
                 ),
-                home: UnitSplash(),
+                home: UnitSplash(isPad:isPad),
                 builder: (context, child) {
                   child = EasyLoadingBuilder(context,child);  //do something
                   child = botToastBuilder(context,child);
                   return child;
                 },
                 navigatorObservers: [BotToastNavigatorObserver()], //2.注册路由观察者
-          )
-      );
+          );
+
     });
   }
 

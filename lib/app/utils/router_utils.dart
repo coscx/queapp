@@ -39,7 +39,7 @@ class RotateRouter<T> extends PageRouteBuilder<T> {
   final Widget child;
   final int durationMs;
   final Curve curve;
-  RotateRouter({this.child, this.durationMs = 500,this.curve=Curves.fastOutSlowIn})
+  RotateRouter({this.child, this.durationMs = 250,this.curve=Curves.fastOutSlowIn})
       : super(
       pageBuilder: (context, animation, secondaryAnimation) => child,
       transitionDuration: Duration(milliseconds: durationMs),
@@ -56,7 +56,7 @@ class Right2LeftRouter<T> extends PageRouteBuilder<T> {
   final Widget child;
   final int durationMs;
   final Curve curve;
-  Right2LeftRouter({this.child,this.durationMs=500,this.curve=Curves.fastOutSlowIn})
+  Right2LeftRouter({this.child,this.durationMs=250,this.curve=Curves.fastOutSlowIn})
       :super(
       transitionDuration:Duration(milliseconds: durationMs),
       pageBuilder:(ctx,a1,a2)=>child,
