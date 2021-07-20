@@ -68,6 +68,23 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _initFluwx();
+    SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+    // _factor=0;
+    // _controller =
+    //     AnimationController(duration: Duration(milliseconds: 1), vsync: this)
+    //       ..addStatusListener(_listenStatus)..forward();
+    //
+    // _curveAnim = CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
+
+    // initPlatformState();
+    // 初始化插件
+    if (Platform.isAndroid) {
+      AliAuthPlugin.initSdk(AndroidAuthSdk);
+    } else {
+      AliAuthPlugin.initSdk(IosAliAuthSdk);
+    }
+    UmengAnalyticsPush.initUmeng(true, true);
     Future.delayed(Duration(milliseconds: 1)).then((e) async {
 
       var ss = await LocalStorage.get("token");
@@ -92,23 +109,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
       }
 
     });
-    SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
-    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-    // _factor=0;
-    // _controller =
-    //     AnimationController(duration: Duration(milliseconds: 1), vsync: this)
-    //       ..addStatusListener(_listenStatus)..forward();
-    //
-    // _curveAnim = CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn);
 
-   // initPlatformState();
-    // 初始化插件
-    if (Platform.isAndroid) {
-      AliAuthPlugin.initSdk(AndroidAuthSdk);
-    } else {
-      AliAuthPlugin.initSdk(IosAliAuthSdk);
-    }
-    UmengAnalyticsPush.initUmeng(true, true);
   }
 
 
