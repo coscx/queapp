@@ -522,7 +522,7 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
   }
   void onNewGroupMessage(result, int error)async {
     var count = 1;
-    print(result);
+    //print(result);
     //Map response = await im.getConversations();
     //var  conversions = response["data"];
     // conversions.map((e) {

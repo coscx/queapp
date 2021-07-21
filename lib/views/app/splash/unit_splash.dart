@@ -67,13 +67,18 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+    SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
     _initFluwx();
-    Future.delayed(Duration(milliseconds: 1)).then((e) async {
-
+    Future.delayed(Duration(microseconds: 1)).then((e) async {
       var ss = await LocalStorage.get("token");
       var sss =ss.toString();
       if(sss == "" || ss == null || ss == "null"){
-
+        if (Platform.isAndroid) {
+          await AliAuthPlugin.initSdk(AndroidAuthSdk);
+        } else {
+          await AliAuthPlugin.initSdk(IosAliAuthSdk);
+        }
         Navigator.of(context).pushReplacementNamed(UnitRouter.login);
 
       } else{
@@ -92,8 +97,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
       }
 
     });
-    SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
-    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+
     // _factor=0;
     // _controller =
     //     AnimationController(duration: Duration(milliseconds: 1), vsync: this)
@@ -103,12 +107,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
 
    // initPlatformState();
     // 初始化插件
-    if (Platform.isAndroid) {
-      AliAuthPlugin.initSdk(AndroidAuthSdk);
-    } else {
-      AliAuthPlugin.initSdk(IosAliAuthSdk);
-    }
-    UmengAnalyticsPush.initUmeng(true, true);
+
   }
 
 
@@ -125,6 +124,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
         universalLink: "https://your.univerallink.com/link/");
     var result = await isWeChatInstalled;
     print("wx is installed $result");
+    await UmengAnalyticsPush.initUmeng(false, true);
   }
   void _listenStatus(AnimationStatus status) {
     if (status == AnimationStatus.completed) {
@@ -195,12 +195,7 @@ class _UnitSplashState extends State<UnitSplash> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final double winH = MediaQuery.of(context).size.height;
     final double winW = MediaQuery.of(context).size.width;
-    ScreenUtil.init(
-      BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width,
-          maxHeight: MediaQuery.of(context).size.height),
-      designSize: widget.isPad?Size(1536,2048):Size(750, 1334),
-    );
+
     return Theme(
         data: ThemeData(
         appBarTheme: AppBarTheme.of(context).copyWith(
