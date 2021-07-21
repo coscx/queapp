@@ -87,7 +87,17 @@
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
             android:authorities="${applicationId}.TTMultiProvider"
             android:exported="false" />
+        <activity
+            android:name="com.example.flt_im_plugin.VOIPVoiceActivity"
+            android:screenOrientation="portrait"
+            android:label="voip" >
+        </activity>
 
+        <activity
+            android:name="com.example.flt_im_plugin.VOIPVideoActivity"
+            android:screenOrientation="portrait"
+            android:label="voip" >
+        </activity>
         <!--
              Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
