@@ -36,6 +36,7 @@ class NearByProvider extends ChangeNotifier {
           print(data);
         }
     );
+
     notifyListeners();
   }
 

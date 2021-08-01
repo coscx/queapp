@@ -6,13 +6,13 @@ const _KEY = "GuGuAPP\$*@AesKey";
 const _IV = "0000000000000000";
 const public_key ='''
 -----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwJojRka0TnDlFjphoafw
-CcREgwtr+LZeOdo0NSyKJ6+kRZQ5i1nhGPUN+P2vCrZE5PbOJidlx85juTjC3Hej
-1ukkXGMwGjBMelzfYITbxcdB8V/vUDqH8lIUG+AMO8sonIceyr6TDBlxbLKNPd50
-NurmcRs17FCZui3SKSdJcAoe5eceUrD2vC3qAY01YItW+dYg6UhG3Q254iA4DxFY
-hmcNVhihcqDtOI/X8uTpX85ZLPlwSFvwB8wQhH8dbOT1BeoZyRznwWGzsk9aaCXW
-bkuo8XxGFZDxjNelZrJbMC2WBFvp9s4k8eCnVEnCGhRJce8hOF1H95ikYjq2+O5q
-HQIDAQAB
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2kOYzEb09KyQGOoj+4wn
+x3ylk4YqPmsBjgUofHZt6bnLGVN8hDz0WnZqzU/foCYbMQk4ZYCcdaMiwaKkFIsx
+5fml3tZ146lyu7PJrrdIx30aWAgPmEcsUJlIOzfH3bOr1209twwDGIwhohwxiJAl
+HUfyLA+RpqarvhHRQ3DxGYpwrNkvzPMwvf7WF928CN0H/D+2SfztD+hZxq+bKmHL
+U6gX93YWoFzjS2vq0VYJpP13L4w/BVh4bMFRb0JhvzKMmzlq0mAjEWFcm1y1XSJ3
+E3urgKV9aidZ0HX0gSrHpAL4oLCMGzcN+Pk5C5tI20tJKbqlDZoZoWZ/nLlHgor9
+fQIDAQAB
 -----END PUBLIC KEY-----
 ''';
 class EncryptUtils {
@@ -32,9 +32,9 @@ class EncryptUtils {
   }
 
   //AES加密
-  static aesEncrypt(plainText) {
+  static aesEncrypt(String plainText,String  keys ) {
     try {
-      final key = Key.fromUtf8(_KEY);
+      final key = Key.fromUtf8(keys);
       final iv = IV.fromUtf8(_IV);
       final encrypter = Encrypter(AES(key, mode: AESMode.cbc));
       final encrypted = encrypter.encrypt(plainText, iv: iv);

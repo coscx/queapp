@@ -23,6 +23,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_geen/views/pages/my/my_route.dart';
+import 'package:flutter_geen/views/pages/utils/encrypts.dart';
+import 'package:flutter_geen/views/pages/utils/radom.dart';
 import 'package:flutter_geen/views/widget/bottom_sheet.dart';
 import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
 import 'package:flutter_xupdate/flutter_xupdate.dart';
@@ -112,15 +114,10 @@ class _UnitNavigationState extends State<UnitNavigation> with SingleTickerProvid
     Future.delayed(Duration(seconds: 1)).then((e) async {
 
       _checkUpdateVersion();
-      // var result = await EncryptUtils.encodeRSAString("content");
-      // print("aabbcc");
-      // print(result);
+
     });
 
-   // var mobile ="15666035163";
-   // var area ="86";
-   //
-   // var result = IssuesApi.testFlutter("token", mobile, area);
+
 
 
 
