@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ad_plugin/flutter_ad_plugin.dart';
+import 'package:flutter_geen/app/api/issues_api.dart';
 import 'package:flutter_geen/app/router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class MyRoute extends StatefulWidget {
@@ -11,10 +12,12 @@ class MyRoute extends StatefulWidget {
 }
 
 class _MyPage extends State<MyRoute> with AutomaticKeepAliveClientMixin {
+  String _text;
   @override
   void initState() {
     super.initState();
     print("MyRoute initState");
+    _text= " ";
   }
   @override
   Widget build(BuildContext context) {
@@ -52,6 +55,21 @@ class _MyPage extends State<MyRoute> with AutomaticKeepAliveClientMixin {
         Padding(padding: EdgeInsets.only(top: 24.h)),
         _getItemCell('退出账号'),
         _getItemCell('客服'),
+          RichText(
+      //文字居中
+      textAlign: TextAlign.center,
+      //文字区域
+      text: TextSpan(
+      text: "",
+      style: TextStyle(color: Colors.grey),
+      children: [
+
+        //后续显示的文本内容
+        TextSpan(text: _text)
+      ],
+    ),
+    )
+
       ],
     )));
   }
@@ -71,9 +89,16 @@ class _MyPage extends State<MyRoute> with AutomaticKeepAliveClientMixin {
             children: <Widget>[
               Padding(padding: EdgeInsets.only(top: 16.h)),
               GestureDetector(
-                onTap: (){
+                onTap: () async {
+                  var mobile ="15666035163";
+                  var area ="86";
 
-                    FlutterAdPlugin().jumpAdList;
+                  var result =await  IssuesApi.testFlutter("token", mobile, area);
+                  print(result);
+                  setState(() {
+                    _text = result.toString();
+                  });
+                   // FlutterAdPlugin().jumpAdList;
 
                 },
                 child: CircleAvatar(

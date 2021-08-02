@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
+import 'package:flutter_geen/views/pages/chat/view/util/bottom_dialog.dart';
 import 'package:flutter_geen/views/pages/chat/widget/dialogs/delete_category_dialog.dart';
 import 'package:flutter_geen/views/pages/utils/DyBehaviorNull.dart';
 import 'package:flutter_geen/views/pages/chat/utils/common_util.dart';
@@ -988,7 +989,32 @@ class ChatsState extends State<ChatsPage> {
         }
       });
     }));
-    _widgets.add(MoreWidgets.buildIcon(Icons.videocam, '视频通话'));
+    _widgets.add(MoreWidgets.buildIcon(Icons.videocam, '在线通话', o: (res) {
+      showDialog(
+          barrierDismissible: true,//是否点击空白区域关闭对话框,默认为true，可以关闭
+          context: context,
+          builder: (BuildContext context) {
+            var list = List();
+            list.add('语音聊天');
+            list.add('视频聊天');
+            return BottomSheetWidget(
+              list: list,
+              onItemClickListener: (index) async {
+                if(index == 0){
+                  im.voiceCall(widget.model.cid);
+                  Navigator.pop(context);
+                }
+                if(index == 1){
+                  FltImPlugin im = FltImPlugin();
+                  im.videoCall(widget.model.cid);
+                  Navigator.pop(context);
+                }
+
+              },
+            );
+          });
+
+    }));
     _widgets.add(MoreWidgets.buildIcon(Icons.location_on, '位置'));
     _widgets.add(MoreWidgets.buildIcon(Icons.view_agenda, '红包'));
     _widgets.add(MoreWidgets.buildIcon(Icons.swap_horiz, '转账'));

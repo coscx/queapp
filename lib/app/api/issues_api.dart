@@ -5,6 +5,7 @@ import 'package:flutter_geen/model/SearchParamModel.dart';
 
 import 'package:flutter_geen/storage/dao/local_storage.dart';
 import 'package:flutter_geen/views/pages/utils/encrypts.dart';
+import 'package:flutter_geen/views/pages/utils/radom.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:city_pickers/modal/result.dart';
 import 'dart:io';
@@ -342,12 +343,15 @@ class IssuesApi {
   static Future<Map<String,dynamic>> testFlutter( String token,mobile,area ) async {
     int t = DateTime.now().millisecondsSinceEpoch;
     var data = {"timestamp":t,"tel":mobile,"area":area};
-    var result = EncryptUtils.aesEncrypt(jsonEncode(data));
-    var formData = {"args":result,"er":"lVPZ2qZZxan2mlny9rfZMQ=="};
+
+    var secret = GetRand.getRandString();
+    var rasResult = await EncryptUtils.encodeRSAString(secret);
+    var args = await EncryptUtils.aesEncrypt(json.encode(data),secret);
+    var formData = {"args":args,"er":rasResult};
     Dio dioA= Dio();
     dioA.options.headers['AppAuthorization']=token;
     try {
-      Response<dynamic> rep = await dioA.post('https://api.gugu2019.com/v1/login/SendCode',queryParameters:formData );
+      Response<dynamic> rep = await dioA.post('http://share.3dsqq.com/api/CheckRsa',data:formData );
       return rep.data;
 
     } on DioError catch(e){
