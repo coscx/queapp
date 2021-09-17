@@ -182,7 +182,7 @@ class _NoBorderExpansionTileState extends State<NoBorderExpansionTile> with Sing
     _borderColorTween
       ..end = theme.dividerColor;
     _headerColorTween
-      ..begin = theme.textTheme.subhead.color
+
       ..end = theme.accentColor;
     _iconColorTween
       ..begin = theme.unselectedWidgetColor

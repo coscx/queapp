@@ -25,6 +25,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:frefresh/frefresh.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:vibration/vibration.dart';
@@ -1366,14 +1367,14 @@ class GroupChatState extends State<GroupChatPage> {
       return;
     }
   }
-  _willBuildImageMessage(File imageFile) {
+  _willBuildImageMessage(XFile imageFile) {
     if (imageFile == null || imageFile.path.isEmpty) {
       return;
     }
     _buildImageMessage(imageFile, false);return;
   }
 
-  _buildImageMessage(File file, bool sendOriginalImage)  {
+  _buildImageMessage(XFile file, bool sendOriginalImage)  {
    file.readAsBytes().then((content) =>
        BlocProvider.of<GroupBloc>(context).add(EventGroupSendNewImageMessage(tfSender,widget.model.cid,content))
       );
