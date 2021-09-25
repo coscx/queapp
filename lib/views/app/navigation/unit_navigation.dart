@@ -34,7 +34,7 @@ import 'package:umeng_analytics_push/umeng_analytics_push.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:umeng_analytics_push/message_model.dart';
 /// 说明: 主题结构 左右滑页 + 底部导航栏
-//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 github token
+//___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____ github token
 class UnitNavigation extends StatefulWidget {
   @override
   _UnitNavigationState createState() => _UnitNavigationState();
