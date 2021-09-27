@@ -17,7 +17,7 @@ import io.flutter.plugins.GeneratedPluginRegistrant.registerWith
 
 
 class MainActivity: FlutterActivity() {
-    var handler: Handler = Handler(Looper.myLooper())
+    var handler: Handler = Handler(Looper.myLooper()!!)
 
     //通讯名称,回到手机桌面
     private val CHANNEL = "android/back/desktop"
